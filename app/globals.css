@@ -1,26 +1,297 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   Design tokens — Ambulatório de Dermatologia e Hanseníase da Amazônia
+   Palette: navy quase-preto + azul profundo + cinzas frios.
+   Sem gradientes, sem sombras, sem opacity effects.
+   Fonts: Bricolage Grotesque (display) + Hanken Grotesk (body).
+   ============================================================ */
+@theme {
+  /* Primary — navy institucional */
+  --color-brand: #1a3a6b;          /* azul naval (interativo principal) */
+  --color-brand-strong: #14306a;   /* navy escuro (ações primárias) */
+  --color-brand-dark: #0d2150;
+  --color-brand-darker: #091a3d;   /* navy quase-preto (seções escuras) */
+  --color-brand-light: #4f82c4;    /* azul médio (texto sobre fundo escuro) */
+  --color-brand-faint: #92bad8;    /* azul suave (texto secundário no escuro) */
+  --color-brand-soft: #eef4fb;     /* azul muito claro (fundos suaves) */
+  --color-brand-tint: #d1e4f5;     /* azul tint (bordas, superfícies leves) */
+  --color-brand-panel: #1a3054;    /* painel sobre fundo escuro */
+  --color-brand-edge: #223e6e;     /* borda sobre fundo escuro */
+
+  /* Accent — azul vívido (uso pontual) */
+  --color-accent: #2563eb;
+  --color-accent-light: #93c5fd;
+  --color-accent-soft: #eff6ff;
+  --color-accent-tint: #dbeafe;
+
+  /* Neutros — cinzas frios */
+  --color-ink: #0f172a;            /* quase-preto */
+  --color-ink-soft: #334155;       /* cinza escuro */
+  --color-muted: #64748b;          /* cinza médio */
+  --color-line: #e2e8f0;           /* cinza claro (bordas) */
+  --color-canvas: #f8fafc;         /* branco frio */
+  --color-surface: #ffffff;        /* branco puro */
+
+  /* Tipografia */
+  --font-display: var(--font-bricolage), "Bricolage Grotesque", Georgia, serif;
+  --font-sans: var(--font-hanken), "Hanken Grotesk", system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================================
+   Tema do Congresso — identidade visual do I Congresso Amazônico
+   de Hanseníase (logo): ameixa/roxo + verde-oliva + terracota + creme.
+   Escopado: só vale dentro de `.theme-congresso` (rota /congresso).
+   O site do ADHAM (/) permanece com a paleta navy.
+   ============================================================ */
+.theme-congresso {
+  /* Primary — terracota */
+  --color-brand: #b0572b;
+  --color-brand-strong: #934823;
+  --color-brand-dark: #6e3719;
+  --color-brand-darker: #3b2236;   /* ameixa profunda → seções escuras */
+  --color-brand-light: #e0a36a;    /* terracota clara → texto sobre escuro */
+  --color-brand-faint: #c9b49a;    /* areia suave → texto secundário no escuro */
+  --color-brand-soft: #f0eadb;     /* creme → fundos suaves, ícones */
+  --color-brand-tint: #e4d9c0;     /* areia tint → bordas, chips */
+  --color-brand-panel: #4c3144;    /* painel ameixa sobre escuro */
+  --color-brand-edge: #5c3f54;     /* borda ameixa sobre escuro */
+
+  /* Accent — verde-oliva (uso pontual) */
+  --color-accent: #74793d;
+  --color-accent-light: #a7ac6b;
+  --color-accent-soft: #eef0df;
+  --color-accent-tint: #dce0bf;
+
+  /* Neutros quentes */
+  --color-ink: #3a2e20;
+  --color-ink-soft: #5a4b39;
+  --color-muted: #897965;
+  --color-line: #e6ddcb;
+  --color-canvas: #f4efe3;         /* creme do pôster */
+  --color-surface: #fcfaf3;        /* branco quente */
+
+  background-color: var(--color-canvas);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+::selection {
+  background: var(--color-brand-strong);
+  color: #fff;
+}
+
+/* ============================================================
+   Blocos reutilizáveis
+   ============================================================ */
+
+/* Eyebrow / kicker acima dos títulos de seção */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-brand-strong);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.section-subtitle {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 38rem;
+}
+
+/* ============================================================
+   Botões
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.95rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-brand-strong);
+  color: #fff;
+  border-color: var(--color-brand-strong);
+}
+.btn-primary:hover {
+  background: var(--color-brand-darker);
+  border-color: var(--color-brand-darker);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-line);
+}
+.btn-outline:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand-strong);
+}
+
+/* Botão para uso sobre fundos escuros */
+.btn-white {
+  background: #ffffff;
+  color: var(--color-brand-darker);
+  border-color: #ffffff;
+}
+.btn-white:hover {
+  background: var(--color-brand-soft);
+  border-color: var(--color-brand-soft);
+  transform: translateY(-2px);
+}
+
+/* Variante fantasma para seções escuras */
+.btn-ghost-light {
+  background: var(--color-brand-panel);
+  color: #fff;
+  border-color: var(--color-brand-edge);
+}
+.btn-ghost-light:hover {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+/* Tamanho pequeno — para navbar e contextos compactos */
+.btn-sm {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.8rem;
+}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 20px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-brand-tint);
+}
+
+/* Pill / chip */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: var(--color-brand-tint);
+  color: var(--color-brand-strong);
+  border: 1px solid var(--color-brand-tint);
+}
+
+/* Frame de foto */
+.photo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ============================================================
+   Editorial — utilitários para quebrar a cara de template
+   ============================================================ */
+
+/* Título display gigante */
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+/* Primeira letra grande (capitular) num parágrafo de abertura */
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 3.6em;
+  line-height: 0.74;
+  float: left;
+  margin: 0.04em 0.12em 0 0;
+  color: var(--color-brand-strong);
+}
+
+/* Número/índice editorial (ex.: 01, 02) */
+.index-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--color-brand-tint);
+}
+
+/* Texto vazado/contorno (sobre fundos escuros) */
+.outline-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-brand-edge);
+}
+
+/* Linha de cabeçalho editorial: rótulo + traço fino que ocupa o resto */
+.rule-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brand-strong);
+}
+.rule-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-line);
+}
+
+/* Folhas decorativas que só aparecem dentro do tema do congresso */
+.leaf-congresso { display: none; }
+.theme-congresso .leaf-congresso { display: block; }
