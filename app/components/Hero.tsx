@@ -11,6 +11,11 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7">
+          <img
+            src="/logo-congresso.png"
+            alt="I Congresso Amazônico de Hanseníase"
+            className="h-28 sm:h-32 w-auto mb-7"
+          />
           <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.3em] uppercase text-brand-light">
             {CONGRESSO.edicao} Congresso · Bienal · Marabá, PA
           </p>

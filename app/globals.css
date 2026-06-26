@@ -296,3 +296,9 @@ body {
 /* Folhas decorativas que só aparecem dentro do tema do congresso */
 .leaf-congresso { display: none; }
 .theme-congresso .leaf-congresso { display: block; }
+
+/* Troca de logo conforme o tema (ADHAM padrão · Congresso dentro de .theme-congresso) */
+.adham-only { display: block; }
+.cong-only { display: none; }
+.theme-congresso .adham-only { display: none; }
+.theme-congresso .cong-only { display: block; }

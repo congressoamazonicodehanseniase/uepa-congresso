@@ -25,11 +25,16 @@ export default function Footer() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-10 mb-12">
           <div className="md:col-span-2">
-            <div className="mb-6 bg-white inline-block rounded-xl p-2.5">
+            <div className="mb-6">
               <img
                 src="/llogoo.png"
                 alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
-                className="h-16 w-auto object-contain"
+                className="adham-only h-16 w-auto object-contain bg-white rounded-xl p-2.5"
+              />
+              <img
+                src="/logo-congresso.png"
+                alt="I Congresso Amazônico de Hanseníase"
+                className="cong-only h-28 w-auto object-contain"
               />
             </div>
             <p className="text-sm leading-relaxed mb-5 max-w-sm">
