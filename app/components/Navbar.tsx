@@ -36,6 +36,12 @@ export default function Navbar() {
     return () => document.removeEventListener('keydown', onKey);
   }, [open]);
 
+  // Trava o scroll do fundo enquanto o drawer está aberto
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [open]);
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 bg-surface border-b border-line transition-all duration-300 ${
@@ -81,30 +87,50 @@ export default function Navbar() {
         </button>
       </div>
 
-      {open && (
-        <div id="mobile-menu" className="lg:hidden bg-surface px-6 pb-6 pt-3 border-t border-line">
-          <ul className="flex flex-col gap-1 mb-4">
-            {links.map((l) => (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  className="block py-2.5 text-base font-medium text-ink-soft hover:text-brand-strong transition-colors"
-                  onClick={() => setOpen(false)}
-                >
-                  {l.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <Link
-            href={cta.href}
-            className="btn btn-primary w-full"
-            onClick={() => setOpen(false)}
-          >
+      {/* Backdrop */}
+      <div
+        className={`lg:hidden fixed inset-0 z-40 bg-ink/40 transition-opacity duration-300 ${
+          open ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setOpen(false)}
+        aria-hidden
+      />
+
+      {/* Drawer lateral (desliza da direita) */}
+      <aside
+        id="mobile-menu"
+        className={`lg:hidden fixed top-0 right-0 z-50 h-dvh w-4/5 max-w-xs bg-surface border-l border-line flex flex-col transition-transform duration-300 ease-out ${
+          open ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        aria-hidden={!open}
+      >
+        <div className="flex items-center justify-between px-6 h-[4.5rem] border-b border-line flex-shrink-0">
+          <img src="/llogoo.png" alt="ADHAM" className="h-10 w-auto object-contain" />
+          <button onClick={() => setOpen(false)} aria-label="Fechar menu" className="text-ink p-1">
+            <X size={24} />
+          </button>
+        </div>
+
+        <ul className="flex flex-col px-6 py-4 flex-1 overflow-y-auto">
+          {links.map((l) => (
+            <li key={l.href}>
+              <Link
+                href={l.href}
+                className="block py-3.5 text-base font-medium text-ink-soft hover:text-brand-strong transition-colors border-b border-line"
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="px-6 pb-8 pt-2 flex-shrink-0">
+          <Link href={cta.href} className="btn btn-primary w-full" onClick={() => setOpen(false)}>
             {cta.label}
           </Link>
         </div>
-      )}
+      </aside>
     </nav>
   );
 }

@@ -2,36 +2,37 @@
 
 /* ============================================================
    Design tokens — Ambulatório de Dermatologia e Hanseníase da Amazônia
-   Palette: navy quase-preto + azul profundo + cinzas frios.
+   Paleta padrão (site do Ambulatório): cores do logo ADHAM —
+   verde-oliva + dourado + cobre/terracota + creme (sem o fundo ameixa).
    Sem gradientes, sem sombras, sem opacity effects.
    Fonts: Bricolage Grotesque (display) + Hanken Grotesk (body).
    ============================================================ */
 @theme {
-  /* Primary — navy institucional */
-  --color-brand: #1a3a6b;          /* azul naval (interativo principal) */
-  --color-brand-strong: #14306a;   /* navy escuro (ações primárias) */
-  --color-brand-dark: #0d2150;
-  --color-brand-darker: #091a3d;   /* navy quase-preto (seções escuras) */
-  --color-brand-light: #4f82c4;    /* azul médio (texto sobre fundo escuro) */
-  --color-brand-faint: #92bad8;    /* azul suave (texto secundário no escuro) */
-  --color-brand-soft: #eef4fb;     /* azul muito claro (fundos suaves) */
-  --color-brand-tint: #d1e4f5;     /* azul tint (bordas, superfícies leves) */
-  --color-brand-panel: #1a3054;    /* painel sobre fundo escuro */
-  --color-brand-edge: #223e6e;     /* borda sobre fundo escuro */
+  /* Primary — verde-oliva do logo ADHAM (círculo) */
+  --color-brand: #6f7539;          /* oliva (interativo principal) */
+  --color-brand-strong: #5e6431;   /* oliva escuro (ações primárias, eyebrows) */
+  --color-brand-dark: #4a4f27;
+  --color-brand-darker: #3a2c1d;   /* marrom escuro (seções escuras — NÃO o fundo ameixa) */
+  --color-brand-light: #cda659;    /* dourado (texto sobre fundo escuro) */
+  --color-brand-faint: #c6b48f;    /* areia (texto secundário no escuro) */
+  --color-brand-soft: #eef0df;     /* verde-creme (fundos suaves, ícones) */
+  --color-brand-tint: #dde0bf;     /* oliva tint (bordas, superfícies leves) */
+  --color-brand-panel: #4a3a28;    /* painel marrom sobre fundo escuro */
+  --color-brand-edge: #5a4836;     /* borda marrom sobre fundo escuro */
 
-  /* Accent — azul vívido (uso pontual) */
-  --color-accent: #2563eb;
-  --color-accent-light: #93c5fd;
-  --color-accent-soft: #eff6ff;
-  --color-accent-tint: #dbeafe;
+  /* Accent — cobre/terracota do logo (uso pontual) */
+  --color-accent: #a35e34;
+  --color-accent-light: #cf8b5a;
+  --color-accent-soft: #f6ece2;
+  --color-accent-tint: #ecd9c8;
 
-  /* Neutros — cinzas frios */
-  --color-ink: #0f172a;            /* quase-preto */
-  --color-ink-soft: #334155;       /* cinza escuro */
-  --color-muted: #64748b;          /* cinza médio */
-  --color-line: #e2e8f0;           /* cinza claro (bordas) */
-  --color-canvas: #f8fafc;         /* branco frio */
-  --color-surface: #ffffff;        /* branco puro */
+  /* Neutros quentes */
+  --color-ink: #33291b;            /* marrom quase-preto */
+  --color-ink-soft: #574a39;       /* marrom escuro */
+  --color-muted: #897a64;          /* marrom médio */
+  --color-line: #e7ddca;           /* areia clara (bordas) */
+  --color-canvas: #f6f1e6;         /* creme */
+  --color-surface: #fffdf8;        /* branco quente */
 
   /* Tipografia */
   --font-display: var(--font-bricolage), "Bricolage Grotesque", Georgia, serif;
