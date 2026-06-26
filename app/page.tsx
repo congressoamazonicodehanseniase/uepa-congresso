@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PhotoPlaceholder from './components/PhotoPlaceholder';
+import GaleriaImpacto from './components/GaleriaImpacto';
 import { CONTATO, REDES, RESPONSAVEL, CONGRESSO } from './lib/config';
 import { FOTOS } from './lib/fotos';
 import { MapPin, Mail, AtSign, ArrowRight } from 'lucide-react';
@@ -160,7 +161,7 @@ export default function Home() {
 
         {/* Impacto e trajetória */}
         <section id="impacto" className="py-24 bg-surface">
-          <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+          <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5">
               <p className="rule-label mb-7">Impacto e trajetória</p>
               <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
@@ -173,11 +174,8 @@ export default function Home() {
                 conhecimento e inovação em saúde.
               </p>
             </div>
-            <div className="lg:col-span-7 grid grid-cols-2 gap-4">
-              <PhotoPlaceholder src={FOTOS.pratica1.src} caption={FOTOS.pratica1.alt} className="mt-8" />
-              <PhotoPlaceholder src={FOTOS.discussao.src} caption={FOTOS.discussao.alt} />
-              <PhotoPlaceholder src={FOTOS.atendimento.src} caption={FOTOS.atendimento.alt} />
-              <PhotoPlaceholder src={FOTOS.pratica2.src} caption={FOTOS.pratica2.alt} className="-mt-8" />
+            <div className="lg:col-span-7">
+              <GaleriaImpacto />
             </div>
           </div>
         </section>
