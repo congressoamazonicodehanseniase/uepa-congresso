@@ -47,12 +47,14 @@ export const LOCAIS = {
     nome: 'Universidade do Estado do Pará (UEPA)',
     endereco: 'Av. Hiléia, s/n – Bairro Amapá – Marabá/PA – CEP 68.502-100',
     mapsQuery: 'UEPA Marabá Avenida Hiléia Bairro Amapá',
+    fotos: ['https://correiodecarajas.com.br/wp-content/uploads/2026/01/uepa-1024x576.jpeg'],
   },
   congresso: {
     rotulo: 'Congresso Científico · 28 e 29 de agosto',
     nome: 'Carajás Centro de Convenções – Leonildo Borges Rocha',
     endereco: 'BR-222 – Vila Militar Presidente Médici – Marabá/PA',
     mapsQuery: 'Carajás Centro de Convenções Leonildo Borges Rocha Marabá',
+    fotos: ['https://carajasconvencoes.com.br/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-14-at-11.06.07.jpeg'],
   },
 } as const;
 

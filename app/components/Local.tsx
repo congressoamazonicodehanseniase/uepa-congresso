@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { MapPin, Plane } from 'lucide-react';
 import { LOCAIS } from '../lib/config';
+import FotoSlideshow from './FotoSlideshow';
 
 const venues = [LOCAIS.capacitacoes, LOCAIS.congresso];
 
@@ -30,30 +31,44 @@ export default function Local() {
             {venues.map((venue, i) => {
               const isActive = i === active;
               return (
-                <button
+                <div
                   key={venue.nome}
-                  type="button"
+                  role="button"
+                  tabIndex={0}
                   onClick={() => setActive(i)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setActive(i);
+                    }
+                  }}
                   aria-pressed={isActive}
-                  className={`text-left rounded-2xl border p-5 sm:p-6 transition-colors ${
+                  className={`cursor-pointer rounded-2xl border p-3 transition-colors ${
                     isActive
                       ? 'border-brand-strong bg-brand-soft'
                       : 'border-line bg-surface hover:border-brand-tint'
                   }`}
                 >
-                  <div className="flex items-start gap-4">
-                    <span className={`index-num shrink-0 ${isActive ? 'text-brand-strong' : 'text-brand-tint'}`}>
+                  <FotoSlideshow
+                    fotos={venue.fotos.map((src) => ({ src, alt: venue.nome }))}
+                    ratio="aspect-[5/2]"
+                    interval={4500}
+                    position="center"
+                    className="mb-3"
+                  />
+                  <div className="flex items-start gap-3 px-1">
+                    <span className={`font-[family-name:var(--font-display)] text-xl font-bold leading-none shrink-0 ${isActive ? 'text-brand-strong' : 'text-brand-tint'}`}>
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <div className="min-w-0">
-                      <p className="text-xs font-semibold tracking-[0.14em] uppercase text-brand-strong">{venue.rotulo}</p>
-                      <h3 className="font-[family-name:var(--font-display)] font-bold text-ink text-lg mt-1.5 leading-snug">
+                      <p className="text-[0.62rem] font-semibold tracking-[0.12em] uppercase text-brand-strong">{venue.rotulo}</p>
+                      <h3 className="font-[family-name:var(--font-display)] font-bold text-ink text-sm sm:text-base mt-0.5 leading-snug">
                         {venue.nome}
                       </h3>
-                      <p className="text-muted text-sm mt-1.5 leading-snug">{venue.endereco}</p>
+                      <p className="text-muted text-xs mt-1 leading-snug">{venue.endereco}</p>
                     </div>
                   </div>
-                </button>
+                </div>
               );
             })}
 

@@ -45,10 +45,10 @@ const pilares = [
   { n: '04', title: 'Extensão', desc: 'Ações que aproximam ciência, educação e comunidade no enfrentamento da hanseníase.' },
 ];
 
-const extensao = [
+const extensao: { title: string; desc: string; foto: { src: string; alt: string }; pos?: string }[] = [
   { title: 'II Jornada do Lúpus', desc: 'Integração e ciência fortalecendo o diálogo acadêmico sobre doenças autoimunes.', foto: FOTOS.jornadaLupus },
-  { title: 'Produção científica', desc: 'Apresentação de trabalhos em congressos nacionais, como o 78º Congresso da Sociedade Brasileira de Dermatologia (CSBD), Rio 2025.', foto: FOTOS.producao },
-  { title: 'Estande na Jornada do Lúpus', desc: 'Diálogo com a comunidade no estande do ADHAM, ao lado do GARPA, sobre lúpus, melanoma e cuidado com a pele.', foto: FOTOS.jornadaEstande },
+  { title: 'Produção científica', desc: 'Apresentação de trabalhos em congressos nacionais, como o 78º Congresso da Sociedade Brasileira de Dermatologia (CSBD), Rio 2025.', foto: FOTOS.producao, pos: 'center 30%' },
+  { title: 'Estande na Jornada do Lúpus', desc: 'Diálogo com a comunidade no estande do ADHAM, ao lado do GARPA, sobre lúpus, melanoma e cuidado com a pele.', foto: FOTOS.jornadaEstande, pos: 'center 60%' },
   { title: 'Cartas ao Cientista', desc: 'Ação de extensão que aproxima ciência, educação e comunidade.', foto: FOTOS.cartas },
   { title: 'Carreta Roda Hans', desc: 'Iniciativa do Ministério da Saúde; acadêmicos atuam na assistência em hanseníase em Marabá.', foto: FOTOS.carreta },
   { title: 'Estágios da LIMDERM', desc: 'Vivência prática dos acadêmicos do 6º período de Habilidades Profissionais no ambulatório.', foto: FOTOS.estagio },
@@ -240,7 +240,7 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
               {extensao.map((e) => (
                 <div key={e.title}>
-                  <PhotoPlaceholder ratio="aspect-[16/10]" src={e.foto.src} caption={e.foto.alt} />
+                  <PhotoPlaceholder ratio="aspect-[16/10]" src={e.foto.src} caption={e.foto.alt} position={e.pos} />
                   <h3 className="font-[family-name:var(--font-display)] font-semibold text-ink mt-4">{e.title}</h3>
                   <p className="text-muted text-sm mt-1.5 leading-relaxed">{e.desc}</p>
                 </div>
