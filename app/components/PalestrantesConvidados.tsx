@@ -11,6 +11,7 @@ type Palestrante = {
   instituicao: string;
   foto: string;
   curriculo: string;
+  resumo: string;
   lattes?: string;
 };
 
@@ -22,6 +23,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Presidente da Sociedade Brasileira de Hansenologia (2023–2026) · FMRP-USP',
     foto: '/palestrantes/marco-andrey.jpg',
     curriculo: 'Médico pela Universidade Federal de Juiz de Fora, Dermatologista, Doutor pela USP e pós-doutor pela Universidade de Amsterdã. Professor Titular da FMRP-USP, coordenador do Laboratório de Cicatrização e Hanseníase e do Programa de Pós-Graduação em Clínica Médica. Presidente da Sociedade Brasileira de Hansenologia (2023–2026) e membro do Conselho da International Leprosy Association (ILA). Atua em hanseníase, dermatologia, cicatrização e pesquisa translacional.',
+    resumo: 'Atua em hanseníase, dermatologia, cicatrização e pesquisa translacional. É coordenador do Laboratório de Cicatrização e Hanseníase da FMRP-USP.',
     lattes: 'http://lattes.cnpq.br/9103136155056414',
   },
   {
@@ -30,6 +32,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professor Titular da UFPA · Fundador do LDI/UFPA · Ex-presidente da SBH',
     foto: '/palestrantes/claudio-salgado.jpg',
     curriculo: 'Médico pela UEPA, Doutor em Medicina pela Universidade de Tóquio, Professor Titular da UFPA e fundador do LDI/UFPA. Referência em hanseníase, dermatologia tropical e imunologia. Ex-presidente da Sociedade Brasileira de Hansenologia, Conselheiro da International Leprosy Association (Américas) e Coordenador da Área Ciências Biológicas II da CAPES.',
+    resumo: 'Referência em hanseníase, dermatologia tropical e imunologia, atuando como Professor Titular da UFPA e fundador do LDI/UFPA.',
     lattes: 'http://lattes.cnpq.br/2310734509396125',
   },
   {
@@ -38,6 +41,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Instituto Lauro de Souza Lima (ILSL) · Aliança Contra a Hanseníase',
     foto: '/palestrantes/jaison-barreto.jpg',
     curriculo: 'Médico pela Universidade Federal de Santa Catarina, especialista em Dermatologia e Hansenologia, Doutor em Dermatologia pela USP. Médico do Instituto Lauro de Souza Lima (ILSL), preceptor da Residência Médica em Dermatologia e assessor médico da Aliança Contra a Hanseníase. Atua em Dermatologia, Dermatopatologia e Hansenologia.',
+    resumo: 'Especialista em Dermatologia e Hansenologia, atua como médico do Instituto Lauro de Souza Lima (ILSL) e assessor da Aliança Contra a Hanseníase.',
     lattes: 'http://lattes.cnpq.br/5343952256246039',
   },
   {
@@ -46,6 +50,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professora Titular da UEPA · Secretária-Geral da SBD',
     foto: '/palestrantes/regina-carneiro.jpg',
     curriculo: 'Graduada em Medicina pela Universidade Federal do Pará (1985), com especialização em Dermatologia Tropical (UFPA), Mestrado em Dermatologia e Doutorado em Medicina (Dermatologia) pela Universidade Federal de São Paulo (UNIFESP). É Professora Titular de Dermatologia da Universidade do Estado do Pará (UEPA) desde 2013, docente permanente dos programas de pós-graduação em Cirurgia Experimental e Biologia dos Agentes Parasitários da UEPA. Atua como Coordenadora e Preceptora da Residência Médica em Dermatologia da UEPA e exerce o cargo de Secretária-Geral da Sociedade Brasileira de Dermatologia. Desenvolve atividades de ensino, assistência e pesquisa com ênfase em Dermatologia Tropical, dermatoses inflamatórias e dermatologia pediátrica.',
+    resumo: 'Desenvolve atividades com ênfase em Dermatologia Tropical, dermatoses inflamatórias e dermatologia pediátrica. É Professora Titular da UEPA.',
     lattes: 'http://lattes.cnpq.br/1387234135281918',
   },
   {
@@ -54,6 +59,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professor Associado da UFPA · Coordenador do LabEE-UFPA (epidemiologia espacial)',
     foto: '/palestrantes/josafa-barreto.jpg',
     curriculo: 'Professor Associado II da Universidade Federal do Pará (UFPA), com mestrado e doutorado em Doenças Tropicais pela UFPA e doutorado sanduíche na Emory University (EUA). Atua como docente de Saúde Coletiva no Campus Castanhal e como professor permanente do Programa de Pós-Graduação em Doenças Tropicais da UFPA. Desenvolve pesquisas em epidemiologia espacial da hanseníase, com ênfase na distribuição espacial da doença, soroprevalência em municípios endêmicos e aplicação de Sistemas de Informação Geográfica (SIG) e geoprocessamento em saúde pública. É fundador e coordenador do Laboratório de Epidemiologia Espacial da UFPA (LabEE-UFPA) desde 2014, criado com financiamento do CNPq.',
+    resumo: 'Desenvolve pesquisas em epidemiologia espacial da hanseníase, com ênfase na distribuição da doença e aplicação de geoprocessamento em saúde pública.',
     lattes: 'http://lattes.cnpq.br/1894551542259862',
   },
   {
@@ -62,6 +68,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professora Titular da UEPA · Mestrado Saúde na Amazônia (UFPA/UEPA)',
     foto: '/palestrantes/marilia-brasil.jpg',
     curriculo: 'Médica dermatologista e infectologista, com doutorado pela UFPA e pós-doutorado pela FM-USP. É Professora Titular de Dermatologia da UEPA, docente da UFPA e coordenadora do Mestrado Profissional Saúde na Amazônia (UFPA/UEPA). Atua em ensino, assistência e pesquisa com ênfase em hanseníase, HIV/AIDS, leishmanioses, dermatologia tropical e epidemiologia de doenças endêmicas da Amazônia.',
+    resumo: 'Atua em ensino, assistência e pesquisa com ênfase em hanseníase, leishmanioses e epidemiologia de doenças endêmicas da Amazônia.',
     lattes: 'http://lattes.cnpq.br/0548879430701901',
   },
   {
@@ -70,6 +77,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Membro da SBD · Dermatologista da SESMA/Belém · Docente do CESUPA',
     foto: '/palestrantes/lorena-carvalho.jpg',
     curriculo: 'Médica dermatologista, mestre em andamento pela UEPA, com atuação em dermatologia clínica, cirúrgica, dermatoscopia e cosmiatria. Graduada em Medicina pela UEPA e especialista em Dermatologia pela UFPA. É membro titular da Sociedade Brasileira de Dermatologia, dermatologista da SESMA/Belém e docente de Dermatologia do CESUPA, onde coordena o ambulatório de cirurgia dermatológica.',
+    resumo: 'Com atuação em dermatologia clínica, cirúrgica, dermatoscopia e cosmiatria. É dermatologista da SESMA/Belém e docente do CESUPA.',
     lattes: 'http://lattes.cnpq.br/7517604215547189',
   },
   {
@@ -78,6 +86,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Vice-Reitora da UEPA · PPGENF e PPGESA',
     foto: '/palestrantes/ilma-pastana.jpg',
     curriculo: 'Enfermeira, mestre, doutora e pós-doutora em Enfermagem. Atualmente é Vice-Reitora da Universidade do Estado do Pará (UEPA), professora da graduação e dos programas de pós-graduação em Enfermagem (PPGENF) e Ensino na Saúde na Amazônia (PPGESA). Possui experiência em enfermagem cirúrgica, controle de infecções, gestão em saúde e educação em enfermagem, tendo ocupado cargos de destaque na UEPA e na Associação Brasileira de Enfermagem (ABEn), com relevante atuação no ensino, na pesquisa e na gestão acadêmica.',
+    resumo: 'Possui experiência em enfermagem cirúrgica, controle de infecções, gestão em saúde e educação em enfermagem. Atualmente é Vice-Reitora da UEPA.',
     lattes: 'http://lattes.cnpq.br/1650337093024641',
   },
   {
@@ -86,6 +95,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professor da UNIFESSPA · Coordenador do Curso de Medicina',
     foto: '/palestrantes/luann-wendel.jpg',
     curriculo: 'Farmacêutico, doutor em Inovação Farmacêutica e mestre em Ciências Farmacêuticas pela UFPA, com pós-doutorado em Doenças Tropicais pelo Núcleo de Medicina Tropical da UFPA. É Professor Adjunto e Pesquisador da UNIFESSPA, Coordenador da Faculdade de Medicina e do Curso de Medicina, além de coordenador do Programa de Pós-Graduação em Saúde da Família. Atua em pesquisa nas áreas de doenças tropicais e negligenciadas, assistência farmacêutica, farmacologia clínica, farmacogenômica e saúde coletiva, com produção científica e orientação em programas de pós-graduação.',
+    resumo: 'Atua em pesquisa nas áreas de doenças tropicais e negligenciadas, assistência farmacêutica, farmacologia clínica e saúde coletiva.',
     lattes: 'http://lattes.cnpq.br/6233488431016391',
   },
   {
@@ -94,6 +104,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professor da UEPA · Bolsista de produtividade do CNPq',
     foto: '/palestrantes/anderson-bentes.jpg',
     curriculo: 'Farmacêutico graduado pela Universidade Federal do Pará (UFPA), com Mestrado em Ciências Farmacêuticas e Doutorado em Biotecnologia pela UFPA. É Professor Adjunto da Universidade do Estado do Pará (UEPA) e coordenador do Programa de Pós-Graduação Profissional em Cirurgia e Pesquisa Experimental. Atua em pesquisa nas áreas de Farmacologia Experimental, plantas medicinais, drogas sintéticas e tecnologias em saúde, sendo coordenador de laboratório de pesquisa e membro da Sociedade Brasileira de Farmacologia e Terapêutica Experimental. É bolsista de produtividade do CNPq.',
+    resumo: 'Atua em pesquisa nas áreas de Farmacologia Experimental, plantas medicinais, drogas sintéticas e tecnologias em saúde.',
     lattes: 'http://lattes.cnpq.br/3455183793812931',
   },
 ];
@@ -152,8 +163,8 @@ export default function PalestrantesConvidados() {
                   </h3>
                   <p className="text-brand-strong text-sm font-semibold mt-1.5 leading-snug">{p.titulo}</p>
                   <p className="text-muted text-sm mt-1.5 leading-snug">{p.instituicao}</p>
-                  <p className="text-ink-soft text-[0.8rem] mt-3 leading-relaxed line-clamp-4 flex-1">
-                    {p.curriculo}
+                  <p className="text-ink-soft text-[0.8rem] mt-3 leading-relaxed flex-1">
+                    {p.resumo}
                   </p>
                   
                   <div className="mt-4 pt-3 border-t border-line text-sm text-brand-strong font-semibold flex items-center justify-between">
