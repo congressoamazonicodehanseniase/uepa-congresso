@@ -52,6 +52,7 @@ export const LOCAIS = {
   congresso: {
     rotulo: 'Congresso Científico · 28 e 29 de agosto',
     nome: 'Carajás Centro de Convenções – Leonildo Borges Rocha',
+    desc: 'O espaço será o auditório do Carajás Centro de Convenções, com capacidade para 522 pessoas.',
     endereco: 'BR-222 – Vila Militar Presidente Médici – Marabá/PA',
     mapsQuery: 'Carajás Centro de Convenções Leonildo Borges Rocha Marabá',
     fotos: ['https://carajasconvencoes.com.br/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-14-at-11.06.07.jpeg'],

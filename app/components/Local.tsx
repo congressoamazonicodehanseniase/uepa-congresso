@@ -65,6 +65,11 @@ export default function Local() {
                       <h3 className="font-[family-name:var(--font-display)] font-bold text-ink text-sm sm:text-base mt-0.5 leading-snug">
                         {venue.nome}
                       </h3>
+                      {'desc' in venue && (
+                        <p className="text-ink-soft text-xs mt-1 leading-relaxed">
+                          {venue.desc}
+                        </p>
+                      )}
                       <p className="text-muted text-xs mt-1 leading-snug">{venue.endereco}</p>
                     </div>
                   </div>
