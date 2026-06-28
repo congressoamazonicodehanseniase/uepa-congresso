@@ -3,9 +3,7 @@ import { LeafMark } from './Decor';
 import { LOGO_POR_NOME } from '../lib/parceiros';
 
 const grupos = [
-  { titulo: 'Realização', parceiros: ['ADHAM', 'UEPA', 'LIMDERM', 'CIPE'] },
-  { titulo: 'Apoio científico', parceiros: ['CNPq', 'SBH'] },
-  { titulo: 'Apoio institucional', parceiros: ['SMS Marabá', 'SESPA', 'UNIACESSE'] },
+  { titulo: 'Realização', parceiros: ['ADHAM', 'UEPA', 'LIMDERM'] },
 ];
 
 export default function Patrocinadores() {
