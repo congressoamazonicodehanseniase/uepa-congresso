@@ -4,8 +4,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PhotoPlaceholder from './components/PhotoPlaceholder';
 import GaleriaImpacto from './components/GaleriaImpacto';
-import { CONTATO, REDES, RESPONSAVEL, CONGRESSO } from './lib/config';
+import { CONTATO, REDES, RESPONSAVEL, CONGRESSO, INSCRICAO_URL } from './lib/config';
 import { FOTOS } from './lib/fotos';
+import { PARCEIROS } from './lib/parceiros';
 import { MapPin, Mail, AtSign, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -57,11 +58,9 @@ const reconhecimentos = [
 
 const visao = [
   { title: 'Referência na Amazônia Legal', desc: 'Consolidar-se como centro de referência em assistência, ensino, pesquisa e extensão.' },
-  { title: 'Residência Médica de Dermatologia', desc: 'Criação de programa de residência médica em dermatologia.' },
+  { title: 'Cursos em Dermatologia e Hanseníase', desc: 'Criação de programa de residência médica em dermatologia.' },
   { title: 'Congresso Amazônico bienal', desc: 'Consolidar o congresso como espaço permanente de atualização e pesquisa.' },
 ];
-
-const parceiros = ['UEPA', 'LIMDERM', 'CIPE', 'CNPq', 'SBH', 'SMS Marabá', 'SESPA', 'UNIACESSE'];
 
 export default function Home() {
   return (
@@ -75,7 +74,7 @@ export default function Home() {
             <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-end mt-8">
               <div className="lg:col-span-8">
                 <h1 className="display text-ink" style={{ fontSize: 'clamp(2.4rem, 6.5vw, 5.2rem)' }}>
-                  Ambulatório de Dermatologia e <span className="text-brand-strong">Hanseníase</span> da Amazônia
+                  Ambulatório de Dermatologia e <span className="text-brand-strong mark">Hanseníase</span> da Amazônia
                 </h1>
               </div>
               <div className="lg:col-span-4">
@@ -89,9 +88,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="mt-12">
-              <PhotoPlaceholder ratio="aspect-[21/9]" priority src={FOTOS.hero.src} caption={FOTOS.hero.alt} position="center top" />
-            </div>
+            <figure className="mt-12">
+              <PhotoPlaceholder ratio="aspect-[16/9]" priority src={FOTOS.fachada.src} caption={FOTOS.fachada.alt} position="center 40%" />
+              <figcaption className="figcaption mt-3 flex items-center gap-2">
+                <span className="inline-block w-6 h-px bg-brand-strong" />
+                {FOTOS.fachada.alt}
+              </figcaption>
+            </figure>
           </div>
         </section>
 
@@ -109,7 +112,7 @@ export default function Home() {
         </section>
 
         {/* Quem somos + Nossa história */}
-        <section id="sobre" className="py-24 bg-surface">
+        <section id="sobre" className="py-16 sm:py-24 bg-surface">
           <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-6">
               <p className="rule-label mb-7">Quem somos</p>
@@ -127,7 +130,7 @@ export default function Home() {
                 pesquisa e extensão.
               </p>
               <div className="relative mt-8">
-                <PhotoPlaceholder ratio="aspect-[16/10]" src={FOTOS.inauguracao.src} caption={FOTOS.inauguracao.alt} />
+                <PhotoPlaceholder ratio="aspect-[16/10]" src={FOTOS.fachada.src} caption={FOTOS.fachada.alt} />
               </div>
             </div>
 
@@ -148,7 +151,7 @@ export default function Home() {
         </section>
 
         {/* A hanseníase na Amazônia — manifesto */}
-        <section className="py-24 bg-brand-darker text-white">
+        <section className="py-16 sm:py-24 bg-brand-darker text-white">
           <div className="max-w-5xl mx-auto px-6">
             <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.28em] uppercase text-brand-light mb-8">A hanseníase na Amazônia</p>
             <p className="display leading-[1.1]" style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>
@@ -160,7 +163,7 @@ export default function Home() {
         </section>
 
         {/* Impacto e trajetória */}
-        <section id="impacto" className="py-24 bg-surface">
+        <section id="impacto" className="py-16 sm:py-24 bg-surface">
           <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5">
               <p className="rule-label mb-7">Impacto e trajetória</p>
@@ -181,7 +184,7 @@ export default function Home() {
         </section>
 
         {/* Pilares — numerado editorial */}
-        <section id="atuacao" className="py-24 bg-canvas">
+        <section id="atuacao" className="py-16 sm:py-24 bg-canvas">
           <div className="max-w-6xl mx-auto px-6">
             <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
               <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
@@ -204,7 +207,7 @@ export default function Home() {
         </section>
 
         {/* Extensão */}
-        <section className="py-24 bg-surface">
+        <section className="py-16 sm:py-24 bg-surface">
           <div className="max-w-6xl mx-auto px-6">
             <p className="rule-label mb-10">Extensão e comunidade · Ciência que chega à população</p>
             <div className="grid md:grid-cols-3 gap-x-10 gap-y-8">
@@ -220,7 +223,7 @@ export default function Home() {
         </section>
 
         {/* Reconhecimentos + Visão */}
-        <section className="py-24 bg-canvas">
+        <section className="py-16 sm:py-24 bg-canvas">
           <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
             <div>
               <p className="rule-label mb-8">Reconhecimento</p>
@@ -251,7 +254,7 @@ export default function Home() {
         </section>
 
         {/* Congresso — destaque */}
-        <section id="congresso" className="py-24 bg-surface">
+        <section id="congresso" className="py-16 sm:py-24 bg-surface">
           <div className="max-w-6xl mx-auto px-6">
             <div className="rounded-2xl bg-brand-darker overflow-hidden grid lg:grid-cols-2">
               <div className="p-10 md:p-14">
@@ -268,7 +271,7 @@ export default function Home() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link href="/congresso" className="btn btn-white">Ver o congresso</Link>
-                  <Link href="/congresso#inscricoes" className="btn btn-ghost-light">Inscrições</Link>
+                  <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost-light">Inscrições</a>
                 </div>
               </div>
               <PhotoPlaceholder ratio="min-h-[18rem] lg:min-h-full" src={FOTOS.evento.src} caption={FOTOS.evento.alt} className="m-6 lg:m-8" />
@@ -277,7 +280,7 @@ export default function Home() {
         </section>
 
         {/* Apoiadores */}
-        <section id="apoiadores" className="py-24 bg-canvas border-t border-line">
+        <section id="apoiadores" className="py-16 sm:py-24 bg-canvas border-t border-line">
           <div className="max-w-5xl mx-auto px-6">
             <div className="max-w-2xl mb-12">
               <p className="rule-label mb-7">Apoiadores e parceiros</p>
@@ -287,17 +290,31 @@ export default function Home() {
                 gestão pública e organizações científicas.
               </p>
             </div>
-            <div className="flex flex-wrap gap-x-10 gap-y-4">
-              {parceiros.map((p) => (
-                <span key={p} className="font-[family-name:var(--font-display)] font-bold text-ink text-xl">{p}</span>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-10 items-center">
+              {PARCEIROS.map((p) =>
+                p.logo ? (
+                  <div key={p.nome} className="flex items-center justify-center h-16">
+                    <img
+                      src={p.logo}
+                      alt={p.nome}
+                      title={p.nome}
+                      loading="lazy"
+                      className="max-h-16 max-w-[85%] w-auto object-contain transition-all duration-300 ease-out hover:-translate-y-1"
+                    />
+                  </div>
+                ) : (
+                  <div key={p.nome} className="flex items-center justify-center h-16">
+                    <span className="font-[family-name:var(--font-display)] font-bold text-muted text-lg transition-colors hover:text-brand-strong">{p.nome}</span>
+                  </div>
+                ),
+              )}
             </div>
-            <p className="text-muted text-xs mt-6">Logotipos oficiais serão adicionados em breve.</p>
+            <p className="text-muted text-xs mt-8">Passe o mouse para ver em cores. CIPE: logotipo em breve.</p>
           </div>
         </section>
 
         {/* Contato + Responsável */}
-        <section id="contato" className="py-24 bg-surface border-t border-line">
+        <section id="contato" className="py-16 sm:py-24 bg-surface border-t border-line">
           <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <p className="rule-label mb-7">Contato e localização</p>
@@ -322,22 +339,36 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-7">
-              <div className="rounded-2xl bg-brand-darker text-white p-8 md:p-10 grid sm:grid-cols-[auto_1fr] gap-8 items-start">
-                <PhotoPlaceholder ratio="aspect-square" src={FOTOS.dyana.src} caption={FOTOS.dyana.alt} position="center top" className="w-32 sm:w-36" />
-                <div>
-                  <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.18em] uppercase text-brand-light">Responsável Técnica</p>
-                  <h3 className="display text-white mt-2" style={{ fontSize: 'clamp(1.4rem, 2.4vw, 1.9rem)' }}>{RESPONSAVEL.nome}</h3>
-                  <p className="text-brand-faint mt-1">{RESPONSAVEL.titulo}</p>
-                  <p className="text-brand-light text-sm mt-3 font-medium">{RESPONSAVEL.registro}</p>
-                  <p className="text-brand-faint text-sm mt-4 leading-relaxed">
-                    Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e
-                    orientadora da LIMDERM. Membro da SBH, SBD, SBCD, GBM e SBC. Idealizadora do ADHAM e
-                    Coordenação Geral e Científica do I Congresso Amazônico de Hanseníase.
-                  </p>
+            <div className="lg:col-span-7 flex flex-col gap-6">
+              {/* Fotos UEPA + Ambulatório, lado a lado */}
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                <figure className="rounded-2xl overflow-hidden">
+                  <img
+                    src="/foto.uepa.jpeg"
+                    alt="Entrada da Universidade do Estado do Pará – Campus Universitário de Marabá"
+                    className="w-full h-40 sm:h-52 object-cover object-center"
+                  />
+                </figure>
+                <figure className="rounded-2xl overflow-hidden">
+                  <img
+                    src={FOTOS.fachada.src}
+                    alt={FOTOS.fachada.alt}
+                    className="w-full h-40 sm:h-52 object-cover object-top"
+                  />
+                </figure>
+              </div>
+
+              {/* Responsável técnica — compacto */}
+              <div className="rounded-2xl bg-brand-darker text-white px-6 py-5 flex items-center gap-5">
+                <PhotoPlaceholder ratio="aspect-square" src={FOTOS.dyana.src} caption={FOTOS.dyana.alt} position="center top" className="w-14 shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-[0.65rem] font-semibold tracking-[0.18em] uppercase text-brand-light">Responsável Técnica</p>
+                  <p className="font-[family-name:var(--font-display)] font-bold text-white text-base leading-snug mt-0.5">{RESPONSAVEL.nome}</p>
+                  <p className="text-brand-faint text-xs mt-0.5">{RESPONSAVEL.titulo} · {RESPONSAVEL.registro}</p>
                 </div>
               </div>
-              <div className="mt-6 flex flex-wrap gap-4">
+
+              <div className="flex flex-wrap gap-4">
                 <Link href="/congresso" className="btn btn-primary">Conheça o Congresso 2026 <ArrowRight size={16} /></Link>
                 <a href="#topo" className="btn btn-outline">Voltar ao topo</a>
               </div>

@@ -263,7 +263,7 @@ body {
   font-size: clamp(2.4rem, 6vw, 4.5rem);
   line-height: 1;
   letter-spacing: -0.04em;
-  color: var(--color-brand-tint);
+  color: var(--color-brand);
 }
 
 /* Texto vazado/contorno (sobre fundos escuros) */
@@ -272,6 +272,25 @@ body {
   font-weight: 800;
   color: transparent;
   -webkit-text-stroke: 1.5px var(--color-brand-edge);
+}
+
+/* Acabamento editorial: equilíbrio das quebras de linha (evita linhas órfãs/ragged) */
+h1, h2, h3, .display, .section-title { text-wrap: balance; }
+p, li, blockquote { text-wrap: pretty; }
+
+/* Marcador de destaque em palavra-chave (sublinhado-realce sutil, feito à mão) */
+.mark {
+  background-image: linear-gradient(transparent 76%, var(--color-brand-tint) 76%, var(--color-brand-tint) 94%, transparent 94%);
+  background-repeat: no-repeat;
+  padding-inline: 0.06em;
+}
+
+/* Legenda editorial de foto */
+.figcaption {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  font-style: italic;
+  line-height: 1.5;
 }
 
 /* Linha de cabeçalho editorial: rótulo + traço fino que ocupa o resto */

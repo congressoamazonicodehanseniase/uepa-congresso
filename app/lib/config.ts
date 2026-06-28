@@ -12,6 +12,10 @@ export const CONGRESSO = {
   apoio: 'Apoio CNPq',
 } as const;
 
+// Inscrições e submissão de trabalhos acontecem na página oficial do evento no Even3.
+// ⚠️ SUBSTITUA pela URL real da página do evento no Even3 antes de publicar.
+export const INSCRICAO_URL = 'https://www.even3.com.br/';
+
 export const CONTATO = {
   // Telefone/WhatsApp institucional ainda a definir (a adquirir).
   telefone: 'A definir',

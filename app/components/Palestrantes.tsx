@@ -1,5 +1,4 @@
 import PhotoPlaceholder from './PhotoPlaceholder';
-import { LeafMark } from './Decor';
 import { FOTOS } from '../lib/fotos';
 
 const coordenacao = [
@@ -21,44 +20,45 @@ const coordenacao = [
 
 export default function Palestrantes() {
   return (
-    <section id="palestrantes" className="py-24 bg-surface">
+    <section id="palestrantes" className="py-12 sm:py-16 bg-surface">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-14">
-          <p className="rule-label mb-7">Coordenação científica</p>
-          <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
-            Quem conduz<br />o congresso
+        <div className="mb-8">
+          <p className="rule-label mb-4">Coordenação científica</p>
+          <h2
+            className="font-[family-name:var(--font-display)] font-bold text-ink leading-tight"
+            style={{ fontSize: 'clamp(1.35rem, 2.6vw, 1.9rem)' }}
+          >
+            Quem conduz o congresso
           </h2>
         </div>
 
-        <div className="space-y-12">
+        <div className="grid md:grid-cols-2 gap-5 lg:gap-7">
           {coordenacao.map((s, i) => (
-            <div
-              key={s.name}
-              className={`grid md:grid-cols-12 gap-6 md:gap-10 items-center ${i % 2 ? 'md:[direction:rtl]' : ''}`}
-            >
-              <div className="md:col-span-4 [direction:ltr]">
-                <div className="relative max-w-[16rem]">
-                  <PhotoPlaceholder ratio="aspect-[4/5]" src={s.foto.src} caption={s.foto.alt} position="center top" />
-                  <LeafMark className={`absolute w-16 text-brand-tint ${i % 2 ? '-bottom-6 -left-6 rotate-12' : '-bottom-6 -right-6 -rotate-12'}`} />
-                </div>
+            <div key={s.name} className="flex gap-4 rounded-xl border border-line bg-canvas p-4 sm:p-5">
+              <div className="w-20 sm:w-24 shrink-0">
+                <PhotoPlaceholder ratio="aspect-[4/5]" src={s.foto.src} caption={s.foto.alt} position="center top" />
               </div>
-              <div className="md:col-span-8 [direction:ltr]">
-                <span className="index-num">{String(i + 1).padStart(2, '0')}</span>
-                <h3 className="display text-ink mt-1" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)' }}>{s.name}</h3>
-                <p className="text-brand-strong font-semibold mt-2">{s.role}</p>
-                <p className="text-muted text-sm mt-1">{s.institution}</p>
-                <p className="text-ink-soft mt-4 leading-relaxed max-w-xl">{s.bio}</p>
+              <div className="min-w-0">
+                <span className="font-[family-name:var(--font-display)] font-bold text-brand-strong text-xs">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-ink text-base leading-snug mt-0.5">
+                  {s.name}
+                </h3>
+                <p className="text-brand-strong font-semibold text-sm mt-1">{s.role}</p>
+                <p className="text-muted text-xs mt-0.5">{s.institution}</p>
+                <p className="text-ink-soft text-sm mt-2.5 leading-relaxed">{s.bio}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <blockquote className="mt-16 border-l-4 border-brand-strong pl-6 max-w-3xl">
-          <p className="font-[family-name:var(--font-display)] text-xl md:text-2xl text-ink leading-snug italic">
+        <blockquote className="mt-8 border-l-2 border-brand-strong pl-4 max-w-2xl">
+          <p className="font-[family-name:var(--font-display)] text-base text-ink leading-snug italic">
             “Com a participação de especialistas nacionais vinculados à Sociedade Brasileira de
             Dermatologia e à Sociedade Brasileira de Hansenologia.”
           </p>
-          <footer className="text-muted text-sm mt-3">Os nomes e convidados serão anunciados em breve.</footer>
+          <footer className="text-muted text-xs mt-2">Os nomes e convidados serão anunciados em breve.</footer>
         </blockquote>
       </div>
     </section>

@@ -6,7 +6,7 @@ const b = '/fotos/';
 export const FOTOS = {
   // Institucional
   hero:        { src: b + 'p02a.jpg', alt: 'Equipe do ADHAM: docentes, gestores e acadêmicos da UEPA Campus VIII' },
-  fachada:     { src: b + 'p00a.jpg', alt: 'Fachada do Ambulatório de Dermatologia e Hanseníase da Amazônia' },
+  fachada:     { src: b + 'fachada-ambulatorio.jpg', alt: 'Fachada do Ambulatório de Dermatologia e Hanseníase da Amazônia' },
   inauguracao: { src: b + 'p01a.jpg', alt: 'Marco inaugural do ADHAM, com docentes, gestores e acadêmicos da UEPA Campus VIII' },
   academicos:  { src: b + 'p03a.jpg', alt: 'Inauguração do ADHAM com a Dra. Dyana Melkys e acadêmicos da UEPA' },
 

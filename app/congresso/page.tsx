@@ -5,6 +5,7 @@ import Stats from '../components/Stats';
 import Sobre from '../components/Sobre';
 import Programacao from '../components/Programacao';
 import Palestrantes from '../components/Palestrantes';
+import PalestrantesConvidados from '../components/PalestrantesConvidados';
 import Local from '../components/Local';
 import Inscricoes from '../components/Inscricoes';
 import Patrocinadores from '../components/Patrocinadores';
@@ -30,10 +31,11 @@ export default function CongressoPage() {
         <Hero />
         <Stats />
         <Sobre />
+        <Inscricoes />
         <Programacao />
         <Palestrantes />
+        <PalestrantesConvidados />
         <Local />
-        <Inscricoes />
         <Patrocinadores />
       </main>
       <Footer />

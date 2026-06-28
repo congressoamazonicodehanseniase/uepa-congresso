@@ -1,70 +1,103 @@
-import { LeafMark, WaveBottom } from './Decor';
-import { CONGRESSO, LOCAIS } from '../lib/config';
+import { CONGRESSO, LOCAIS, INSCRICAO_URL } from '../lib/config';
+
+const dias = [
+  { d: '27', w: 'Quinta' },
+  { d: '28', w: 'Sexta' },
+  { d: '29', w: 'Sábado' },
+];
+
+const provas = [
+  'Certificado com carga horária',
+  'Especialistas SBH e SBD',
+  'Apoio CNPq',
+];
 
 export default function Hero() {
   return (
-    <section id="topo" className="relative overflow-hidden bg-brand-darker text-white pt-32 pb-36 lg:pt-40">
-      {/* Decoração orgânica */}
-      <LeafMark className="absolute -top-10 -right-10 w-72 text-brand-panel rotate-[18deg] pointer-events-none" />
-      <LeafMark className="absolute bottom-24 -left-16 w-56 text-brand-panel -rotate-[24deg] pointer-events-none" />
-      <LeafMark className="absolute top-44 right-1/3 w-14 text-brand-panel rotate-[35deg] pointer-events-none hidden lg:block" />
+    <section
+      id="topo"
+      className="relative bg-brand-darker text-white pt-28 pb-20 sm:pt-32 lg:pt-40 lg:pb-24"
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Mensagem de venda */}
+          <div className="lg:col-span-7">
+            <p className="flex items-center gap-3 font-[family-name:var(--font-display)] text-xs sm:text-sm tracking-[0.26em] uppercase text-brand-light">
+              <span className="w-8 h-px bg-brand-edge" />
+              {CONGRESSO.edicao} Edição · Bienal · Marabá, PA
+            </p>
+            <h1 className="display mt-5 text-white" style={{ fontSize: 'clamp(2.4rem, 6vw, 4.6rem)' }}>
+              Congresso <span className="text-brand-light italic">Amazônico</span> de Hanseníase
+            </h1>
+            <p className="mt-6 text-base sm:text-lg text-brand-faint leading-relaxed max-w-xl">
+              Três dias de atualização científica com especialistas nacionais, certificação,
+              apresentação de trabalhos e networking para quem atua na linha de frente da
+              hanseníase na Amazônia.
+            </p>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-10 items-center">
-        <div className="lg:col-span-7">
-          <img
-            src="/logo-congresso.png"
-            alt="I Congresso Amazônico de Hanseníase"
-            className="h-28 sm:h-32 w-auto mb-7"
-          />
-          <p className="font-[family-name:var(--font-display)] text-sm tracking-[0.3em] uppercase text-brand-light">
-            {CONGRESSO.edicao} Congresso · Bienal · Marabá, PA
-          </p>
+            {/* Prova social — linha editorial, sem ícones genéricos */}
+            <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-brand-faint">
+              {provas.map((p, i) => (
+                <span key={p} className="flex items-center gap-3">
+                  {i > 0 && <span className="text-brand-edge">·</span>}
+                  <span>{p}</span>
+                </span>
+              ))}
+            </p>
 
-          <h1 className="display mt-6 text-white" style={{ fontSize: 'clamp(2.8rem, 7vw, 6rem)' }}>
-            Congresso<br />
-            <span className="text-brand-light italic">Amazônico</span><br />
-            de Hanseníase
-          </h1>
-
-          <p className="mt-8 text-lg md:text-xl text-brand-faint leading-relaxed max-w-lg">
-            Ciência, clínica e comunidade reunidas para transformar o enfrentamento
-            da hanseníase na Amazônia. Uma realização do ADHAM, com apoio do CNPq.
-          </p>
-
-          <div className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-brand-faint">
-            <span className="text-white font-semibold">{CONGRESSO.datasLabel}</span>
-            <span className="text-brand-edge">/</span>
-            <span>{LOCAIS.congresso.nome.split('–')[0].trim()}</span>
-            <span className="text-brand-edge">/</span>
-            <span>{CONGRESSO.apoio}</span>
-          </div>
-
-          <div className="mt-9 flex flex-wrap gap-3">
-            <a href="#inscricoes" className="btn btn-white">Inscreva-se</a>
-            <a href="#programacao" className="btn btn-ghost-light">Ver programação</a>
-          </div>
-        </div>
-
-        {/* Data como peça gráfica */}
-        <div className="lg:col-span-5">
-          <div className="relative mx-auto max-w-sm">
-            <div className="border border-brand-edge rounded-[2rem] p-10 text-center bg-brand-panel">
-              <p className="font-[family-name:var(--font-display)] text-brand-light tracking-[0.3em] uppercase text-xs">Agosto · 2026</p>
-              <div className="mt-4 flex items-end justify-center gap-3 leading-none">
-                <span className="display text-white" style={{ fontSize: 'clamp(3.5rem,9vw,6rem)' }}>27</span>
-                <span className="display outline-text" style={{ fontSize: 'clamp(3.5rem,9vw,6rem)', WebkitTextStroke: '2px var(--color-brand-light)' }}>28</span>
-                <span className="display text-brand-light" style={{ fontSize: 'clamp(3.5rem,9vw,6rem)' }}>29</span>
-              </div>
-              <p className="mt-5 text-brand-faint text-sm border-t border-brand-edge pt-5">
-                Quinta · Sexta · Sábado<br />Marabá, Pará, Brasil
-              </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white">Garantir minha vaga</a>
+              <a href="#programacao" className="btn btn-ghost-light">Ver programação</a>
             </div>
-            <LeafMark className="absolute -bottom-8 -right-6 w-24 text-brand-light rotate-12" />
+
+            {/* Urgência real */}
+            <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+              <span className="inline-flex items-center gap-2 text-brand-light font-semibold">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-light" />
+                Ligantes: gratuidade até 05/07
+              </span>
+              <span className="text-brand-edge">·</span>
+              <span className="text-brand-faint">Submissão de trabalhos até 11/07</span>
+            </p>
+          </div>
+
+          {/* Card de datas e local — âncora de conversão */}
+          <div className="lg:col-span-5">
+            <div className="rounded-[1.75rem] border border-brand-edge bg-brand-panel p-8 sm:p-9">
+              <p className="flex items-center gap-3 font-[family-name:var(--font-display)] text-brand-light text-[0.7rem] uppercase tracking-[0.28em]">
+                Agosto 2026
+                <span className="flex-1 h-px bg-brand-edge" />
+              </p>
+              <div className="mt-6 flex items-stretch">
+                {dias.map((x, i) => (
+                  <div
+                    key={x.d}
+                    className={`flex-1 text-center ${i > 0 ? 'border-l border-brand-edge' : ''}`}
+                  >
+                    <span
+                      className="display block text-white tabular-nums"
+                      style={{ fontSize: 'clamp(2.9rem, 8vw, 4.4rem)', lineHeight: 0.82, letterSpacing: '-0.045em' }}
+                    >
+                      {x.d}
+                    </span>
+                    <span className="mt-3 block text-brand-light text-[0.6rem] font-semibold uppercase tracking-[0.24em]">
+                      {x.w}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-7 pt-6 border-t border-brand-edge text-sm leading-relaxed">
+                <p className="text-white font-semibold">Marabá, Pará · Brasil</p>
+                <p className="text-brand-faint mt-0.5">{LOCAIS.congresso.nome}</p>
+                <p className="text-brand-light mt-0.5">{CONGRESSO.apoio} · Bienal</p>
+              </div>
+              <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white w-full mt-7">
+                Quero me inscrever
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
-      <WaveBottom className="absolute bottom-0 left-0 w-full h-20 text-canvas" />
     </section>
   );
 }

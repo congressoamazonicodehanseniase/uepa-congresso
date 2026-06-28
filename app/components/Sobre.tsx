@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import PhotoPlaceholder from './PhotoPlaceholder';
 import { LeafMark } from './Decor';
-import { CONGRESSO } from '../lib/config';
+import { CONGRESSO, INSCRICAO_URL } from '../lib/config';
 import { FOTOS } from '../lib/fotos';
 
 const eixos = [
@@ -21,7 +21,7 @@ const ficha = [
 
 export default function Sobre() {
   return (
-    <section id="sobre" className="py-24 bg-surface">
+    <section id="sobre" className="py-16 sm:py-24 bg-surface">
       <div className="max-w-6xl mx-auto px-6">
         {/* Abertura editorial assimétrica */}
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
@@ -73,6 +73,60 @@ export default function Sobre() {
               <p className="text-muted text-sm mt-1.5 leading-relaxed">{e.desc}</p>
             </div>
           ))}
+        </div>
+
+        {/* Por que participar */}
+        <div className="mt-24 rounded-3xl bg-brand-darker text-white px-8 py-12 sm:px-12 sm:py-14">
+          <div className="max-w-xl mb-12">
+            <p className="rule-label mb-6 text-brand-light">Por que participar</p>
+            <h2 className="display text-white" style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>
+              O que você leva<br />do congresso
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                n: '01',
+                title: 'Certificado com carga horária',
+                desc: 'Documento oficial emitido aos participantes, com carga horária válida para atualização curricular e requisitos de educação continuada.',
+              },
+              {
+                n: '02',
+                title: 'Especialistas nacionais',
+                desc: 'Palestras e mesas com profissionais vinculados à Sociedade Brasileira de Hansenologia, SBD e FIOCRUZ — referências nacionais na área.',
+              },
+              {
+                n: '03',
+                title: 'Apresentação de trabalhos',
+                desc: 'Submita seu trabalho científico, apresente-o e receba certificação específica. Submissões abertas até 11/07/2026.',
+              },
+              {
+                n: '04',
+                title: 'Capacitações práticas',
+                desc: 'Dia 27/08 dedicado a oficinas e capacitações técnicas para profissionais e estudantes, na UEPA.',
+              },
+              {
+                n: '05',
+                title: 'Rede científica amazônica',
+                desc: 'Conecte-se a pesquisadores, gestores e clínicos que atuam na Amazônia Legal — um espaço único de intercâmbio na região.',
+              },
+              {
+                n: '06',
+                title: 'Apoio CNPq',
+                desc: 'Evento bienal com suporte do Conselho Nacional de Desenvolvimento Científico e Tecnológico — legitimidade científica reconhecida.',
+              },
+            ].map((b) => (
+              <div key={b.n} className="border-t border-brand-edge pt-5">
+                <span className="index-num text-brand-light block">{b.n}</span>
+                <h3 className="font-[family-name:var(--font-display)] font-semibold text-white text-base mt-2 leading-snug">{b.title}</h3>
+                <p className="text-brand-faint text-sm mt-2 leading-relaxed">{b.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 pt-8 border-t border-brand-edge flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white">Garantir minha vaga agora</a>
+            <p className="text-brand-faint text-sm">Quanto antes, menor o valor — o 1º lote tem o menor preço.</p>
+          </div>
         </div>
       </div>
     </section>

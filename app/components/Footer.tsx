@@ -23,18 +23,18 @@ export default function Footer() {
       <LeafMark className="leaf-congresso pointer-events-none absolute -top-12 -right-10 w-56 text-brand-panel rotate-[25deg]" />
       <LeafMark className="leaf-congresso pointer-events-none absolute bottom-2 -left-14 w-44 text-brand-panel -rotate-[18deg]" />
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-4 gap-10 mb-12">
-          <div className="md:col-span-2">
-            <div className="mb-6">
+        <div className="grid md:grid-cols-12 gap-10 gap-y-12 mb-12">
+          <div className="md:col-span-5">
+            <div className="mb-6 flex flex-wrap items-center gap-5">
               <img
-                src="/llogoo.png"
+                src="/adham-icon.png"
                 alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
-                className="adham-only h-16 w-auto object-contain bg-white rounded-xl p-2.5"
+                className="h-20 w-auto object-contain"
               />
               <img
-                src="/logo-congresso.png"
-                alt="I Congresso Amazônico de Hanseníase"
-                className="cong-only h-28 w-auto object-contain"
+                src="/parceiros/uepa.png"
+                alt="Universidade do Estado do Pará"
+                className="h-14 w-auto object-contain"
               />
             </div>
             <p className="text-sm leading-relaxed mb-5 max-w-sm">
@@ -58,8 +58,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h4 className="text-white font-[family-name:var(--font-display)] font-semibold text-sm mb-5">Navegação</h4>
+          <div className="md:col-span-3">
+            <h4 className="text-white font-[family-name:var(--font-display)] font-semibold text-xs uppercase tracking-[0.18em] mb-5">Navegação</h4>
             <ul className="space-y-2.5">
               {navLinks.map((item) => (
                 <li key={item.label}>
@@ -69,8 +69,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-white font-[family-name:var(--font-display)] font-semibold text-sm mb-5">Contato</h4>
+          <div className="md:col-span-4">
+            <h4 className="text-white font-[family-name:var(--font-display)] font-semibold text-xs uppercase tracking-[0.18em] mb-5">Contato</h4>
             <div className="space-y-3">
               <a href={`mailto:${CONTATO.email}`} className="flex items-start gap-2.5 text-sm hover:text-brand-light transition-colors break-words">
                 <Mail size={14} className="flex-shrink-0 mt-0.5" />

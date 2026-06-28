@@ -1,8 +1,5 @@
-'use client';
-
-import { useState, type FormEvent, type ChangeEvent } from 'react';
-import { CheckCircle2, FileText, Clock } from 'lucide-react';
-import { CONTATO, INSCRICOES_INFO } from '../lib/config';
+import { FileText, Clock, ArrowUpRight } from 'lucide-react';
+import { CONTATO, INSCRICOES_INFO, INSCRICAO_URL } from '../lib/config';
 
 const tabela = [
   {
@@ -33,42 +30,39 @@ const tabela = [
 ];
 
 const faqs = [
-  { q: 'Como faço a inscrição?', a: 'A inscrição será feita pela plataforma oficial. O link, o período por lote e os documentos serão divulgados pelos canais oficiais.' },
+  { q: 'Como faço a inscrição?', a: 'A inscrição é feita pela plataforma oficial do evento no Even3. Clique em “Inscrever-se” e conclua por lá; o período por lote e os documentos constam na própria página.' },
   { q: 'Haverá certificado?', a: 'Sim. O certificado com carga horária será emitido aos participantes; os critérios serão informados na confirmação.' },
   { q: 'Como submeter trabalhos?', a: `As submissões vão de ${INSCRICOES_INFO.submissaoPeriodo}. Normas, áreas temáticas, formato e certificação constarão no edital.` },
   { q: 'Como entro em contato?', a: `Pelo e-mail ${CONTATO.email} ou pelas redes sociais oficiais do congresso.` },
 ];
 
-type FormData = { nome: string; email: string; registro: string; categoria: string };
-
-const inputClass =
-  'bg-surface border border-line rounded-xl px-4 py-3 text-sm text-ink placeholder-muted focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand-tint transition w-full';
-
 export default function Inscricoes() {
-  const [form, setForm] = useState<FormData>({ nome: '', email: '', registro: '', categoria: '' });
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleChange(e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  }
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSubmitted(true);
-  }
-
   return (
-    <section id="inscricoes" className="py-24 bg-surface">
+    <section id="inscricoes" className="py-16 sm:py-24 bg-surface">
       <div className="max-w-6xl mx-auto px-6">
+
+        {/* Faixa de urgência */}
+        <div className="mb-10 rounded-2xl bg-brand-darker text-white px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3 flex-wrap">
+            <span className="text-brand-light text-xs font-semibold uppercase tracking-widest">Atenção</span>
+            <span className="w-px h-4 bg-brand-edge hidden sm:block" />
+            <span className="text-white text-sm font-medium">Ligantes LIMDERM: <strong>gratuidade encerra 05/07</strong></span>
+            <span className="w-px h-4 bg-brand-edge hidden sm:block" />
+            <span className="text-white text-sm font-medium">Submissão de trabalhos: <strong>até 11/07</strong></span>
+          </div>
+          <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white btn-sm shrink-0">Quero me inscrever</a>
+        </div>
+
         <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
           <div>
             <p className="rule-label mb-7">Inscrições</p>
             <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
-              Garanta sua vaga
+              Inscreva-se agora —<br />o 1º lote é o menor preço
             </h2>
           </div>
           <p className="text-muted max-w-sm text-sm leading-relaxed">
-            Valores por categoria e lote. Os Estudantes Ligantes (LIMDERM e parceiros) têm gratuidade
-            apenas no período indicado.
+            Os valores aumentam a cada lote. Inscreva-se quanto antes para garantir
+            o menor preço disponível na sua categoria.
           </p>
         </div>
 
@@ -114,8 +108,17 @@ export default function Inscricoes() {
             </div>
           ))}
         </div>
+        {/* Progressão de preço — trilho único, do menor ao maior valor */}
+        <div className="mt-4 mb-6 flex items-center gap-3 text-xs">
+          <span className="font-semibold text-brand-strong whitespace-nowrap">1º lote · menor preço</span>
+          <span className="relative flex-1 h-px bg-brand-tint">
+            <span className="absolute left-0 -top-[3px] w-1.5 h-1.5 rounded-full bg-brand-strong" />
+            <span className="absolute right-0 -top-[3px] w-1.5 h-1.5 rounded-full bg-muted" />
+          </span>
+          <span className="text-muted whitespace-nowrap">maior valor</span>
+        </div>
         <p className="text-muted text-sm mb-16">
-          Os lotes seguem a ordem de inscrição: quanto antes, menor o valor.
+          Os lotes encerram por ordem de inscrição — ao esgotar um lote, o próximo valor passa a valer imediatamente.
         </p>
 
         {/* Submissão + público-alvo */}
@@ -141,52 +144,54 @@ export default function Inscricoes() {
           </div>
         </div>
 
-        {/* Formulário */}
-        <div id="formulario" className="rounded-3xl bg-brand-darker text-white p-8 md:p-10 mb-16">
-          {submitted ? (
-            <div className="text-center py-8">
-              <CheckCircle2 size={52} className="text-brand-light mx-auto mb-5" />
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-2xl mb-3">Tudo certo!</h3>
-              <p className="text-brand-faint max-w-sm mx-auto">
-                Enviaremos o link da plataforma e os prazos no e-mail <strong className="text-white">{form.email}</strong>.
+        {/* Chamada de inscrição — direto ao Even3 */}
+        <div className="rounded-3xl bg-brand-darker text-white p-8 md:p-12 mb-16">
+          <div className="grid lg:grid-cols-12 gap-8 lg:items-center">
+            <div className="lg:col-span-8">
+              <p className="rule-label mb-5 text-brand-light">Inscrição oficial</p>
+              <h3 className="display text-white" style={{ fontSize: 'clamp(1.7rem,3.2vw,2.6rem)' }}>
+                Garanta sua vaga enquanto o 1º lote está aberto
+              </h3>
+              <p className="text-brand-faint mt-4 max-w-xl leading-relaxed">
+                Inscrições e submissão de trabalhos pela plataforma oficial do evento. Quanto antes
+                você se inscreve, menor o valor — o 1º lote tem o melhor preço da sua categoria.
               </p>
             </div>
-          ) : (
-            <>
-              <div className="max-w-xl mb-8">
-                <h3 className="display text-white" style={{ fontSize: 'clamp(1.6rem,3vw,2.2rem)' }}>Receba o link de inscrição</h3>
-                <p className="text-brand-faint mt-2">Deixe seus dados e enviamos o link da plataforma e os prazos de cada lote.</p>
-              </div>
-              <form onSubmit={handleSubmit}>
-                <div className="grid sm:grid-cols-2 gap-4 mb-7 max-w-2xl">
-                  <input name="nome" type="text" value={form.nome} onChange={handleChange} placeholder="Nome completo *" required className={inputClass} aria-label="Nome completo" />
-                  <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="E-mail *" required className={inputClass} aria-label="E-mail" />
-                  <input name="registro" type="text" value={form.registro} onChange={handleChange} placeholder="CRM / Registro / Matrícula (opcional)" className={inputClass} aria-label="Registro" />
-                  <select name="categoria" value={form.categoria} onChange={handleChange} required className={inputClass} aria-label="Categoria">
-                    <option value="">Categoria *</option>
-                    <option value="ligante">Estudante Ligante (LIMDERM e parceiros)</option>
-                    <option value="estudante">Estudante (UEPA / outras instituições)</option>
-                    <option value="profissional">Profissional da saúde</option>
-                  </select>
-                </div>
-                <button type="submit" className="btn btn-white">Quero receber o link</button>
-                <p className="text-brand-faint text-xs mt-3">
-                  Seus dados são protegidos conforme a{' '}
-                  <a href="/privacidade" className="underline hover:text-white transition-colors">LGPD</a>.
-                </p>
-              </form>
-            </>
-          )}
+            <div className="lg:col-span-4 lg:text-right">
+              <a
+                href={INSCRICAO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-white w-full sm:w-auto text-base px-8 py-3.5"
+              >
+                Inscrever-se agora <ArrowUpRight size={18} />
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* FAQ */}
-        <div className="grid md:grid-cols-2 gap-x-10 gap-y-8">
+        <div className="grid md:grid-cols-2 gap-x-10 gap-y-8 mb-16">
           {faqs.map((faq) => (
             <div key={faq.q} className="border-t border-line pt-5">
               <h4 className="font-[family-name:var(--font-display)] font-semibold text-ink mb-1.5">{faq.q}</h4>
               <p className="text-muted text-sm leading-relaxed">{faq.a}</p>
             </div>
           ))}
+        </div>
+
+        {/* CTA final */}
+        <div className="border-t-2 border-brand-strong pt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <p className="font-[family-name:var(--font-display)] font-bold text-ink text-xl leading-snug">
+              Ficou com dúvida? Fale direto com a organização.
+            </p>
+            <p className="text-muted text-sm mt-1">
+              E-mail: <a href={`mailto:${CONTATO.email}`} className="text-brand-strong hover:underline">{CONTATO.email}</a>
+              {' · '}Instagram: <a href="https://instagram.com/CAHANS_" target="_blank" rel="noopener noreferrer" className="text-brand-strong hover:underline">@CAHANS_</a>
+            </p>
+          </div>
+          <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary shrink-0">Garantir vaga agora</a>
         </div>
       </div>
     </section>
