@@ -34,7 +34,7 @@ const palestrantes: Palestrante[] = [
   },
   {
     nome: 'Dr. Jaison Barreto',
-    titulo: 'Dermatologista e hansenologista · Doutor (USP)',
+    titulo: 'Dermatologista e hansenólogo · Doutor (USP)',
     instituicao: 'Instituto Lauro de Souza Lima (ILSL) · Aliança Contra a Hanseníase',
     foto: '/palestrantes/jaison-barreto.jpg',
     curriculo: 'Médico pela Universidade Federal de Santa Catarina, especialista em Dermatologia e Hansenologia, Doutor em Dermatologia pela USP. Médico do Instituto Lauro de Souza Lima (ILSL), preceptor da Residência Médica em Dermatologia e assessor médico da Aliança Contra a Hanseníase. Atua em Dermatologia, Dermatopatologia e Hansenologia.',
