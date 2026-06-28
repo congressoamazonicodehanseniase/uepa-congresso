@@ -32,7 +32,7 @@ const stats = [
 ];
 
 const timeline = [
-  { date: '2024', title: 'Nascimento do ADHAM', desc: 'Da parceria entre UEPA, LIMDERM e CIPE para fortalecer o cuidado dermatológico e o enfrentamento da hanseníase na região.' },
+  { date: '2024', title: 'Nascimento do ADHAM', desc: 'Resultado da parceria entre a UEPA, o LIMDERM e o CIPE, com o objetivo de fortalecer o cuidado dermatológico e as ações de enfrentamento da hanseníase na região.' },
   { date: '31/10/2024', title: 'Inauguração oficial', desc: 'Marco de abertura do ambulatório, com docentes, gestores e acadêmicos da UEPA Campus VIII.' },
   { date: '22/11/2024', title: 'Primeiro atendimento', desc: 'Início das atividades assistenciais com o primeiro atendimento especializado.' },
   { date: 'Atual', title: 'Integração ao SUS', desc: 'A integração ao sistema municipal de regulação ampliou o acesso da população aos serviços especializados.' },
