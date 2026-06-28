@@ -5,7 +5,7 @@ const coordenacao = [
   {
     name: 'Dra. Dyana Melkys Borges da Silva',
     role: 'Coordenação Geral e Científica',
-    institution: 'Médica Dermatologista · CRM-PA 9310 | RQE 53946065',
+    institution: 'Médica Dermatologista · CRM-PA 9310 · RQE 5394 (Dermatologia) · RQE 6065 (Hansenologia)',
     bio: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Membro da SBH, SBD, SBCD, GBM e SBC. Idealizadora do ADHAM.',
     foto: FOTOS.dyana,
   },
@@ -53,12 +53,19 @@ export default function Palestrantes() {
           ))}
         </div>
 
-        <blockquote className="mt-8 border-l-2 border-brand-strong pl-4 max-w-2xl">
-          <p className="font-[family-name:var(--font-display)] text-base text-ink leading-snug italic">
-            “Com a participação de especialistas nacionais vinculados à Sociedade Brasileira de
-            Dermatologia e à Sociedade Brasileira de Hansenologia.”
+        <blockquote className="relative mt-10 pl-9 sm:pl-12 max-w-2xl">
+          <span
+            aria-hidden
+            className="absolute left-0 -top-3 font-[family-name:var(--font-display)] font-bold text-brand-tint leading-none select-none"
+            style={{ fontSize: 'clamp(3.4rem, 7vw, 4.6rem)' }}
+          >
+            “
+          </span>
+          <p className="font-[family-name:var(--font-display)] text-lg sm:text-xl text-ink leading-snug italic">
+            Com a participação de especialistas nacionais vinculados à Sociedade Brasileira de
+            Dermatologia e à Sociedade Brasileira de Hansenologia.
           </p>
-          <footer className="text-muted text-xs mt-2">Os nomes e convidados serão anunciados em breve.</footer>
+          <footer className="text-muted text-xs mt-3 not-italic">Os nomes e convidados serão anunciados em breve.</footer>
         </blockquote>
       </div>
     </section>

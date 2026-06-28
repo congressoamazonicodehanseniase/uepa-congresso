@@ -55,7 +55,7 @@ export default function Programacao() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
           <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
-            Três dias,<br />um propósito
+            Três dias,<br /><span className="italic text-brand-strong">um propósito</span>
           </h2>
           <p className="text-muted max-w-sm text-sm leading-relaxed">
             27/08: capacitações na UEPA. 28 e 29/08: congresso científico no Carajás Centro de

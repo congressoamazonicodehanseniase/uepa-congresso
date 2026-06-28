@@ -1,5 +1,7 @@
 import { FileText, Clock, ArrowUpRight } from 'lucide-react';
 import { CONTATO, INSCRICOES_INFO, INSCRICAO_URL } from '../lib/config';
+import Countdown from './Countdown';
+import CountdownTimer from './CountdownTimer';
 
 const tabela = [
   {
@@ -41,23 +43,35 @@ export default function Inscricoes() {
     <section id="inscricoes" className="py-16 sm:py-24 bg-surface">
       <div className="max-w-6xl mx-auto px-6">
 
-        {/* Faixa de urgência */}
-        <div className="mb-10 rounded-2xl bg-brand-darker text-white px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-center gap-3 flex-wrap">
-            <span className="text-brand-light text-xs font-semibold uppercase tracking-widest">Atenção</span>
-            <span className="w-px h-4 bg-brand-edge hidden sm:block" />
-            <span className="text-white text-sm font-medium">Ligantes LIMDERM: <strong>gratuidade encerra 05/07</strong></span>
-            <span className="w-px h-4 bg-brand-edge hidden sm:block" />
-            <span className="text-white text-sm font-medium">Submissão de trabalhos: <strong>até 11/07</strong></span>
+        {/* Faixa de urgência + cronômetro de submissão */}
+        <div className="mb-12 rounded-2xl bg-brand-darker text-white p-6 sm:p-8">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-10">
+            <div className="min-w-0">
+              <div className="flex items-center gap-x-3 gap-y-2 flex-wrap">
+                <span className="text-brand-light text-xs font-semibold uppercase tracking-widest">Atenção</span>
+                <span className="w-px h-4 bg-brand-edge hidden sm:block" />
+                <span className="inline-flex items-center gap-2 text-white text-sm font-medium">
+                  Ligantes LIMDERM: <strong>gratuidade encerra 05/07</strong>
+                  <Countdown deadline={INSCRICOES_INFO.ligantesFim} className="bg-brand-strong px-2 py-0.5 text-xs font-semibold" />
+                </span>
+              </div>
+              <div className="mt-6">
+                <CountdownTimer
+                  target={`${INSCRICOES_INFO.submissaoFim}T23:59:59`}
+                  label="Submissão de trabalhos encerra em"
+                />
+              </div>
+            </div>
+            <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white shrink-0">Quero me inscrever</a>
           </div>
-          <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white btn-sm shrink-0">Quero me inscrever</a>
         </div>
 
         <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
           <div>
             <p className="rule-label mb-7">Inscrições</p>
             <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
-              Inscreva-se agora —<br />o 1º lote é o menor preço
+              Inscreva-se agora —<br />o 1º lote é o{' '}
+              <span className="italic text-brand-strong mark">menor preço</span>
             </h2>
           </div>
           <p className="text-muted max-w-sm text-sm leading-relaxed">

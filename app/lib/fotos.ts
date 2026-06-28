@@ -19,6 +19,7 @@ export const FOTOS = {
   // Pesquisa e extensão
   producao:    { src: b + 'p23a.jpg', alt: 'Produção científica: Dra. Dyana Melkys apresentando trabalho em congresso da SBD' },
   jornadaLupus:{ src: b + 'p24b.jpg', alt: 'Ação de extensão e ciência na II Jornada do Lúpus' },
+  jornadaEstande:{ src: b + 'p25a.jpg', alt: 'Equipe do ADHAM no estande da II Jornada do Lúpus, ao lado do GARPA' },
   evento:      { src: b + 'p24a.jpg', alt: 'Auditório durante a II Jornada do Lúpus, evento científico do ADHAM' },
   estagio:     { src: b + 'p21b.jpg', alt: 'Estágio da LIMDERM e atividades dos acadêmicos no ADHAM' },
   cartas:      { src: b + 'p26a.jpg', alt: 'Ação de extensão “Cartas ao Cientista”, aproximando ciência, educação e comunidade' },

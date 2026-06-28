@@ -46,8 +46,11 @@ const pilares = [
 
 const extensao = [
   { title: 'II Jornada do Lúpus', desc: 'Integração e ciência fortalecendo o diálogo acadêmico sobre doenças autoimunes.', foto: FOTOS.jornadaLupus },
+  { title: 'Produção científica', desc: 'Apresentação de trabalhos em congressos nacionais, como o 78º Congresso da Sociedade Brasileira de Dermatologia (CSBD), Rio 2025.', foto: FOTOS.producao },
+  { title: 'Estande na Jornada do Lúpus', desc: 'Diálogo com a comunidade no estande do ADHAM, ao lado do GARPA, sobre lúpus, melanoma e cuidado com a pele.', foto: FOTOS.jornadaEstande },
   { title: 'Cartas ao Cientista', desc: 'Ação de extensão que aproxima ciência, educação e comunidade.', foto: FOTOS.cartas },
   { title: 'Carreta Roda Hans', desc: 'Iniciativa do Ministério da Saúde; acadêmicos atuam na assistência em hanseníase em Marabá.', foto: FOTOS.carreta },
+  { title: 'Estágios da LIMDERM', desc: 'Vivência prática dos acadêmicos do 6º período de Habilidades Profissionais no ambulatório.', foto: FOTOS.estagio },
 ];
 
 const reconhecimentos = [
@@ -82,9 +85,9 @@ export default function Home() {
                   Integramos assistência, ensino, pesquisa e extensão, ampliando o acesso ao
                   atendimento especializado na Amazônia.
                 </p>
-                <div className="mt-7 flex flex-wrap gap-3">
-                  <a href="#contato" className="btn btn-primary">Agendar atendimento</a>
-                  <Link href="/congresso" className="btn btn-outline">Congresso {CONGRESSO.ano}</Link>
+                <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+                  <a href="#contato" className="btn btn-primary w-full sm:w-auto">Agendar atendimento</a>
+                  <Link href="/congresso" className="btn btn-outline w-full sm:w-auto">Congresso {CONGRESSO.ano}</Link>
                 </div>
               </div>
             </div>
@@ -130,7 +133,7 @@ export default function Home() {
                 pesquisa e extensão.
               </p>
               <div className="relative mt-8">
-                <PhotoPlaceholder ratio="aspect-[16/10]" src={FOTOS.fachada.src} caption={FOTOS.fachada.alt} />
+                <PhotoPlaceholder ratio="aspect-[16/10]" src={FOTOS.atendimento.src} caption={FOTOS.atendimento.alt} position="center 40%" />
               </div>
             </div>
 
@@ -209,8 +212,8 @@ export default function Home() {
         {/* Extensão */}
         <section className="py-16 sm:py-24 bg-surface">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="rule-label mb-10">Extensão e comunidade · Ciência que chega à população</p>
-            <div className="grid md:grid-cols-3 gap-x-10 gap-y-8">
+            <p className="rule-label mb-10">Extensão, pesquisa e formação · Ciência que chega à população</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
               {extensao.map((e) => (
                 <div key={e.title}>
                   <PhotoPlaceholder ratio="aspect-[16/10]" src={e.foto.src} caption={e.foto.alt} />
@@ -274,7 +277,13 @@ export default function Home() {
                   <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost-light">Inscrições</a>
                 </div>
               </div>
-              <PhotoPlaceholder ratio="min-h-[18rem] lg:min-h-full" src={FOTOS.evento.src} caption={FOTOS.evento.alt} className="m-6 lg:m-8" />
+              <div className="m-6 lg:m-8 rounded-2xl bg-brand-panel border border-brand-edge flex items-center justify-center p-10 min-h-[18rem] lg:min-h-full">
+                <img
+                  src="/logo-congresso-claro.png"
+                  alt="I Congresso Amazônico de Hanseníase"
+                  className="w-full max-w-[16rem] lg:max-w-[20rem] object-contain"
+                />
+              </div>
             </div>
           </div>
         </section>

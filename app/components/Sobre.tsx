@@ -28,7 +28,7 @@ export default function Sobre() {
           <div className="lg:col-span-7">
             <p className="rule-label mb-7">Sobre o congresso</p>
             <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
-              Um marco para a Amazônia
+              Um <span className="italic text-brand-strong">marco</span> para a Amazônia
             </h2>
             <p className="dropcap mt-7 text-ink-soft leading-relaxed text-[1.08rem]">
               A persistência da hanseníase na Região Norte reforça a necessidade de serviços

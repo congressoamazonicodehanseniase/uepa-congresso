@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Hanken_Grotesk } from "next/font/google";
+import { Bricolage_Grotesque, Hanken_Grotesk, Fraunces } from "next/font/google";
 import "./globals.css";
 
 // Fonts with personality — deliberately not the generic Inter/Outfit look.
@@ -16,6 +16,16 @@ const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+// Fraunces — serif display de alto contraste e caráter (eixos SOFT/WONK).
+// Usada como acento artístico (ex.: numerais das datas), contrastando com o grotesco.
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -38,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${bricolage.variable} ${hanken.variable} h-full`}
+      className={`${bricolage.variable} ${hanken.variable} ${fraunces.variable} h-full`}
     >
       <body className="min-h-full flex flex-col antialiased">{children}</body>
     </html>

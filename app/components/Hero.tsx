@@ -1,4 +1,5 @@
-import { CONGRESSO, LOCAIS, INSCRICAO_URL } from '../lib/config';
+import { CONGRESSO, LOCAIS, INSCRICAO_URL, INSCRICOES_INFO } from '../lib/config';
+import Countdown from './Countdown';
 
 const dias = [
   { d: '27', w: 'Quinta' },
@@ -45,17 +46,21 @@ export default function Hero() {
               ))}
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white">Garantir minha vaga</a>
-              <a href="#programacao" className="btn btn-ghost-light">Ver programação</a>
+            <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+              <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white w-full sm:w-auto">Garantir minha vaga</a>
+              <a href="#programacao" className="btn btn-ghost-light w-full sm:w-auto">Ver programação</a>
             </div>
 
             {/* Urgência real */}
-            <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+            <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
               <span className="inline-flex items-center gap-2 text-brand-light font-semibold">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-light" />
                 Ligantes: gratuidade até 05/07
               </span>
+              <Countdown
+                deadline={INSCRICOES_INFO.ligantesFim}
+                className="bg-brand-strong px-2.5 py-0.5 text-xs font-semibold text-white"
+              />
               <span className="text-brand-edge">·</span>
               <span className="text-brand-faint">Submissão de trabalhos até 11/07</span>
             </p>
@@ -63,7 +68,7 @@ export default function Hero() {
 
           {/* Card de datas e local — âncora de conversão */}
           <div className="lg:col-span-5">
-            <div className="rounded-[1.75rem] border border-brand-edge bg-brand-panel p-8 sm:p-9">
+            <div className="rounded-[1.75rem] border border-brand-edge bg-brand-panel p-6 sm:p-9">
               <p className="flex items-center gap-3 font-[family-name:var(--font-display)] text-brand-light text-[0.7rem] uppercase tracking-[0.28em]">
                 Agosto 2026
                 <span className="flex-1 h-px bg-brand-edge" />
@@ -75,12 +80,20 @@ export default function Hero() {
                     className={`flex-1 text-center ${i > 0 ? 'border-l border-brand-edge' : ''}`}
                   >
                     <span
-                      className="display block text-white tabular-nums"
-                      style={{ fontSize: 'clamp(2.9rem, 8vw, 4.4rem)', lineHeight: 0.82, letterSpacing: '-0.045em' }}
+                      className="block text-white leading-none"
+                      style={{
+                        fontFamily: 'var(--font-serif)',
+                        fontWeight: 600,
+                        fontSize: 'clamp(3rem, 9vw, 4.7rem)',
+                        letterSpacing: '-0.01em',
+                      }}
                     >
                       {x.d}
                     </span>
-                    <span className="mt-3 block text-brand-light text-[0.6rem] font-semibold uppercase tracking-[0.24em]">
+                    <span
+                      className="mt-2.5 block text-brand-light text-sm italic"
+                      style={{ fontFamily: 'var(--font-serif)' }}
+                    >
                       {x.w}
                     </span>
                   </div>

@@ -10,6 +10,7 @@ import Local from '../components/Local';
 import Inscricoes from '../components/Inscricoes';
 import Patrocinadores from '../components/Patrocinadores';
 import Footer from '../components/Footer';
+import StickyCTA from '../components/StickyCTA';
 
 export const metadata: Metadata = {
   title: { absolute: 'I Congresso Amazônico de Hanseníase | 27–29 Ago 2026 · Marabá, PA' },
@@ -30,8 +31,8 @@ export default function CongressoPage() {
       <main>
         <Hero />
         <Stats />
-        <Sobre />
         <Inscricoes />
+        <Sobre />
         <Programacao />
         <Palestrantes />
         <PalestrantesConvidados />
@@ -39,6 +40,7 @@ export default function CongressoPage() {
         <Patrocinadores />
       </main>
       <Footer />
+      <StickyCTA />
     </div>
   );
 }

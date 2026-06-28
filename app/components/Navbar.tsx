@@ -54,12 +54,12 @@ export default function Navbar() {
           <img
             src="/llogoo.png"
             alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
-            className="adham-only h-20 w-auto object-contain transition-transform group-hover:scale-105"
+            className="adham-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
           />
           <img
             src="/logo-congresso.png"
             alt="I Congresso Amazônico de Hanseníase"
-            className="cong-only h-20 w-auto object-contain transition-transform group-hover:scale-105"
+            className="cong-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </Link>
 

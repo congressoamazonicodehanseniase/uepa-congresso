@@ -7,6 +7,8 @@ export const CONGRESSO = {
   // 27, 28 e 29 de agosto de 2026 — Marabá/PA. Evento bienal, apoio CNPq.
   datasLabel: '27, 28 e 29 de agosto de 2026',
   datasCurta: '27 – 29 Ago 2026',
+  // Abertura do congresso (ISO) — alvo da contagem regressiva.
+  inicioISO: '2026-08-27T08:00:00',
   ano: '2026',
   local: 'Marabá · Pará · Brasil',
   apoio: 'Apoio CNPq',
@@ -35,7 +37,7 @@ export const REDES = {
 export const RESPONSAVEL = {
   nome: 'Dra. Dyana Melkys Borges da Silva',
   titulo: 'Médica Dermatologista · Responsável Técnica do ADHAM',
-  registro: 'CRM-PA 9310 | RQE 53946065',
+  registro: 'CRM-PA 9310 · RQE 5394 (Dermatologia) · RQE 6065 (Hansenologia)',
 } as const;
 
 // Locais do evento (PDF "Programação do Congresso").
@@ -58,6 +60,9 @@ export const LOCAIS = {
 export const INSCRICOES_INFO = {
   ligantesPeriodo: '26/06 a 05/07/2026',
   submissaoPeriodo: '26/06/2026 a 11/07/2026',
+  // Datas-fim (ISO) usadas pelo countdown de urgência.
+  ligantesFim: '2026-07-05',
+  submissaoFim: '2026-07-11',
   publicoAlvo: [
     'Médicos',
     'Médicos residentes',
