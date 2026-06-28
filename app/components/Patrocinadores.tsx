@@ -50,7 +50,6 @@ export default function Patrocinadores() {
           ))}
         </div>
 
-        <p className="text-muted text-xs mt-8">CIPE: logotipo em breve.</p>
 
         <div className="mt-14 flex flex-col sm:flex-row sm:items-center justify-between gap-5 rounded-3xl bg-brand-darker text-white p-8">
           <div>

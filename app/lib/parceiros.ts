@@ -1,5 +1,4 @@
 // Parceiros e apoiadores. Logos otimizados (fundo removido) em /public/parceiros/.
-// CIPE ainda sem logo oficial limpa — exibe o nome como fallback.
 
 export type Parceiro = { nome: string; logo: string | null };
 
@@ -7,7 +6,7 @@ export const PARCEIROS: Parceiro[] = [
   { nome: 'UEPA', logo: '/parceiros/uepa.png' },
   { nome: 'LIMDERM', logo: '/parceiros/limderm.png' },
   { nome: 'ADHAM', logo: '/parceiros/adham-logo.png' },
-  { nome: 'CIPE', logo: null },
+  { nome: 'CIPE', logo: '/parceiros/cipe.png' },
   { nome: 'CNPq', logo: '/parceiros/cnpq.png' },
   { nome: 'SBH', logo: '/parceiros/sbh.png' },
   { nome: 'SMS Marabá', logo: '/parceiros/sms-maraba.png' },

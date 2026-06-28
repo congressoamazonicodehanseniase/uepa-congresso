@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PhotoPlaceholder from './components/PhotoPlaceholder';
 import GaleriaImpacto from './components/GaleriaImpacto';
+import FotoSlideshow from './components/FotoSlideshow';
 import { CONTATO, REDES, RESPONSAVEL, CONGRESSO, INSCRICAO_URL } from './lib/config';
 import { FOTOS } from './lib/fotos';
 import { PARCEIROS } from './lib/parceiros';
@@ -76,7 +77,7 @@ export default function Home() {
             <p className="rule-label">ADHAM · Marabá, Pará</p>
             <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-end mt-8">
               <div className="lg:col-span-8">
-                <h1 className="display text-ink" style={{ fontSize: 'clamp(2.4rem, 6.5vw, 5.2rem)' }}>
+                <h1 className="display text-ink" style={{ fontSize: 'clamp(1.9rem, 4.6vw, 3.8rem)' }}>
                   Ambulatório de Dermatologia e <span className="text-brand-strong mark">Hanseníase</span> da Amazônia
                 </h1>
               </div>
@@ -91,13 +92,31 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <figure className="mt-12">
-              <PhotoPlaceholder ratio="aspect-[16/9]" priority src={FOTOS.fachada.src} caption={FOTOS.fachada.alt} position="center 40%" />
-              <figcaption className="figcaption mt-3 flex items-center gap-2">
-                <span className="inline-block w-6 h-px bg-brand-strong" />
-                {FOTOS.fachada.alt}
-              </figcaption>
-            </figure>
+            {/* Banner do congresso — leva direto à página do evento */}
+            <Link href="/congresso" className="theme-congresso group mt-12 block overflow-hidden rounded-2xl">
+              <div className="relative flex flex-col items-center gap-7 bg-brand-darker px-7 py-8 transition-transform group-hover:-translate-y-0.5 sm:flex-row sm:gap-10 sm:px-12 sm:py-10">
+                <img
+                  src="/logo-congresso-claro.png"
+                  alt="I Congresso Amazônico de Hanseníase"
+                  className="order-1 w-36 shrink-0 sm:order-2 sm:w-44 lg:w-52"
+                />
+                <div className="order-2 flex-1 text-center sm:order-1 sm:text-left">
+                  <p className="font-[family-name:var(--font-display)] text-xs font-semibold uppercase tracking-[0.22em] text-brand-light sm:text-sm">
+                    27, 28 e 29 de Agosto de 2026 · Marabá, PA
+                  </p>
+                  <h2 className="display mt-3 text-white" style={{ fontSize: 'clamp(1.6rem, 3.2vw, 2.4rem)' }}>
+                    I Congresso Amazônico de Hanseníase
+                  </h2>
+                  <p className="mx-auto mt-3 max-w-md text-sm text-brand-faint sm:mx-0">
+                    Realização do ADHAM, com apoio do CNPq. Inscrições abertas.
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white">
+                    Conheça o congresso
+                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
 
@@ -133,7 +152,12 @@ export default function Home() {
                 pesquisa e extensão.
               </p>
               <div className="relative mt-8">
-                <PhotoPlaceholder ratio="aspect-[16/10]" src={FOTOS.atendimento.src} caption={FOTOS.atendimento.alt} position="center 40%" />
+                <FotoSlideshow
+                  ratio="aspect-[16/10]"
+                  interval={4000}
+                  position="center 40%"
+                  fotos={[FOTOS.atendimento, FOTOS.discussao, FOTOS.pratica1, FOTOS.pratica2]}
+                />
               </div>
             </div>
 
@@ -277,7 +301,7 @@ export default function Home() {
                   <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost-light">Inscrições</a>
                 </div>
               </div>
-              <div className="m-6 lg:m-8 rounded-2xl bg-brand-panel border border-brand-edge flex items-center justify-center p-10 min-h-[18rem] lg:min-h-full">
+              <div className="flex items-center justify-center p-8 lg:p-10 min-h-[16rem] lg:min-h-full">
                 <img
                   src="/logo-congresso-claro.png"
                   alt="I Congresso Amazônico de Hanseníase"
@@ -318,7 +342,6 @@ export default function Home() {
                 ),
               )}
             </div>
-            <p className="text-muted text-xs mt-8">Passe o mouse para ver em cores. CIPE: logotipo em breve.</p>
           </div>
         </section>
 

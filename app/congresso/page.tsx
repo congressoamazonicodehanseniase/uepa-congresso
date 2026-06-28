@@ -31,11 +31,11 @@ export default function CongressoPage() {
       <main>
         <Hero />
         <Stats />
+        <PalestrantesConvidados />
         <Inscricoes />
         <Sobre />
         <Programacao />
         <Palestrantes />
-        <PalestrantesConvidados />
         <Local />
         <Patrocinadores />
       </main>
