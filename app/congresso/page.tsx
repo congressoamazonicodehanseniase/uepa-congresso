@@ -33,10 +33,10 @@ export default function CongressoPage() {
         <Stats />
         <PalestrantesConvidados />
         <Inscricoes />
+        <Local />
         <Sobre />
         <Programacao />
         <Palestrantes />
-        <Local />
         <Patrocinadores />
       </main>
       <Footer />
