@@ -151,7 +151,10 @@ export default function PalestrantesConvidados() {
                     {p.nome}
                   </h3>
                   <p className="text-brand-strong text-sm font-semibold mt-1.5 leading-snug">{p.titulo}</p>
-                  <p className="text-muted text-sm mt-1.5 leading-snug line-clamp-2">{p.instituicao}</p>
+                  <p className="text-muted text-sm mt-1.5 leading-snug">{p.instituicao}</p>
+                  <p className="text-ink-soft text-[0.8rem] mt-3 leading-relaxed line-clamp-4 flex-1">
+                    {p.curriculo}
+                  </p>
                   
                   <div className="mt-4 pt-3 border-t border-line text-sm text-brand-strong font-semibold flex items-center justify-between">
                     Ler currículo completo
