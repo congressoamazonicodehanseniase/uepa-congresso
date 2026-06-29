@@ -93,7 +93,7 @@ export default function Sobre() {
               {
                 n: '02',
                 title: 'Especialistas nacionais',
-                desc: 'Palestras e mesas com profissionais vinculados à Sociedade Brasileira de Hansenologia, SBD e FIOCRUZ — referências nacionais na área.',
+                desc: 'Palestras e mesas com profissionais vinculados à Sociedade Brasileira de Hansenologia, SBD e FIOCRUZ, referências nacionais na área.',
               },
               {
                 n: '03',
@@ -108,12 +108,12 @@ export default function Sobre() {
               {
                 n: '05',
                 title: 'Rede científica amazônica',
-                desc: 'Conecte-se a pesquisadores, gestores e clínicos que atuam na Amazônia Legal — um espaço único de intercâmbio na região.',
+                desc: 'Conecte-se a pesquisadores, gestores e clínicos que atuam na Amazônia Legal, um espaço único de intercâmbio na região.',
               },
               {
                 n: '06',
                 title: 'Apoio CNPq',
-                desc: 'Evento bienal com suporte do Conselho Nacional de Desenvolvimento Científico e Tecnológico — legitimidade científica reconhecida.',
+                desc: 'Evento bienal com suporte do Conselho Nacional de Desenvolvimento Científico e Tecnológico, legitimidade científica reconhecida.',
               },
             ].map((b) => (
               <div key={b.n} className="border-t border-brand-edge pt-5">

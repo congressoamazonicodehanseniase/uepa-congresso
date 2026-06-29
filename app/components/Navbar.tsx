@@ -50,16 +50,22 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center group ml-2 sm:ml-6 lg:ml-10">
+        <Link href="/" className="flex items-center gap-3 sm:gap-4 group ml-2 sm:ml-6 lg:ml-10">
           <img
             src="/llogoo.png"
             alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
-            className="adham-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
+            className="adham-only h-14 sm:h-20 lg:h-24 w-auto object-contain transition-transform group-hover:scale-105"
           />
           <img
             src="/logo-congresso.png"
             alt="I Congresso Amazônico de Hanseníase"
-            className="cong-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
+            className="cong-only h-14 sm:h-20 lg:h-24 w-auto object-contain transition-transform group-hover:scale-105"
+          />
+          <span className="hidden sm:block w-px h-8 lg:h-10 bg-line shrink-0" />
+          <img
+            src="/parceiros/uepa.png"
+            alt="Universidade do Estado do Pará"
+            className="hidden sm:block h-10 lg:h-14 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity"
           />
         </Link>
 
