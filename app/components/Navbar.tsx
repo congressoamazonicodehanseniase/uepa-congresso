@@ -46,7 +46,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 bg-surface border-b border-line transition-all duration-300 ${
-        scrolled ? 'py-2' : 'py-3'
+        scrolled ? 'py-1' : 'py-2'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -54,18 +54,18 @@ export default function Navbar() {
           <img
             src="/llogoo.png"
             alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
-            className="adham-only h-14 sm:h-20 lg:h-24 w-auto object-contain transition-transform group-hover:scale-105"
+            className="adham-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
           />
           <img
             src="/logo-congresso.png"
             alt="I Congresso Amazônico de Hanseníase"
-            className="cong-only h-14 sm:h-20 lg:h-24 w-auto object-contain transition-transform group-hover:scale-105"
+            className="cong-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
           />
           <span className="hidden sm:block w-px h-8 lg:h-10 bg-line shrink-0" />
           <img
             src="/parceiros/uepa.png"
             alt="Universidade do Estado do Pará"
-            className="hidden sm:block h-10 lg:h-14 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1"
+            className="hidden sm:block h-8 lg:h-11 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1"
           />
         </Link>
 
