@@ -65,7 +65,7 @@ export default function Palestrantes() {
             Com a participação de especialistas nacionais vinculados à Sociedade Brasileira de
             Dermatologia e à Sociedade Brasileira de Hansenologia.
           </p>
-          <footer className="text-muted text-xs mt-3 not-italic">Os nomes e convidados serão anunciados em breve.</footer>
+
         </blockquote>
       </div>
     </section>
