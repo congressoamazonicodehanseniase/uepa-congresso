@@ -65,7 +65,7 @@ export default function Navbar() {
           <img
             src="/parceiros/uepa.png"
             alt="Universidade do Estado do Pará"
-            className="hidden sm:block h-10 lg:h-14 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity"
+            className="hidden sm:block h-10 lg:h-14 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1"
           />
         </Link>
 
