@@ -323,21 +323,21 @@ export default function Home() {
                 gestão pública e organizações científicas.
               </p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-10 items-center">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-12 sm:gap-20 mt-12">
               {PARCEIROS.slice(0, 3).map((p) =>
                 p.logo ? (
-                  <div key={p.nome} className="flex items-center justify-center h-16">
+                  <div key={p.nome} className="flex items-center justify-center">
                     <img
                       src={p.logo}
                       alt={p.nome}
                       title={p.nome}
                       loading="lazy"
-                      className="max-h-16 max-w-[85%] w-auto object-contain transition-all duration-300 ease-out hover:-translate-y-1"
+                      className="h-24 sm:h-32 w-auto object-contain transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105"
                     />
                   </div>
                 ) : (
-                  <div key={p.nome} className="flex items-center justify-center h-16">
-                    <span className="font-[family-name:var(--font-display)] font-bold text-muted text-lg transition-colors hover:text-brand-strong">{p.nome}</span>
+                  <div key={p.nome} className="flex items-center justify-center">
+                    <span className="font-[family-name:var(--font-display)] font-bold text-muted text-2xl transition-colors hover:text-brand-strong">{p.nome}</span>
                   </div>
                 ),
               )}
