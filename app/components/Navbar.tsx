@@ -61,11 +61,11 @@ export default function Navbar() {
             alt="I Congresso Amazônico de Hanseníase"
             className="cong-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
           />
-          <span className={`${isCongresso ? 'hidden' : 'hidden sm:block'} w-px h-8 lg:h-10 bg-line shrink-0`} />
+          <span className={`${isCongresso ? 'hidden' : 'block'} w-px h-8 lg:h-10 bg-line shrink-0`} />
           <img
             src="/parceiros/uepa.png"
             alt="Universidade do Estado do Pará"
-            className={`${isCongresso ? 'hidden' : 'hidden sm:block'} h-8 lg:h-11 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1`}
+            className={`${isCongresso ? 'hidden' : 'block'} h-8 lg:h-11 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1`}
           />
         </Link>
 
