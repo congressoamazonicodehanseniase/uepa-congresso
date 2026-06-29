@@ -25,6 +25,14 @@ export const FOTOS = {
   cartas:      { src: b + 'p26a.jpg', alt: 'Ação de extensão “Cartas ao Cientista”, aproximando ciência, educação e comunidade' },
   carreta:     { src: b + 'p28a.jpg', alt: 'Acadêmicos na ação de extensão da Carreta Roda Hans (Ministério da Saúde) em Marabá' },
 
+  // Campanhas e ações sociais
+  campanhaLaranja:     { src: b + 'campanha-dez-laranja.jpeg',           alt: 'Campanha Dez Laranja no HMM – conscientização sobre hanseníase' },
+  oficinaHanseniase:   { src: b + 'oficina-hanseniase.jpeg',             alt: 'Oficina de Hanseníase promovida pelo ADHAM' },
+  primeirosSonhos:     { src: b + 'primeiros-sonhos-adham.jpeg',         alt: 'Lá dos primeiros sonhos do ADHAM – origem do ambulatório' },
+  acaoSocial:          { src: b + 'acao-social.jpeg',                    alt: 'Ação social do ADHAM na comunidade' },
+  campanhaReumaticas:  { src: b + 'campanha-doencas-reumaticas.jpeg',    alt: 'Campanha de conscientização e prevenção de doenças reumáticas' },
+  acaoSocialLimderm:   { src: b + 'acao-social-limderm.jpeg',            alt: 'Ação social da LIMDERM com o ADHAM' },
+
   // Reconhecimento
   premioCientifico: { src: b + 'p31a.jpg', alt: 'Premiação CIPE: reconhecimento da produção científica do ADHAM' },
   premioSocial:     { src: b + 'p32a.jpg', alt: 'Premiação CIPE: reconhecimento do impacto social do ADHAM' },

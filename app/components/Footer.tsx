@@ -37,7 +37,7 @@ export default function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </div>
-            <p className="text-sm leading-relaxed mb-5 max-w-sm">
+            <p className="text-sm leading-relaxed mb-5 max-w-sm text-white/70">
               Assistência, ensino, pesquisa e extensão em dermatologia e hanseníase na Amazônia.
               Em Marabá-PA. Realizador do {CONGRESSO.nome}.
             </p>
@@ -51,8 +51,8 @@ export default function Footer() {
                   aria-label={label}
                   className="inline-flex items-center gap-2 rounded-lg bg-brand-panel border border-brand-edge hover:bg-brand-strong hover:border-brand px-3 py-2 transition-colors"
                 >
-                  <AtSign size={15} className="text-brand-light" />
-                  <span className="text-xs text-brand-light">{handle}</span>
+                  <AtSign size={15} className="text-white" />
+                  <span className="text-xs text-white">{handle}</span>
                 </a>
               ))}
             </div>
@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {navLinks.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="text-sm hover:text-brand-light transition-colors">{item.label}</Link>
+                  <Link href={item.href} className="text-sm text-white/75 hover:text-white transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -72,27 +72,27 @@ export default function Footer() {
           <div className="md:col-span-4">
             <h4 className="text-white font-[family-name:var(--font-display)] font-semibold text-xs uppercase tracking-[0.18em] mb-5">Contato</h4>
             <div className="space-y-3">
-              <a href={`mailto:${CONTATO.email}`} className="flex items-start gap-2.5 text-sm hover:text-brand-light transition-colors break-words">
-                <Mail size={14} className="flex-shrink-0 mt-0.5" />
+              <a href={`mailto:${CONTATO.email}`} className="flex items-start gap-2.5 text-sm text-white/75 hover:text-white transition-colors break-words">
+                <Mail size={14} className="flex-shrink-0 mt-0.5 text-white" />
                 {CONTATO.email}
               </a>
-              <p className="flex items-start gap-2.5 text-sm">
-                <MapPin size={14} className="flex-shrink-0 mt-0.5" />
+              <p className="flex items-start gap-2.5 text-sm text-white/75">
+                <MapPin size={14} className="flex-shrink-0 mt-0.5 text-white" />
                 {CONTATO.enderecoCurto}
               </p>
             </div>
             <div className="mt-6 p-4 bg-brand-panel rounded-xl border border-brand-edge">
-              <p className="text-[0.7rem] text-brand-faint mb-1 uppercase tracking-wider">Endereço completo</p>
-              <p className="text-brand-light text-sm leading-snug">{CONTATO.endereco}</p>
+              <p className="text-[0.7rem] text-white/40 mb-1 uppercase tracking-wider">Endereço completo</p>
+              <p className="text-white/80 text-sm leading-snug">{CONTATO.endereco}</p>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-brand-edge pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <div className="border-t border-brand-edge pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
           <p>© 2026 Ambulatório de Dermatologia e Hanseníase da Amazônia (ADHAM). Todos os direitos reservados.</p>
           <div className="flex gap-5">
-            <Link href="/privacidade" className="hover:text-brand-light transition-colors">Política de Privacidade</Link>
-            <Link href="/termos" className="hover:text-brand-light transition-colors">Termos de Uso</Link>
+            <Link href="/privacidade" className="hover:text-white transition-colors">Política de Privacidade</Link>
+            <Link href="/termos" className="hover:text-white transition-colors">Termos de Uso</Link>
           </div>
         </div>
       </div>
