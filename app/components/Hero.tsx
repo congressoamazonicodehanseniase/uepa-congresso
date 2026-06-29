@@ -61,7 +61,7 @@ export default function Hero() {
                 deadline={INSCRICOES_INFO.ligantesFim}
                 className="bg-brand-strong px-2.5 py-0.5 text-xs font-semibold text-white"
               />
-              <span className="text-brand-edge">·</span>
+              <span className="text-brand-edge hidden sm:inline">·</span>
               <span className="text-brand-faint">Submissão de trabalhos até 11/07</span>
             </p>
           </div>

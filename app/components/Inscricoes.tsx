@@ -163,7 +163,7 @@ export default function Inscricoes() {
           <div className="grid lg:grid-cols-12 gap-8 lg:items-center">
             <div className="lg:col-span-8">
               <p className="rule-label mb-5 text-brand-light">Inscrição oficial</p>
-              <h3 className="display text-white" style={{ fontSize: 'clamp(1.7rem,3.2vw,2.6rem)' }}>
+              <h3 className="display text-white" style={{ fontSize: 'clamp(1.35rem,3.2vw,2.6rem)' }}>
                 Garanta sua vaga enquanto o 1º lote está aberto
               </h3>
               <p className="text-brand-faint mt-4 max-w-xl leading-relaxed">

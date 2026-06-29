@@ -10,11 +10,11 @@ export default function Stats() {
     <section className="bg-canvas pt-6 pb-20">
       <div className="max-w-6xl mx-auto px-6">
         <p className="rule-label mb-10">O evento em números</p>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-10">
           {stats.map((s, i) => (
             <div
               key={i}
-              className={`px-4 sm:px-8 first:pl-0 ${i > 0 ? 'lg:border-l lg:border-brand-tint' : ''}`}
+              className={`px-3 sm:px-8 first:pl-0 ${i > 0 ? 'sm:border-l sm:border-brand-tint' : ''}`}
             >
               <p className="display text-brand-strong" style={{ fontSize: 'clamp(2.6rem, 6vw, 4.5rem)' }}>
                 {s.value}

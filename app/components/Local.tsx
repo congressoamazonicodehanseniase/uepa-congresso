@@ -61,7 +61,7 @@ export default function Local() {
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <div className="min-w-0">
-                      <p className="text-[0.62rem] font-semibold tracking-[0.12em] uppercase text-brand-strong">{venue.rotulo}</p>
+                      <p className="text-[0.62rem] font-semibold tracking-[0.04em] sm:tracking-[0.12em] uppercase text-brand-strong leading-snug">{venue.rotulo}</p>
                       <h3 className="font-[family-name:var(--font-display)] font-bold text-ink text-sm sm:text-base mt-0.5 leading-snug">
                         {venue.nome}
                       </h3>

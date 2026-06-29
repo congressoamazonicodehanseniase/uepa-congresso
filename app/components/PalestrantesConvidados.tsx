@@ -149,7 +149,7 @@ export default function PalestrantesConvidados() {
                 className="group rounded-2xl border border-line bg-surface overflow-hidden flex flex-col transition-all hover:border-brand-tint hover:shadow-lg hover:-translate-y-1 cursor-pointer"
                 onClick={() => setSelected(p)}
               >
-                <div className="aspect-[4/5] bg-brand-soft overflow-hidden">
+                <div className="h-64 sm:h-auto sm:aspect-[4/5] bg-brand-soft overflow-hidden">
                   <img
                     src={p.foto}
                     alt={p.nome}
