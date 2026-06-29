@@ -324,7 +324,7 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-12 sm:gap-20 mt-12">
-              {PARCEIROS.slice(0, 3).map((p) =>
+              {PARCEIROS.slice(0, 4).map((p) =>
                 p.logo ? (
                   <div key={p.nome} className="flex items-center justify-center">
                     <img
