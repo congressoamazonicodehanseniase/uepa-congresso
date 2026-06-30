@@ -71,7 +71,7 @@ export default function InscricaoForm() {
     setEnviandoComprovante(true);
     try {
       const form = new FormData();
-      form.append('nomeCompleto', dados.nomeCompleto);
+      Object.entries(dados).forEach(([chave, valor]) => form.append(chave, valor));
       form.append('comprovante', comprovante);
       const res = await fetch('/api/comprovante', { method: 'POST', body: form });
       if (!res.ok) throw new Error();

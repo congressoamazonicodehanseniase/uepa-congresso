@@ -3,6 +3,8 @@ import { CONTATO } from '../../lib/config';
 
 const TAMANHO_MAXIMO = 8 * 1024 * 1024; // 8MB
 
+const CAMPOS_OBRIGATORIOS = ['nomeCompleto', 'nomeCracha', 'categoria', 'tipoParticipacao', 'cidade', 'instituicao'] as const;
+
 export async function POST(request: Request) {
   let form: FormData;
   try {
@@ -11,11 +13,27 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Formulário inválido' }, { status: 400 });
   }
 
-  const nomeCompleto = form.get('nomeCompleto');
+  const campo = (nome: string) => {
+    const valor = form.get(nome);
+    return typeof valor === 'string' ? valor : undefined;
+  };
+
+  const dados = {
+    nomeCompleto: campo('nomeCompleto'),
+    nomeCracha: campo('nomeCracha'),
+    categoria: campo('categoria'),
+    especialidade: campo('especialidade'),
+    empresa: campo('empresa'),
+    tipoParticipacao: campo('tipoParticipacao'),
+    cidade: campo('cidade'),
+    instituicao: campo('instituicao'),
+  };
   const arquivo = form.get('comprovante');
 
-  if (!nomeCompleto || typeof nomeCompleto !== 'string') {
-    return Response.json({ error: 'Campo obrigatório ausente: nomeCompleto' }, { status: 400 });
+  for (const obrigatorio of CAMPOS_OBRIGATORIOS) {
+    if (!dados[obrigatorio]) {
+      return Response.json({ error: `Campo obrigatório ausente: ${obrigatorio}` }, { status: 400 });
+    }
   }
   if (!(arquivo instanceof File) || arquivo.size === 0) {
     return Response.json({ error: 'Anexe o comprovante de pagamento' }, { status: 400 });
@@ -27,9 +45,31 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Envie uma imagem ou PDF' }, { status: 400 });
   }
 
+  const linhas: [string, string | undefined][] = [
+    ['Nome completo', dados.nomeCompleto],
+    ['Nome para o crachá', dados.nomeCracha],
+    ['Categoria', dados.categoria],
+    ['Especialidade', dados.especialidade],
+    ['Empresa', dados.empresa],
+    ['Palestrante ou participante/ouvinte', dados.tipoParticipacao],
+    ['Cidade', dados.cidade],
+    ['Instituição', dados.instituicao],
+  ];
+
+  const corpoTexto = linhas
+    .filter(([, valor]) => valor)
+    .map(([label, valor]) => `${label}: ${valor}`)
+    .join('\n');
+
+  const corpoHtml = linhas
+    .filter(([, valor]) => valor)
+    .map(([label, valor]) => `<tr><td style="padding:4px 12px 4px 0;color:#574a39;font-weight:600">${label}</td><td style="padding:4px 0">${valor}</td></tr>`)
+    .join('');
+
   const { GMAIL_USER, GMAIL_APP_PASSWORD } = process.env;
   if (!GMAIL_USER || !GMAIL_APP_PASSWORD) {
-    console.warn(`GMAIL_USER/GMAIL_APP_PASSWORD não configurados — comprovante de ${nomeCompleto} não foi enviado por e-mail`);
+    console.warn(`GMAIL_USER/GMAIL_APP_PASSWORD não configurados — inscrição + comprovante de ${dados.nomeCompleto} não foram enviados por e-mail:`);
+    console.warn(corpoTexto);
     return Response.json({ ok: true });
   }
 
@@ -45,13 +85,13 @@ export async function POST(request: Request) {
       from: `"Inscrições · Congresso Amazônico de Hanseníase" <${GMAIL_USER}>`,
       to: CONTATO.email,
       replyTo: GMAIL_USER,
-      subject: `Comprovante de pagamento: ${nomeCompleto}`,
-      text: `Comprovante de pagamento Pix enviado por: ${nomeCompleto}`,
-      html: `<p>Comprovante de pagamento Pix enviado por: <strong>${nomeCompleto}</strong></p>`,
+      subject: `Inscrição + comprovante: ${dados.nomeCompleto}`,
+      text: `${corpoTexto}\n\nComprovante de pagamento Pix em anexo.`,
+      html: `<table style="font-family:sans-serif;font-size:14px">${corpoHtml}</table><p style="font-family:sans-serif;font-size:14px">Comprovante de pagamento Pix em anexo.</p>`,
       attachments: [{ filename: arquivo.name || 'comprovante', content: buffer, contentType: arquivo.type }],
     });
   } catch (err) {
-    console.error('Falha ao enviar e-mail de comprovante', err);
+    console.error('Falha ao enviar e-mail de inscrição + comprovante', err);
     return Response.json({ error: 'Falha ao enviar e-mail' }, { status: 502 });
   }
 

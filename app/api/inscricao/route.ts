@@ -1,6 +1,3 @@
-import nodemailer from 'nodemailer';
-import { CONTATO } from '../../lib/config';
-
 type Inscricao = {
   nomeCompleto: string;
   nomeCracha: string;
@@ -35,53 +32,7 @@ export async function POST(request: Request) {
     }
   }
 
-  const { GMAIL_USER, GMAIL_APP_PASSWORD } = process.env;
-
-  const linhas: [string, string | undefined][] = [
-    ['Nome completo', dados.nomeCompleto],
-    ['Nome para o crachá', dados.nomeCracha],
-    ['Categoria', dados.categoria],
-    ['Especialidade', dados.especialidade],
-    ['Empresa', dados.empresa],
-    ['Palestrante ou participante/ouvinte', dados.tipoParticipacao],
-    ['Cidade', dados.cidade],
-    ['Instituição', dados.instituicao],
-  ];
-
-  const corpoTexto = linhas
-    .filter(([, valor]) => valor)
-    .map(([label, valor]) => `${label}: ${valor}`)
-    .join('\n');
-
-  const corpoHtml = linhas
-    .filter(([, valor]) => valor)
-    .map(([label, valor]) => `<tr><td style="padding:4px 12px 4px 0;color:#574a39;font-weight:600">${label}</td><td style="padding:4px 0">${valor}</td></tr>`)
-    .join('');
-
-  if (!GMAIL_USER || !GMAIL_APP_PASSWORD) {
-    console.warn('GMAIL_USER/GMAIL_APP_PASSWORD não configurados — inscrição registrada apenas no log:');
-    console.warn(corpoTexto);
-    return Response.json({ ok: true });
-  }
-
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: { user: GMAIL_USER, pass: GMAIL_APP_PASSWORD },
-  });
-
-  try {
-    await transporter.sendMail({
-      from: `"Inscrições · Congresso Amazônico de Hanseníase" <${GMAIL_USER}>`,
-      to: CONTATO.email,
-      replyTo: GMAIL_USER,
-      subject: `Nova inscrição: ${dados.nomeCompleto}`,
-      text: corpoTexto,
-      html: `<table style="font-family:sans-serif;font-size:14px">${corpoHtml}</table>`,
-    });
-  } catch (err) {
-    console.error('Falha ao enviar e-mail de inscrição', err);
-    return Response.json({ error: 'Falha ao enviar e-mail' }, { status: 502 });
-  }
-
+  // O e-mail só é enviado depois, em /api/comprovante, junto com o comprovante
+  // de pagamento — texto e anexo precisam chegar na mesma mensagem.
   return Response.json({ ok: true });
 }
