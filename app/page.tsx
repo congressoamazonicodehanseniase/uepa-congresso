@@ -46,9 +46,9 @@ const pilares = [
 ];
 
 const extensao: { title: string; desc: string; foto: { src: string; alt: string }; pos?: string }[] = [
-  { title: 'II Jornada do Lúpus', desc: 'Integração e ciência fortalecendo o diálogo acadêmico sobre doenças autoimunes.', foto: FOTOS.jornadaLupus },
+  { title: 'Projeto Cartas ao Cientista', desc: 'Atendimentos e orientações que aproximam ciência, educação e comunidade.', foto: FOTOS.jornadaLupus },
   { title: 'Produção científica', desc: 'Apresentação de trabalhos em congressos nacionais, como o 78º Congresso da Sociedade Brasileira de Dermatologia (CSBD), Rio 2025.', foto: FOTOS.producao, pos: 'center 30%' },
-  { title: 'Estande na Jornada do Lúpus', desc: 'Diálogo com a comunidade no estande do ADHAM, ao lado do GARPA, sobre lúpus, melanoma e cuidado com a pele.', foto: FOTOS.jornadaEstande, pos: 'center 60%' },
+  { title: 'Cartas ao Cientista', desc: 'Equipe do ADHAM em ação de extensão do projeto Cartas ao Cientista, ao lado do GARPA.', foto: FOTOS.jornadaEstande, pos: 'center 60%' },
   { title: 'Cartas ao Cientista', desc: 'Ação de extensão que aproxima ciência, educação e comunidade.', foto: FOTOS.cartas },
   { title: 'Carreta Roda Hans', desc: 'Iniciativa do Ministério da Saúde; acadêmicos atuam na assistência em hanseníase em Marabá.', foto: FOTOS.carreta },
   { title: 'Estágios da LIMDERM', desc: 'Vivência prática dos acadêmicos do 6º período de Habilidades Profissionais no ambulatório.', foto: FOTOS.estagio },
