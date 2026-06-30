@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import PhotoPlaceholder from './components/PhotoPlaceholder';
 import GaleriaImpacto from './components/GaleriaImpacto';
 import FotoSlideshow from './components/FotoSlideshow';
-import { CONTATO, REDES, RESPONSAVEL, CONGRESSO, INSCRICAO_URL } from './lib/config';
+import { CONTATO, REDES, RESPONSAVEL, CONGRESSO } from './lib/config';
 import { FOTOS } from './lib/fotos';
 import { PARCEIROS } from './lib/parceiros';
 import { MapPin, Mail, AtSign, ArrowRight } from 'lucide-react';
@@ -304,7 +304,7 @@ export default function Home() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link href="/congresso" className="btn btn-white">Ver o congresso</Link>
-                  <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost-light">Inscrições</a>
+                  <Link href="/congresso/inscricao" className="btn btn-ghost-light">Inscrições</Link>
                 </div>
               </div>
               <div className="flex items-center justify-center p-8 lg:p-10 min-h-[16rem] lg:min-h-full">
@@ -391,7 +391,8 @@ export default function Home() {
                   <img
                     src={FOTOS.fachada.src}
                     alt={FOTOS.fachada.alt}
-                    className="w-full h-40 sm:h-52 object-cover object-top"
+                    className="w-full h-40 sm:h-52 object-cover"
+                    style={{ objectPosition: 'center 55%' }}
                   />
                 </figure>
               </div>

@@ -32,7 +32,7 @@ export default function Footer() {
                 className="h-20 w-auto object-contain"
               />
               <img
-                src="/parceiros/uepa.png"
+                src="/parceiros/logouepaa.png"
                 alt="Universidade do Estado do Pará"
                 className="h-14 w-auto object-contain"
               />

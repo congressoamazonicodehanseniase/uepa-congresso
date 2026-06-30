@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import { FileText, Clock, ArrowUpRight } from 'lucide-react';
-import { CONTATO, INSCRICOES_INFO, INSCRICAO_URL } from '../lib/config';
+import { CONTATO, INSCRICOES_INFO } from '../lib/config';
 import Countdown from './Countdown';
 import CountdownTimer from './CountdownTimer';
 
@@ -32,7 +33,7 @@ const tabela = [
 ];
 
 const faqs = [
-  { q: 'Como faço a inscrição?', a: 'A inscrição é feita pela plataforma oficial do evento no Even3. Clique em “Inscrever-se” e conclua por lá; o período por lote e os documentos constam na própria página.' },
+  { q: 'Como faço a inscrição?', a: 'Clique em “Quero me inscrever”, preencha seus dados no formulário e finalize o pagamento via Pix com as informações exibidas ao final.' },
   { q: 'Haverá certificado?', a: 'Sim. O certificado com carga horária será emitido aos participantes; os critérios serão informados na confirmação.' },
   { q: 'Como submeter trabalhos?', a: `As submissões vão de ${INSCRICOES_INFO.submissaoPeriodo}. Normas, áreas temáticas, formato e certificação constarão no edital.` },
   { q: 'Como entro em contato?', a: `Pelo e-mail ${CONTATO.email} ou pelas redes sociais oficiais do congresso.` },
@@ -62,7 +63,7 @@ export default function Inscricoes() {
                 />
               </div>
             </div>
-            <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white shrink-0">Quero me inscrever</a>
+            <Link href="/congresso/inscricao" className="btn btn-white shrink-0">Quero me inscrever</Link>
           </div>
         </div>
 
@@ -172,14 +173,12 @@ export default function Inscricoes() {
               </p>
             </div>
             <div className="lg:col-span-4 lg:text-right">
-              <a
-                href={INSCRICAO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/congresso/inscricao"
                 className="btn btn-white w-full sm:w-auto text-base px-8 py-3.5"
               >
                 Inscrever-se agora <ArrowUpRight size={18} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -205,7 +204,7 @@ export default function Inscricoes() {
               {' · '}Instagram: <a href="https://instagram.com/CAHANS_" target="_blank" rel="noopener noreferrer" className="text-brand-strong hover:underline">@CAHANS_</a>
             </p>
           </div>
-          <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary shrink-0">Garantir vaga agora</a>
+          <Link href="/congresso/inscricao" className="btn btn-primary shrink-0">Garantir vaga agora</Link>
         </div>
       </div>
     </section>

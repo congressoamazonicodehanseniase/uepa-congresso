@@ -14,10 +14,6 @@ export const CONGRESSO = {
   apoio: 'Apoio CNPq',
 } as const;
 
-// Inscrições e submissão de trabalhos acontecem na página oficial do evento no Even3.
-// ⚠️ SUBSTITUA pela URL real da página do evento no Even3 antes de publicar.
-export const INSCRICAO_URL = 'https://www.even3.com.br/';
-
 export const CONTATO = {
   // Telefone/WhatsApp institucional ainda a definir (a adquirir).
   telefone: 'A definir',
@@ -79,3 +75,26 @@ export const INSCRICOES_INFO = {
     'Gestores',
   ],
 } as const;
+
+// Dados bancários/Pix da organização — usados na confirmação de inscrição,
+// para pagamento manual com posterior validação pela comissão organizadora.
+export const PIX = {
+  chave: 'congressoamazonicodehanseniase@gmail.com',
+  tipoChave: 'E-mail',
+  favorecido: 'Nu Pagamentos S.A. - Instituição de Pagamento',
+  banco: '0260 · Nu Pagamentos S.A.',
+  agencia: '0001',
+  conta: '483573209-4',
+} as const;
+
+// Categorias do formulário de inscrição (modal "Quero me inscrever").
+export const CATEGORIAS_INSCRICAO = [
+  'Profissional da Saúde (especialidade)',
+  'Estudante',
+  'Representante (empresa)',
+  'Expositor',
+  'Convidado VIP',
+  'Comissão Organizadora',
+] as const;
+
+export const TIPOS_PARTICIPACAO = ['Palestrante', 'Participante / Ouvinte'] as const;

@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
-import { INSCRICAO_URL } from '../lib/config';
 
 const links = [
   { href: '/#sobre', label: 'Sobre' },
@@ -20,8 +19,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const isCongresso = pathname?.startsWith('/congresso');
   const cta = isCongresso
-    ? { href: INSCRICAO_URL, label: 'Inscrever', external: true }
-    : { href: '/#contato', label: 'Agendar', external: false };
+    ? { href: '/congresso/inscricao', label: 'Inscrever' }
+    : { href: '/#contato', label: 'Agendar' };
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
@@ -61,11 +60,11 @@ export default function Navbar() {
             alt="I Congresso Amazônico de Hanseníase"
             className="cong-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
           />
-          <span className={`${isCongresso ? 'hidden' : 'block'} w-px h-8 lg:h-10 bg-line shrink-0`} />
+          <span className="w-px h-8 lg:h-10 bg-line shrink-0" />
           <img
-            src="/parceiros/uepa.png"
+            src="/parceiros/logouepaa.png"
             alt="Universidade do Estado do Pará"
-            className={`${isCongresso ? 'hidden' : 'block'} h-8 lg:h-11 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1`}
+            className="h-8 lg:h-11 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1"
           />
         </Link>
 
@@ -83,15 +82,7 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden lg:block">
-          {cta.external ? (
-            <a href={cta.href} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
-              {cta.label}
-            </a>
-          ) : (
-            <Link href={cta.href} className="btn btn-primary btn-sm">
-              {cta.label}
-            </Link>
-          )}
+          <Link href={cta.href} className="btn btn-primary btn-sm">{cta.label}</Link>
         </div>
 
         <button
@@ -144,15 +135,7 @@ export default function Navbar() {
         </ul>
 
         <div className="px-6 pb-8 pt-2 flex-shrink-0">
-          {cta.external ? (
-            <a href={cta.href} target="_blank" rel="noopener noreferrer" className="btn btn-primary w-full" onClick={() => setOpen(false)}>
-              {cta.label}
-            </a>
-          ) : (
-            <Link href={cta.href} className="btn btn-primary w-full" onClick={() => setOpen(false)}>
-              {cta.label}
-            </Link>
-          )}
+          <Link href={cta.href} className="btn btn-primary w-full" onClick={() => setOpen(false)}>{cta.label}</Link>
         </div>
       </aside>
     </nav>

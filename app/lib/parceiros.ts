@@ -3,7 +3,7 @@
 export type Parceiro = { nome: string; logo: string | null };
 
 export const PARCEIROS: Parceiro[] = [
-  { nome: 'UEPA', logo: '/parceiros/uepa.png' },
+  { nome: 'UEPA', logo: '/parceiros/logouepaa.png' },
   { nome: 'LIMDERM', logo: '/parceiros/limderm.png' },
   { nome: 'ADHAM', logo: '/parceiros/adham-logo.png' },
   { nome: 'CIPE', logo: '/parceiros/cipe.png' },

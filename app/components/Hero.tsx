@@ -1,4 +1,5 @@
-import { CONGRESSO, LOCAIS, INSCRICAO_URL, INSCRICOES_INFO } from '../lib/config';
+import Link from 'next/link';
+import { CONGRESSO, LOCAIS, INSCRICOES_INFO } from '../lib/config';
 import Countdown from './Countdown';
 
 const dias = [
@@ -47,7 +48,7 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
-              <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white w-full sm:w-auto">Garantir minha vaga</a>
+              <Link href="/congresso/inscricao" className="btn btn-white w-full sm:w-auto">Garantir minha vaga</Link>
               <a href="#programacao" className="btn btn-ghost-light w-full sm:w-auto">Ver programação</a>
             </div>
 
@@ -104,9 +105,9 @@ export default function Hero() {
                 <p className="text-brand-faint mt-0.5">{LOCAIS.congresso.nome}</p>
                 <p className="text-brand-light mt-0.5">{CONGRESSO.apoio} · Bienal</p>
               </div>
-              <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white w-full mt-7">
+              <Link href="/congresso/inscricao" className="btn btn-white w-full mt-7">
                 Quero me inscrever
-              </a>
+              </Link>
             </div>
           </div>
         </div>

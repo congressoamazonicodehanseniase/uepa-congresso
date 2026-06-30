@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import PhotoPlaceholder from './PhotoPlaceholder';
 import { LeafMark } from './Decor';
-import { CONGRESSO, INSCRICAO_URL } from '../lib/config';
+import { CONGRESSO } from '../lib/config';
 import { FOTOS } from '../lib/fotos';
 
 const eixos = [
@@ -124,7 +124,7 @@ export default function Sobre() {
             ))}
           </div>
           <div className="mt-10 pt-8 border-t border-brand-edge flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <a href={INSCRICAO_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white">Garantir minha vaga agora</a>
+            <Link href="/congresso/inscricao" className="btn btn-white">Garantir minha vaga agora</Link>
             <p className="text-brand-faint text-sm">Quanto antes, menor o valor — o 1º lote tem o menor preço.</p>
           </div>
         </div>

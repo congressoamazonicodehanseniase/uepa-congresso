@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { X } from 'lucide-react';
-import { INSCRICAO_URL, INSCRICOES_INFO } from '../lib/config';
+import { INSCRICOES_INFO } from '../lib/config';
 import Countdown from './Countdown';
 
 /**
@@ -53,14 +54,12 @@ export default function StickyCTA() {
             </p>
           </div>
           <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
-            <a
-              href={INSCRICAO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/congresso/inscricao"
               className="btn btn-white btn-sm whitespace-nowrap"
             >
               Inscrever-se
-            </a>
+            </Link>
             <button
               onClick={() => setDismissed(true)}
               aria-label="Fechar barra de inscrição"
