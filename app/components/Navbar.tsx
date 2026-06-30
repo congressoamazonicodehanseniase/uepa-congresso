@@ -51,9 +51,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 sm:gap-4 group ml-2 sm:ml-6 lg:ml-10">
           <img
-            src="/llogoo.png"
+            src="/parceiros/logoamb.png"
             alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
-            className="adham-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
+            className="adham-only h-14 sm:h-20 lg:h-24 w-auto object-contain transition-transform group-hover:scale-105"
           />
           <img
             src="/logo-congresso.png"
@@ -114,7 +114,7 @@ export default function Navbar() {
         aria-hidden={!open}
       >
         <div className="flex items-center justify-between px-6 h-[4.5rem] border-b border-line flex-shrink-0">
-          <img src="/llogoo.png" alt="ADHAM" className="h-10 w-auto object-contain" />
+          <img src="/parceiros/logoamb.png" alt="ADHAM" className="h-12 w-auto object-contain" />
           <button onClick={() => setOpen(false)} aria-label="Fechar menu" className="text-ink p-1">
             <X size={24} />
           </button>
