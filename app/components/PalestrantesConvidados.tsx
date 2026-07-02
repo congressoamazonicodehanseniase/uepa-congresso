@@ -226,7 +226,7 @@ const palestrantes: Palestrante[] = [
     nome: 'Dr. Paulo Turiel',
     titulo: 'Médico Oftalmologista (HCFMUSP)',
     instituicao: 'Membro da American Academy of Ophthalmology',
-    foto: '',
+    foto: '/palestrantes/paulo-turiel.jpg',
     curriculo: 'Médico graduado pela Universidade Federal do Pará. Oftalmologista pelo Hospital Federal de Bonsucesso - RJ. Realizou fellowship no setor de Catarata do Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo - HCFMUSP. Membro da American Academy of Ophthalmology. Título de Especialista em Oftalmologia pela Associação Médica Brasileira e Conselho Brasileiro de Oftalmologia (2015).',
     resumo: 'Oftalmologista com fellowship em Catarata pelo HCFMUSP. Membro da American Academy of Ophthalmology.',
     lattes: 'http://lattes.cnpq.br/1186849050351849',
