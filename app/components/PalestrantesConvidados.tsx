@@ -217,7 +217,7 @@ const palestrantes: Palestrante[] = [
     nome: 'Profa. Dra. Simone Argentino',
     titulo: 'Enfermeira · Mestra (UEPA)',
     instituicao: 'Docente efetiva da Universidade do Estado do Pará (UEPA)',
-    foto: '',
+    foto: '/palestrantes/simone-argentino.jpg',
     curriculo: 'Enfermeira graduada pela Universidade Federal de São Paulo (UNIFESP), com pós-graduação em Saúde da Família e Mestrado em Ensino em Saúde na Amazônia pela UEPA. É docente efetiva da Universidade do Estado do Pará desde 2010 e atua nas áreas de Saúde Coletiva, Educação em Saúde e Saúde Indígena, com experiência na formação e capacitação de profissionais para atenção à saúde de populações amazônicas.',
     resumo: 'Atua nas áreas de Saúde Coletiva, Educação em Saúde e Saúde Indígena. Docente efetiva da UEPA desde 2010.',
     lattes: 'http://lattes.cnpq.br/0154609186488185',
