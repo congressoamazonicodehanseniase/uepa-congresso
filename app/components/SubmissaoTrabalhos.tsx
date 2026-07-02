@@ -10,16 +10,24 @@ export default function SubmissaoTrabalhos() {
         <div className="mb-14">
           <p className="rule-label mb-7">Trabalhos Científicos</p>
           <h2 className="display text-ink" style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>
-            Comunicado Preliminar — Submissão
+            Submissão de Trabalhos
           </h2>
           <div className="mt-6 p-5 bg-brand-soft border-l-4 border-brand-strong rounded-r-xl">
             <p className="text-brand-strong font-semibold mb-2 flex items-center gap-2">
               <FileText size={18} />
-              Atenção
+              Edital Aberto
             </p>
-            <p className="text-ink-soft text-sm leading-relaxed">
-              Este é um comunicado preliminar, com caráter informativo, para que os interessados já possam começar a elaborar seus trabalhos científicos. O Edital Oficial completo de Submissão de Trabalhos Científicos — contendo o link da plataforma de submissão, os critérios de avaliação e demais normas — será publicado em breve. As informações abaixo poderão sofrer pequenos ajustes até a publicação do Edital Oficial.
+            <p className="text-ink-soft text-sm leading-relaxed mb-4">
+              A submissão dos trabalhos científicos já está aberta! Os trabalhos devem ser submetidos exclusivamente através da plataforma Even3. Antes de submeter, leia atentamente as regras gerais de formatação e os eixos temáticos abaixo.
             </p>
+            <a
+              href="https://www.even3.com.br/i-congresso-amazonico-de-hanseniase-757463"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-brand-strong text-canvas font-bold text-sm hover:bg-brand-tint transition-colors w-full sm:w-auto"
+            >
+              Submeter Trabalho no Even3
+            </a>
           </div>
           <p className="mt-6 font-semibold text-ink">Importante: a submissão será na modalidade resumo simples.</p>
         </div>
@@ -99,20 +107,19 @@ export default function SubmissaoTrabalhos() {
               <ul className="list-none text-ink-soft space-y-3">
                 <li className="flex flex-col">
                   <span className="text-sm font-semibold text-brand-strong uppercase tracking-wider">Abertura das submissões</span>
-                  <span>17/07/2026 (previsão)</span>
+                  <span>17/07/2026</span>
                 </li>
                 <li className="flex flex-col">
                   <span className="text-sm font-semibold text-brand-strong uppercase tracking-wider">Encerramento das submissões</span>
-                  <span>31/07/2026 (previsão)</span>
+                  <span>31/07/2026</span>
                 </li>
               </ul>
-              <p className="mt-4 text-xs text-muted italic">Datas sujeitas a confirmação no Edital Oficial.</p>
             </div>
 
             <div>
               <h3 className="font-[family-name:var(--font-display)] font-bold text-ink text-xl mb-4">Observação Importante</h3>
               <p className="text-ink-soft text-sm leading-relaxed">
-                A submissão dos trabalhos será exclusiva para participantes inscritos e confirmados no evento, por meio de plataforma oficial que será divulgada juntamente com o Edital Oficial.
+                A submissão dos trabalhos será exclusiva para participantes inscritos e confirmados no evento, por meio da plataforma Even3.
               </p>
             </div>
           </div>

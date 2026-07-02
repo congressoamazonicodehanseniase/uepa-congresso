@@ -182,7 +182,7 @@ export default function Inscricoes() {
                 Garanta sua vaga enquanto o 1º lote está aberto
               </h3>
               <p className="text-brand-faint mt-4 max-w-xl leading-relaxed">
-                Inscrições e submissão de trabalhos pela plataforma oficial do evento. Quanto antes
+                Inscrições e submissão de trabalhos pela plataforma Even3. Quanto antes
                 você se inscreve, menor o valor — o 1º lote tem o melhor preço da sua categoria.
               </p>
             </div>
