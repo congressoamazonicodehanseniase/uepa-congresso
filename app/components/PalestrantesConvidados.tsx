@@ -108,6 +108,14 @@ const palestrantes: Palestrante[] = [
     lattes: 'http://lattes.cnpq.br/3455183793812931',
   },
   {
+    nome: 'Dra. Dyana Melkys Borges da Silva',
+    titulo: 'Coordenação Geral e Científica',
+    instituicao: 'Médica Dermatologista · CRM-PA 9310 · RQE 5394 (Dermatologia) · RQE 6065 (Hansenologia)',
+    foto: '/palestrantes/dyana-silva-nova.jpg',
+    curriculo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Membro da SBH, SBD, SBCD, GBM e SBC. Idealizadora do ADHAM.',
+    resumo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Idealizadora do ADHAM.',
+  },
+  {
     nome: 'Dra. Larissa Navarro Barros',
     titulo: 'Otorrinolaringologista · Mestre em Ensino na Saúde na Amazônia (UEPA)',
     instituicao: 'Professora UEPA Campus VIII · Coordenadora da LIOTO',
@@ -204,14 +212,6 @@ const palestrantes: Palestrante[] = [
     curriculo: 'Biomédica (PUC Goiás - 2014), Mestrado em Ciências Ambientais e Saúde (PUC Goiás - 2017) e Doutorado em Biologia Parasitária na Amazônia (UEPA - 2023). Atualmente é Professora Auxiliar I da Universidade do Estado do Pará (UEPA) pelo Departamento de Patologia (DPAT).',
     resumo: 'Doutora em Biologia Parasitária na Amazônia (UEPA), atua como Professora Auxiliar no Departamento de Patologia da UEPA.',
     lattes: 'http://lattes.cnpq.br/1087812657057520',
-  },
-  {
-    nome: 'Dra. Dyana Melkys Borges da Silva',
-    titulo: 'Coordenação Geral e Científica',
-    instituicao: 'Médica Dermatologista · CRM-PA 9310 · RQE 5394 (Dermatologia) · RQE 6065 (Hansenologia)',
-    foto: '/palestrantes/dyana-silva-nova.jpg',
-    curriculo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Membro da SBH, SBD, SBCD, GBM e SBC. Idealizadora do ADHAM.',
-    resumo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Idealizadora do ADHAM.',
   },
   {
     nome: 'Profa. Dra. Simone Argentino',
