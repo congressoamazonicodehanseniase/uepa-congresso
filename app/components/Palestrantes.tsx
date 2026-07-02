@@ -5,6 +5,12 @@ const coordenacao = [
     institution: 'Médica Dermatologista · CRM-PA 9310 · RQE 5394 (Dermatologia) · RQE 6065 (Hansenologia)',
     bio: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Membro da SBH, SBD, SBCD, GBM e SBC. Idealizadora do ADHAM.',
   },
+  {
+    name: 'Dra. Milene Silveira Ferreira',
+    role: 'Coordenação Científica',
+    institution: 'Biomédica · Doutora em Biologia de Agentes Infecciosos e Parasitários',
+    bio: 'Pós-doutora em Ciência da Saúde (FIOCRUZ-MG), docente da UEPA e pesquisadora do Instituto Evandro Chagas. Líder de grupo de pesquisa em doenças humanas e saúde única.',
+  },
 ];
 
 export default function Palestrantes() {
