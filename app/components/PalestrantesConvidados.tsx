@@ -235,7 +235,7 @@ const palestrantes: Palestrante[] = [
     nome: 'Dra. Luanna de Melo Pereira Fernandes',
     titulo: 'Doutora em Neurociências e Biologia Celular',
     instituicao: 'Pró-Reitora de Pesquisa e Pós-Graduação (UEPA)',
-    foto: '',
+    foto: '/palestrantes/luanna-fernandes.jpg',
     curriculo: 'Pró-Reitora de Pesquisa e Pós-Graduação e Professora Adjunta do Departamento de Morfologia e Ciências Fisiológicas (DMCF/UEPA). Graduação em Odontologia, Especialização em Farmacologia e Ortodontia, Mestrado em Ciências Farmacêuticas, Doutorado em Neurociências e Biologia Celular. Docente Permanente do PPGCF-UFPA e BIONORTE. Coordenadora do LANEFC e líder de grupo de pesquisa no CNPq.',
     resumo: 'Pró-Reitora de Pesquisa e Pós-Graduação e Professora Adjunta da UEPA. Doutora em Neurociências e Biologia Celular.',
     lattes: 'http://lattes.cnpq.br/0156144290849777',
