@@ -7,7 +7,7 @@ import CountdownTimer from './CountdownTimer';
 const tabela = [
   {
     name: 'Estudantes Ligantes',
-    sub: 'LIMDERM e parceiros',
+    sub: 'LIMDERM e parceiros · comprovação obrigatória',
     lotes: [{ lote: `Inscrições de ${INSCRICOES_INFO.ligantesPeriodo}`, valor: 'Gratuito' }],
     // lote usado apenas para exibir o período no modo `free`
     free: true,
