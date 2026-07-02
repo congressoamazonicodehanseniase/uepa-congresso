@@ -3,7 +3,7 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import Link from 'next/link';
 import { Check, Copy, Loader2, ArrowLeft, Paperclip } from 'lucide-react';
-import { CATEGORIAS_INSCRICAO, TIPOS_PARTICIPACAO, PIX } from '../../lib/config';
+import { CATEGORIAS_INSCRICAO, TIPOS_PARTICIPACAO, PIX, CONTATO } from '../../lib/config';
 
 type Categoria = (typeof CATEGORIAS_INSCRICAO)[number];
 
