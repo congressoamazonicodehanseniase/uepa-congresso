@@ -13,6 +13,8 @@ const ESTADO_INICIAL = {
   categoria: '' as Categoria | '',
   especialidade: '',
   empresa: '',
+  postoSaude: '',
+  funcao: '',
   tipoParticipacao: '' as (typeof TIPOS_PARTICIPACAO)[number] | '',
   cidade: '',
   instituicao: '',
@@ -97,35 +99,44 @@ export default function InscricaoForm() {
             Inscrição recebida!
           </h2>
         </div>
-        <p className="text-muted text-base sm:text-lg mt-5 leading-relaxed">
-          Agora finalize com o pagamento via Pix abaixo. Depois, envie o comprovante para{' '}
-          <strong className="text-ink">{PIX.chave}</strong> para confirmarmos sua vaga.
-        </p>
+        {dados.categoria === 'Profissional da Saúde (Prefeitura)' ? (
+          <p className="text-muted text-base sm:text-lg mt-5 leading-relaxed">
+            Sua inscrição como profissional da rede municipal foi registrada. Agora, envie seu comprovante de vinculação com a Secretaria de Saúde abaixo ou para{' '}
+            <strong className="text-ink">{CONTATO.email}</strong> para confirmarmos sua isenção.
+          </p>
+        ) : (
+          <>
+            <p className="text-muted text-base sm:text-lg mt-5 leading-relaxed">
+              Agora finalize com o pagamento via Pix abaixo. Depois, envie o comprovante para{' '}
+              <strong className="text-ink">{PIX.chave}</strong> para confirmarmos sua vaga.
+            </p>
 
-        <div className="mt-7 rounded-2xl border border-line bg-canvas p-6 sm:p-8 space-y-5">
-          {[
-            { label: `Chave Pix (${PIX.tipoChave})`, valor: PIX.chave },
-            { label: 'Favorecido', valor: PIX.favorecido },
-            { label: 'Banco', valor: PIX.banco },
-            { label: 'Agência', valor: PIX.agencia },
-            { label: 'Conta', valor: PIX.conta },
-          ].map((item) => (
-            <div key={item.label} className="flex items-center justify-between gap-3">
-              <div className="min-w-0">
-                <p className="text-xs uppercase tracking-[0.08em] text-muted">{item.label}</p>
-                <p className="text-base sm:text-lg text-ink font-medium break-all">{item.valor}</p>
-              </div>
-              <button
-                type="button"
-                onClick={() => copiar(item.label, item.valor)}
-                className="shrink-0 p-3 rounded-lg border border-line text-ink-soft hover:border-brand-strong hover:text-brand-strong transition-colors"
-                aria-label={`Copiar ${item.label}`}
-              >
-                {copiado === item.label ? <Check size={18} /> : <Copy size={18} />}
-              </button>
+            <div className="mt-7 rounded-2xl border border-line bg-canvas p-6 sm:p-8 space-y-5">
+              {[
+                { label: `Chave Pix (${PIX.tipoChave})`, valor: PIX.chave },
+                { label: 'Favorecido', valor: PIX.favorecido },
+                { label: 'Banco', valor: PIX.banco },
+                { label: 'Agência', valor: PIX.agencia },
+                { label: 'Conta', valor: PIX.conta },
+              ].map((item) => (
+                <div key={item.label} className="flex items-center justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="text-xs uppercase tracking-[0.08em] text-muted">{item.label}</p>
+                    <p className="text-base sm:text-lg text-ink font-medium break-all">{item.valor}</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => copiar(item.label, item.valor)}
+                    className="shrink-0 p-3 rounded-lg border border-line text-ink-soft hover:border-brand-strong hover:text-brand-strong transition-colors"
+                    aria-label={`Copiar ${item.label}`}
+                  >
+                    {copiado === item.label ? <Check size={18} /> : <Copy size={18} />}
+                  </button>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        )}
 
         {comprovanteEnviado ? (
           <div className="mt-7 flex items-center gap-4 rounded-2xl border border-brand-tint bg-brand-soft p-6">
@@ -136,7 +147,11 @@ export default function InscricaoForm() {
           </div>
         ) : (
           <form onSubmit={onEnviarComprovante} className="mt-7 rounded-2xl border border-line bg-canvas p-6 sm:p-8">
-            <p className={campoLabel}>Anexar comprovante de pagamento</p>
+            <p className={campoLabel}>
+              {dados.categoria === 'Profissional da Saúde (Prefeitura)' 
+                ? 'Anexar comprovante de vinculação' 
+                : 'Anexar comprovante de pagamento'}
+            </p>
             <p className="text-muted text-sm sm:text-base leading-relaxed mb-4">
               Prefere enviar por aqui? Anexe a imagem ou PDF do comprovante e nós recebemos por e-mail na hora.
             </p>
@@ -234,7 +249,7 @@ export default function InscricaoForm() {
           </div>
         </div>
 
-        {(dados.categoria === 'Profissional da Saúde (especialidade)' || dados.categoria === 'Representante (empresa)') && (
+        {(dados.categoria === 'Profissional da Saúde (especialidade)' || dados.categoria === 'Representante (empresa)' || dados.categoria === 'Profissional da Saúde (Prefeitura)') && (
           <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
             {dados.categoria === 'Profissional da Saúde (especialidade)' && (
               <div>
@@ -246,6 +261,29 @@ export default function InscricaoForm() {
                   className={campoInput}
                 />
               </div>
+            )}
+
+            {dados.categoria === 'Profissional da Saúde (Prefeitura)' && (
+              <>
+                <div>
+                  <label className={campoLabel}>Posto de saúde</label>
+                  <input
+                    required
+                    value={dados.postoSaude}
+                    onChange={(e) => set('postoSaude', e.target.value)}
+                    className={campoInput}
+                  />
+                </div>
+                <div>
+                  <label className={campoLabel}>Função</label>
+                  <input
+                    required
+                    value={dados.funcao}
+                    onChange={(e) => set('funcao', e.target.value)}
+                    className={campoInput}
+                  />
+                </div>
+              </>
             )}
 
             {dados.categoria === 'Representante (empresa)' && (

@@ -90,6 +90,7 @@ export const PIX = {
 // Categorias do formulário de inscrição (modal "Quero me inscrever").
 export const CATEGORIAS_INSCRICAO = [
   'Profissional da Saúde (especialidade)',
+  'Profissional da Saúde (Prefeitura)',
   'Estudante',
   'Representante (empresa)',
   'Expositor',
