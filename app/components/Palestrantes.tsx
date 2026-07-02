@@ -11,7 +11,7 @@ const coordenacao = [
     role: 'Coordenação Científica',
     institution: 'Biomédica · Doutora em Biologia de Agentes Infecciosos e Parasitários',
     bio: 'Pós-doutora em Ciência da Saúde (FIOCRUZ-MG), docente da UEPA e pesquisadora do Instituto Evandro Chagas. Líder de grupo de pesquisa em doenças humanas e saúde única.',
-    foto: '/palestrantes/milene-ferreira.jpg',
+    foto: '/palestrantes/milene-nova.jpeg',
   },
 ];
 

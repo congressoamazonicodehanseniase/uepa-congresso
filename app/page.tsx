@@ -58,7 +58,7 @@ const extensao: { title: string; desc: string; foto: { src: string; alt: string 
   { title: 'Ação Social', desc: 'Atividade de extensão do ADHAM voltada ao atendimento e cuidado da população em situação de vulnerabilidade.', foto: FOTOS.acaoSocial },
   { title: 'Campanha Doenças Reumáticas', desc: 'Ação de conscientização e prevenção de doenças reumáticas promovida pelo ADHAM junto à comunidade.', foto: FOTOS.campanhaReumaticas },
   { title: 'Ação Social LIMDERM', desc: 'Ação social da LIMDERM em parceria com o ADHAM, levando atendimento especializado à comunidade.', foto: FOTOS.acaoSocialLimderm },
-  { title: 'Equipe de Extensão', desc: 'Nossa equipe unida em mais uma ação de extensão do ADHAM.', foto: FOTOS.equipeExtensao },
+  { title: 'Formação', desc: 'Desenvolvendo competências acadêmicas e profissionais por meio do ensino e da educação continuada.', foto: FOTOS.equipeExtensao },
 ];
 
 const reconhecimentos = [

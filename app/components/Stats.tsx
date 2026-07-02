@@ -1,7 +1,7 @@
 const stats = [
   { value: 'Iª', label: 'edição inaugural', note: 'bienal' },
   { value: '3', label: 'dias de programação', note: '27 a 29 de agosto' },
-  { value: '2', label: 'sedes em Marabá', note: 'UEPA + Carajás' },
+  { value: '2', label: 'sedes em Marabá', note: 'UEPA + CENTRO DE CONVENÇÕES' },
   { value: 'CNPq', label: 'apoio institucional', note: 'fomento à pesquisa' },
 ];
 

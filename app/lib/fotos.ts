@@ -41,5 +41,5 @@ export const FOTOS = {
   // Pessoas
   dyana:        { src: '/palestrantes/dyana-silva-nova.jpg', alt: 'Dra. Dyana Melkys Borges da Silva' },
   dyanaFachada: { src: b + 'p06a.jpg', alt: 'Dra. Dyana Melkys, responsável técnica e idealizadora do ADHAM' },
-  milene:       { src: b + 'p35a.jpg', alt: 'Dra. Milene Silveira Ferreira' },
+  milene:       { src: '/palestrantes/milene-nova.jpeg', alt: 'Dra. Milene Silveira Ferreira' },
 } as const;

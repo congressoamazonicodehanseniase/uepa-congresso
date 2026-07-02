@@ -94,7 +94,7 @@ export default function Sobre() {
               {
                 n: '03',
                 title: 'Apresentação de trabalhos',
-                desc: 'Submita seu trabalho científico, apresente-o e receba certificação específica. Submissões abertas até 31/07/2026.',
+                desc: 'Submita seu trabalho científico, apresente-o e receba certificação específica. Submissões abertas até 18/07/2026.',
               },
               {
                 n: '04',
@@ -109,7 +109,7 @@ export default function Sobre() {
               {
                 n: '06',
                 title: 'Apoio CNPq',
-                desc: 'Evento bienal com suporte do Conselho Nacional de Desenvolvimento Científico e Tecnológico, legitimidade científica reconhecida.',
+                desc: 'Evento com suporte do Conselho Nacional de Desenvolvimento Científico e Tecnológico, legitimidade científica reconhecida.',
               },
             ].map((b) => (
               <div key={b.n} className="border-t border-brand-edge pt-5">
