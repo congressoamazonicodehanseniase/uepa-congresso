@@ -18,6 +18,22 @@ type Palestrante = {
 // Palestrantes confirmados do I Congresso Amazônico de Hanseníase.
 const palestrantes: Palestrante[] = [
   {
+    nome: 'Dra. Dyana Melkys Borges da Silva',
+    titulo: 'Coordenação Geral e Científica',
+    instituicao: 'Médica Dermatologista · CRM-PA 9310 · RQE 5394 (Dermatologia) · RQE 6065 (Hansenologia)',
+    foto: '/palestrantes/dyana-silva.jpg',
+    curriculo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Membro da SBH, SBD, SBCD, GBM e SBC. Idealizadora do ADHAM.',
+    resumo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Idealizadora do ADHAM.',
+  },
+  {
+    nome: 'Dra. Milene Silveira Ferreira',
+    titulo: 'Coordenação Científica',
+    instituicao: 'Biomédica · Doutora em Biologia de Agentes Infecciosos e Parasitários',
+    foto: '/palestrantes/milene-ferreira.jpg',
+    curriculo: 'Pós-doutora em Ciência da Saúde (FIOCRUZ-MG), docente da UEPA e pesquisadora do Instituto Evandro Chagas. Líder de grupo de pesquisa em doenças humanas e saúde única.',
+    resumo: 'Pós-doutora em Ciência da Saúde (FIOCRUZ-MG), docente da UEPA e pesquisadora do Instituto Evandro Chagas.',
+  },
+  {
     nome: 'Dr. Marco Andrey',
     titulo: 'Dermatologista · Doutor (USP), pós-doutor (Amsterdã)',
     instituicao: 'Presidente da Sociedade Brasileira de Hansenologia (2023–2026) · FMRP-USP',

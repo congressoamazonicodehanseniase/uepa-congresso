@@ -123,6 +123,13 @@ export default function Inscricoes() {
             </div>
           ))}
         </div>
+        <div className="mb-8 p-6 bg-brand-soft border-l-4 border-brand-strong rounded-r-2xl">
+          <p className="font-bold text-brand-strong mb-2">ATENÇÃO !!!!!</p>
+          <p className="text-sm text-ink-soft">
+            O Congresso Amazônico de Hanseníase 2026, realizado em parceria com a Secretaria Municipal de Saúde de Marabá, convida profissionais vinculados à Secretaria a se inscreverem entre os dias 4 e 19 de julho de 2026. Durante este período, os profissionais vinculados à Secretaria Municipal de Saúde terão isenção da taxa, desde que apresentem comprovação do vínculo, local de lotação e função exercida.
+          </p>
+        </div>
+
         {/* Progressão de preço — trilho único, do menor ao maior valor */}
         <div className="mt-4 mb-6 flex items-center gap-3 text-xs">
           <span className="font-semibold text-brand-strong whitespace-nowrap">1º lote · menor preço</span>

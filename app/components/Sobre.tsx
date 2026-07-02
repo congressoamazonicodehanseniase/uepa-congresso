@@ -30,13 +30,13 @@ export default function Sobre() {
             <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
               Um <span className="italic text-brand-strong">marco</span> para a Amazônia
             </h2>
-            <p className="dropcap mt-7 text-ink-soft leading-relaxed text-[1.08rem]">
+            <p className="dropcap mt-7 text-ink-soft leading-relaxed text-sm">
               A persistência da hanseníase na Região Norte reforça a necessidade de serviços
               especializados, diagnóstico precoce e formação profissional qualificada. Da experiência
               construída pelo ADHAM nasceu o {CONGRESSO.nome}, fortalecendo a discussão científica
               sobre a doença na região.
             </p>
-            <p className="mt-5 text-ink-soft leading-relaxed text-[1.02rem]">
+            <p className="mt-5 text-ink-soft leading-relaxed text-sm">
               Estruturado para ocorrer a cada dois anos, o evento visa consolidar-se como espaço
               permanente de atualização, intercâmbio de experiências e fortalecimento da pesquisa e da
               assistência em hanseníase na Amazônia Legal, reunindo especialistas, pesquisadores,
@@ -47,12 +47,8 @@ export default function Sobre() {
             </Link>
           </div>
 
-          {/* Ficha + foto, deslocadas */}
+          {/* Ficha sem foto, deslocada */}
           <div className="lg:col-span-5 lg:pt-16">
-            <div className="relative">
-              <PhotoPlaceholder ratio="aspect-[4/3]" src={FOTOS.producao.src} caption={FOTOS.producao.alt} position="center 28%" />
-              <LeafMark className="absolute -top-7 -left-7 w-20 text-brand-tint -rotate-12" />
-            </div>
             <dl className="mt-6 divide-y divide-line border-t border-b border-line">
               {ficha.map((item) => (
                 <div key={item.label} className="grid grid-cols-[7rem_1fr] gap-3 py-3.5">
