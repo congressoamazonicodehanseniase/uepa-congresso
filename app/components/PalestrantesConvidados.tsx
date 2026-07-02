@@ -213,6 +213,33 @@ const palestrantes: Palestrante[] = [
     curriculo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Membro da SBH, SBD, SBCD, GBM e SBC. Idealizadora do ADHAM.',
     resumo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Idealizadora do ADHAM.',
   },
+  {
+    nome: 'Profa. Dra. Simone Argentino',
+    titulo: 'Enfermeira · Mestra (UEPA)',
+    instituicao: 'Docente efetiva da Universidade do Estado do Pará (UEPA)',
+    foto: '',
+    curriculo: 'Enfermeira graduada pela Universidade Federal de São Paulo (UNIFESP), com pós-graduação em Saúde da Família e Mestrado em Ensino em Saúde na Amazônia pela UEPA. É docente efetiva da Universidade do Estado do Pará desde 2010 e atua nas áreas de Saúde Coletiva, Educação em Saúde e Saúde Indígena, com experiência na formação e capacitação de profissionais para atenção à saúde de populações amazônicas.',
+    resumo: 'Atua nas áreas de Saúde Coletiva, Educação em Saúde e Saúde Indígena. Docente efetiva da UEPA desde 2010.',
+    lattes: 'http://lattes.cnpq.br/0154609186488185',
+  },
+  {
+    nome: 'Dr. Paulo Turiel',
+    titulo: 'Médico Oftalmologista (HCFMUSP)',
+    instituicao: 'Membro da American Academy of Ophthalmology',
+    foto: '',
+    curriculo: 'Médico graduado pela Universidade Federal do Pará. Oftalmologista pelo Hospital Federal de Bonsucesso - RJ. Realizou fellowship no setor de Catarata do Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo - HCFMUSP. Membro da American Academy of Ophthalmology. Título de Especialista em Oftalmologia pela Associação Médica Brasileira e Conselho Brasileiro de Oftalmologia (2015).',
+    resumo: 'Oftalmologista com fellowship em Catarata pelo HCFMUSP. Membro da American Academy of Ophthalmology.',
+    lattes: 'http://lattes.cnpq.br/1186849050351849',
+  },
+  {
+    nome: 'Dra. Luanna de Melo Pereira Fernandes',
+    titulo: 'Doutora em Neurociências e Biologia Celular',
+    instituicao: 'Pró-Reitora de Pesquisa e Pós-Graduação (UEPA)',
+    foto: '',
+    curriculo: 'Pró-Reitora de Pesquisa e Pós-Graduação e Professora Adjunta do Departamento de Morfologia e Ciências Fisiológicas (DMCF/UEPA). Graduação em Odontologia, Especialização em Farmacologia e Ortodontia, Mestrado em Ciências Farmacêuticas, Doutorado em Neurociências e Biologia Celular. Docente Permanente do PPGCF-UFPA e BIONORTE. Coordenadora do LANEFC e líder de grupo de pesquisa no CNPq.',
+    resumo: 'Pró-Reitora de Pesquisa e Pós-Graduação e Professora Adjunta da UEPA. Doutora em Neurociências e Biologia Celular.',
+    lattes: 'http://lattes.cnpq.br/0156144290849777',
+  }
 ];
 
 export default function PalestrantesConvidados() {
@@ -257,7 +284,7 @@ export default function PalestrantesConvidados() {
               >
                 <div className="h-64 sm:h-auto sm:aspect-[4/5] bg-brand-soft overflow-hidden">
                   <img
-                    src={p.foto}
+                    src={p.foto || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" fill="%23f0f0f0"><rect width="100%25" height="100%25"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23aaa">Foto Pendente</text></svg>'}
                     alt={p.nome}
                     loading="lazy"
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -313,7 +340,7 @@ export default function PalestrantesConvidados() {
               <div className="flex flex-col sm:flex-row gap-6 items-start">
                 <div className="w-24 h-24 sm:w-32 sm:h-32 shrink-0 rounded-2xl overflow-hidden border-2 border-line">
                   <img
-                    src={selected.foto}
+                    src={selected.foto || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" fill="%23f0f0f0"><rect width="100%25" height="100%25"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="12" fill="%23aaa">Sem Foto</text></svg>'}
                     alt={selected.nome}
                     className="w-full h-full object-cover object-top"
                   />
