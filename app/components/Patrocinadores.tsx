@@ -5,7 +5,8 @@ import { LOGO_POR_NOME } from '../lib/parceiros';
 const grupos = [
   { titulo: 'Realização', parceiros: ['ADHAM', 'UEPA', 'LIMDERM', 'CIPE'] },
   { titulo: 'Apoio científico', parceiros: ['CNPq', 'SBH'] },
-  { titulo: 'Apoio institucional', parceiros: ['SMS Marabá', 'SESPA'] },
+  { titulo: 'Apoio institucional', parceiros: ['SMS Marabá'] },
+  // SESPA e UNIACESSE temporariamente removidos
 ];
 
 export default function Patrocinadores() {

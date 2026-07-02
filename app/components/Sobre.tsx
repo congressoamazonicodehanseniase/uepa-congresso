@@ -94,7 +94,7 @@ export default function Sobre() {
               {
                 n: '03',
                 title: 'Apresentação de trabalhos',
-                desc: 'Submita seu trabalho científico, apresente-o e receba certificação específica. Submissões abertas até 11/07/2026.',
+                desc: 'Submita seu trabalho científico, apresente-o e receba certificação específica. Submissões abertas até 31/07/2026.',
               },
               {
                 n: '04',

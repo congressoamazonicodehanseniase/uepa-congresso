@@ -46,7 +46,7 @@ export default function StickyCTA() {
               Garanta sua vaga no congresso
             </p>
             <p className="mt-0.5 flex flex-wrap items-center gap-x-2 text-xs text-brand-faint">
-              <span>Gratuidade dos ligantes encerra 05/07</span>
+              <span>Gratuidade dos ligantes de 03/07 a 09/07</span>
               <Countdown
                 deadline={INSCRICOES_INFO.ligantesFim}
                 className="bg-brand-strong px-2 py-0.5 font-semibold text-white"

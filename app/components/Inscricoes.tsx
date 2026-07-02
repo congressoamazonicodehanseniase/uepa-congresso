@@ -9,6 +9,13 @@ const tabela = [
     name: 'Estudantes Ligantes',
     sub: 'LIMDERM e parceiros',
     lotes: [{ lote: `Inscrições de ${INSCRICOES_INFO.ligantesPeriodo}`, valor: 'Gratuito' }],
+    // lote usado apenas para exibir o período no modo `free`
+    free: true,
+  },
+  {
+    name: 'Profissionais SMS Marabá',
+    sub: 'Vinculados à Secretaria Municipal de Saúde · comprovação obrigatória',
+    lotes: [{ lote: 'Inscrições de 04/07 a 19/07/2026', valor: 'Gratuito' }],
     free: true,
   },
   {
@@ -52,7 +59,7 @@ export default function Inscricoes() {
                 <span className="text-brand-light text-xs font-semibold uppercase tracking-widest">Atenção</span>
                 <span className="w-px h-4 bg-brand-edge hidden sm:block" />
                 <span className="inline-flex items-center gap-2 text-white text-sm font-medium">
-                  Ligantes LIMDERM: <strong>gratuidade encerra 05/07</strong>
+                  Ligantes LIMDERM: <strong>gratuidade de 03/07 a 09/07</strong>
                   <Countdown deadline={INSCRICOES_INFO.ligantesFim} className="bg-brand-strong px-2 py-0.5 text-xs font-semibold" />
                 </span>
               </div>
@@ -99,7 +106,7 @@ export default function Inscricoes() {
                 <div className="md:col-span-8 md:text-right">
                   <p className="font-[family-name:var(--font-display)] font-extrabold text-3xl text-brand-strong leading-none">Gratuito</p>
                   <p className="text-ink-soft text-sm mt-2">
-                    Inscrições de {INSCRICOES_INFO.ligantesPeriodo}, exclusivamente neste período.
+                    {c.lotes[0].lote}, exclusivamente neste período.
                   </p>
                 </div>
               ) : (

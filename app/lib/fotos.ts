@@ -32,6 +32,7 @@ export const FOTOS = {
   acaoSocial:          { src: b + 'acao-social.jpeg',                    alt: 'Ação social do ADHAM na comunidade' },
   campanhaReumaticas:  { src: b + 'campanha-doencas-reumaticas.jpeg',    alt: 'Campanha de conscientização e prevenção de doenças reumáticas' },
   acaoSocialLimderm:   { src: b + 'acao-social-limderm.jpeg',            alt: 'Ação social da LIMDERM com o ADHAM' },
+  equipeExtensao:      { src: b + 'equipe-extensao.jpg',                 alt: 'Equipe de extensão do ADHAM' },
 
   // Reconhecimento
   premioCientifico: { src: b + 'p31a.jpg', alt: 'Premiação CIPE: reconhecimento da produção científica do ADHAM' },
