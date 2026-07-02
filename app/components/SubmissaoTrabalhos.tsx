@@ -107,11 +107,11 @@ export default function SubmissaoTrabalhos() {
               <ul className="list-none text-ink-soft space-y-3">
                 <li className="flex flex-col">
                   <span className="text-sm font-semibold text-brand-strong uppercase tracking-wider">Abertura das submissões</span>
-                  <span>17/07/2026</span>
+                  <span>04/07/2026</span>
                 </li>
                 <li className="flex flex-col">
                   <span className="text-sm font-semibold text-brand-strong uppercase tracking-wider">Encerramento das submissões</span>
-                  <span>31/07/2026</span>
+                  <span>18/07/2026</span>
                 </li>
               </ul>
             </div>
@@ -126,7 +126,7 @@ export default function SubmissaoTrabalhos() {
 
           <div className="mt-12 text-center text-sm text-muted pt-8 border-t border-line">
             <p className="font-semibold text-ink">Comissão Científica — I Congresso Amazônico de Hanseníase</p>
-            <p>Marabá (PA), 30 de junho de 2026.</p>
+            <p>Marabá (PA), 02 de julho de 2026.</p>
           </div>
 
         </div>

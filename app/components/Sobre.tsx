@@ -21,7 +21,7 @@ const ficha = [
 
 export default function Sobre() {
   return (
-    <section id="sobre" className="py-16 sm:py-24 bg-surface">
+    <section id="sobre" className="pt-8 sm:pt-12 pb-16 sm:pb-24 bg-surface">
       <div className="max-w-6xl mx-auto px-6">
         {/* Abertura editorial assimétrica */}
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">

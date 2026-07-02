@@ -48,7 +48,7 @@ const faqs = [
 
 export default function Inscricoes() {
   return (
-    <section id="inscricoes" className="py-16 sm:py-24 bg-surface">
+    <section id="inscricoes" className="pt-16 sm:pt-24 pb-8 sm:pb-12 bg-surface">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Faixa de urgência + cronômetro de submissão */}

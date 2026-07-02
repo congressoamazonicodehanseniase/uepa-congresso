@@ -247,7 +247,7 @@ export default function PalestrantesConvidados() {
 
   return (
     <>
-      <section id="palestrantes-convidados" className="relative py-16 sm:py-24 bg-canvas overflow-hidden">
+      <section id="palestrantes-convidados" className="relative pt-16 sm:pt-24 pb-8 sm:pb-12 bg-canvas overflow-hidden">
         <LeafMark className="absolute -top-10 -left-10 w-52 text-brand-tint rotate-[15deg] pointer-events-none" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">

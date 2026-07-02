@@ -12,7 +12,7 @@ export default function Local() {
   const v = venues[active];
 
   return (
-    <section id="local" className="py-16 sm:py-24 bg-canvas border-t border-line">
+    <section id="local" className="pt-8 sm:pt-12 pb-16 sm:pb-24 bg-canvas border-t border-line">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mb-12">
           <p className="rule-label mb-7">Locais do evento</p>
