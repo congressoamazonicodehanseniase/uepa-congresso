@@ -39,7 +39,7 @@ export const FOTOS = {
   premioSocial:     { src: b + 'p32a.jpg', alt: 'Premiação CIPE: reconhecimento do impacto social do ADHAM' },
 
   // Pessoas
-  dyana:        { src: b + 'p34b.jpg', alt: 'Dra. Dyana Melkys Borges da Silva' },
+  dyana:        { src: '/palestrantes/dyana-silva-nova.jpg', alt: 'Dra. Dyana Melkys Borges da Silva' },
   dyanaFachada: { src: b + 'p06a.jpg', alt: 'Dra. Dyana Melkys, responsável técnica e idealizadora do ADHAM' },
   milene:       { src: b + 'p35a.jpg', alt: 'Dra. Milene Silveira Ferreira' },
 } as const;

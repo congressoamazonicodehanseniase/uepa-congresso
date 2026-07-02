@@ -209,7 +209,7 @@ const palestrantes: Palestrante[] = [
     nome: 'Dra. Dyana Melkys Borges da Silva',
     titulo: 'Coordenação Geral e Científica',
     instituicao: 'Médica Dermatologista · CRM-PA 9310 · RQE 5394 (Dermatologia) · RQE 6065 (Hansenologia)',
-    foto: '/fotos/p34b.jpg',
+    foto: '/palestrantes/dyana-silva-nova.jpg',
     curriculo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Membro da SBH, SBD, SBCD, GBM e SBC. Idealizadora do ADHAM.',
     resumo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Idealizadora do ADHAM.',
   },
