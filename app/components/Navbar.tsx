@@ -48,8 +48,8 @@ export default function Navbar() {
         scrolled ? 'py-1' : 'py-2'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between lg:grid lg:grid-cols-3">
-        <div className="flex items-center justify-start">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between relative">
+        <div className="flex items-center justify-start flex-shrink-0 z-10">
           <Link href="/" className="flex items-center gap-3 sm:gap-4 group ml-2 sm:ml-6 lg:ml-0">
             <img
               src="/parceiros/logoamb.png"
@@ -75,7 +75,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <ul className="hidden lg:flex items-center justify-center gap-8">
+        <ul className="hidden lg:flex items-center justify-center gap-6 xl:gap-8 absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
           {links.map((l) => (
             <li key={l.href}>
               <Link
@@ -88,7 +88,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden lg:flex items-center justify-end">
+        <div className="hidden lg:flex items-center justify-end flex-shrink-0 z-10">
           <Link href={cta.href} className="btn btn-primary btn-sm">{cta.label}</Link>
         </div>
 
