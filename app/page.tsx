@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import PhotoPlaceholder from './components/PhotoPlaceholder';
 import GaleriaImpacto from './components/GaleriaImpacto';
 import FotoSlideshow from './components/FotoSlideshow';
-import { CONTATO, REDES, RESPONSAVEL, CONGRESSO } from './lib/config';
+import { CONTATO, REDES, RESPONSAVEL, CONGRESSO, LOCAIS } from './lib/config';
 import { FOTOS } from './lib/fotos';
 import { PARCEIROS } from './lib/parceiros';
 import { MapPin, Mail, AtSign, ArrowRight } from 'lucide-react';
@@ -429,7 +429,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <figure className="rounded-2xl overflow-hidden">
                   <img
-                    src="/foto.uepa.jpeg"
+                    src={LOCAIS.capacitacoes.fotos[0]}
                     alt="Entrada da Universidade do Estado do Pará – Campus Universitário de Marabá"
                     className="w-full h-40 sm:h-52 object-cover object-center"
                   />
