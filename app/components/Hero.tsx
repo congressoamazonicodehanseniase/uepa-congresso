@@ -63,7 +63,7 @@ export default function Hero() {
                 className="bg-brand-strong px-2.5 py-0.5 text-xs font-semibold text-white"
               />
               <span className="text-brand-edge hidden sm:inline">·</span>
-              <span className="text-brand-faint">Submissão de trabalhos até 31/07</span>
+              <span className="text-brand-faint">Submissão de trabalhos até 18/07</span>
             </p>
           </div>
 
