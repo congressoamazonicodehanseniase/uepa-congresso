@@ -34,7 +34,7 @@ export default function SubmissaoTrabalhos() {
 
         <div className="space-y-12">
           <div>
-            <h3 className="font-[family-name:var(--font-display)] font-bold text-ink text-xl mb-4">Categorias de Trabalho Aceitas</h3>
+            <h3 className="font-[family-name:var(--font-display)] font-bold text-ink text-xl mb-4">Categorias de Trabalho Aceitos</h3>
             <ul className="list-disc pl-5 text-ink-soft space-y-1.5 marker:text-brand-tint">
               <li>Pesquisa Original</li>
               <li>Revisão de Literatura</li>
