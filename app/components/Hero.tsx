@@ -103,7 +103,8 @@ export default function Hero() {
               <div className="mt-7 pt-6 border-t border-brand-edge text-sm leading-relaxed">
                 <p className="text-white font-semibold">Marabá, Pará · Brasil</p>
                 <p className="text-brand-faint mt-0.5">{LOCAIS.congresso.nome}</p>
-                <p className="text-brand-light mt-0.5">{CONGRESSO.apoio} · Bienal</p>
+                <p className="text-brand-faint mt-0.5 text-[0.8rem]">{LOCAIS.congresso.endereco}</p>
+                <p className="text-brand-light mt-1">{CONGRESSO.apoio} · Bienal</p>
               </div>
               <Link href="/congresso/inscricao" className="btn btn-white w-full mt-7">
                 Quero me inscrever
