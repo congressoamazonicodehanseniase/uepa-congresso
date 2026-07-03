@@ -4,7 +4,7 @@
 export const CONGRESSO = {
   edicao: 'I',
   nome: 'I Congresso Amazônico de Hanseníase',
-  // 27, 28 e 29 de agosto de 2026 — Marabá/PA. Evento bienal, apoio CNPq.
+  // 27, 28 e 29 de agosto de 2026 — Marabá/PA. Evento, apoio CNPq.
   datasLabel: '27, 28 e 29 de agosto de 2026',
   datasCurta: '27 – 29 Ago 2026',
   // Abertura do congresso (ISO) — alvo da contagem regressiva.

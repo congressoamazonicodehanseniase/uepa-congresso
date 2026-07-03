@@ -28,7 +28,7 @@ const stats = [
   { value: '2024', label: 'Inauguração', sub: '31 de outubro' },
   { value: '+110', label: 'Atendimentos', sub: 'especializados' },
   { value: '4', label: 'Eixos integrados', sub: 'assistência · ensino · pesquisa · extensão' },
-  { value: '1º', label: 'Congresso Amazônico', sub: 'de Hanseníase (bienal)' },
+  { value: '1º', label: 'Congresso Amazônico', sub: 'de Hanseníase' },
 ];
 
 const timeline = [
@@ -69,7 +69,7 @@ const reconhecimentos = [
 const visao = [
   { title: 'Referência na Amazônia Legal', desc: 'Consolidar-se como centro de referência em assistência, ensino, pesquisa e extensão.' },
   { title: 'Cursos em Dermatologia e Hanseníase', desc: 'Criação de programa de residência médica em dermatologia.' },
-  { title: 'Congresso Amazônico bienal', desc: 'Consolidar o congresso como espaço permanente de atualização e pesquisa.' },
+  { title: 'Congresso Amazônico', desc: 'Consolidar o congresso como espaço permanente de atualização e pesquisa.' },
 ];
 
 export default function Home() {

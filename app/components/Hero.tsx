@@ -26,7 +26,7 @@ export default function Hero() {
           <div className="lg:col-span-7">
             <p className="flex items-center gap-3 font-[family-name:var(--font-display)] text-xs sm:text-sm tracking-[0.26em] uppercase text-brand-light">
 
-              {CONGRESSO.edicao} Edição · Bienal · Marabá, PA
+              {CONGRESSO.edicao} Edição · Marabá, PA
             </p>
             <h1 className="display mt-5 text-white" style={{ fontSize: 'clamp(2.4rem, 6vw, 4.6rem)' }}>
               Congresso <span className="text-brand-light italic">Amazônico</span> de Hanseníase
@@ -104,7 +104,7 @@ export default function Hero() {
                 <p className="text-white font-semibold">Marabá, Pará · Brasil</p>
                 <p className="text-brand-faint mt-0.5">{LOCAIS.congresso.nome}</p>
                 <p className="text-brand-faint mt-0.5 text-[0.8rem]">{LOCAIS.congresso.endereco}</p>
-                <p className="text-brand-light mt-1">{CONGRESSO.apoio} · Bienal</p>
+                <p className="text-brand-light mt-1">{CONGRESSO.apoio}</p>
               </div>
               <Link href="/congresso/inscricao" className="btn btn-white w-full mt-7">
                 Quero me inscrever
