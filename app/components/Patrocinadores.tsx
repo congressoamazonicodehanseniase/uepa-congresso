@@ -42,7 +42,7 @@ export default function Patrocinadores() {
                       loading="lazy"
                       className={`transition-all duration-300 ease-out hover:-translate-y-1 ${
                         p === 'SESPA'
-                          ? 'h-14 w-12 object-cover object-center'
+                          ? 'h-14 w-14 object-cover object-[45%_center] scale-[1.25]'
                           : 'max-h-12 max-w-[8rem] w-auto object-contain'
                       }`}
                     />

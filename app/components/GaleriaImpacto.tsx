@@ -9,9 +9,9 @@ const frames: { cls: string; interval: number; fotos: Foto[] }[] = [
   // Quadro alto à esquerda
   { cls: 'row-span-2', interval: 4200, fotos: [FOTOS.atendimento, FOTOS.pratica1, FOTOS.estagio] },
   // Quadro superior direito
-  { cls: '', interval: 5300, fotos: [FOTOS.academicos, FOTOS.discussao] },
+  { cls: '', interval: 5300, fotos: [FOTOS.discussao, FOTOS.campanhaLaranja] },
   // Quadro inferior direito
-  { cls: '', interval: 4700, fotos: [FOTOS.pratica2, FOTOS.inauguracao, FOTOS.evento] },
+  { cls: '', interval: 4700, fotos: [FOTOS.inauguracao, FOTOS.evento, FOTOS.oficinaHanseniase] },
 ];
 
 function Frame({ cls, interval, fotos }: { cls: string; interval: number; fotos: Foto[] }) {
