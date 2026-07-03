@@ -46,19 +46,19 @@ const pilares: { n: string; title: string; desc: string; foto: { src: string; al
 ];
 
 const extensao: { title: string; desc: string; foto: { src: string; alt: string }; pos?: string }[] = [
+  { title: 'Primeiros sonhos do ADHAM', desc: 'Registros da origem do ambulatório, que nasceu do sonho coletivo de uma equipe comprometida com a saúde da Amazônia.', foto: FOTOS.primeirosSonhos },
+  { title: 'Oficina de Hanseníase', desc: 'Oficina educativa promovida pelo ADHAM para capacitação e difusão do conhecimento sobre a doença.', foto: FOTOS.oficinaHanseniase },
+  { title: 'Formação', desc: 'Desenvolvendo competências acadêmicas e profissionais por meio do ensino e da educação continuada.', foto: FOTOS.equipeExtensao },
+  { title: 'Estágios da LIMDERM', desc: 'Vivência prática dos acadêmicos do 6º período de Habilidades Profissionais no ambulatório.', foto: FOTOS.estagio },
+  { title: 'Ação Social', desc: 'Atividade de extensão do ADHAM voltada ao atendimento e cuidado da população em situação de vulnerabilidade.', foto: FOTOS.acaoSocial },
+  { title: 'Ação Social LIMDERM', desc: 'Ação social da LIMDERM em parceria com o ADHAM, levando atendimento especializado à comunidade.', foto: FOTOS.acaoSocialLimderm },
+  { title: 'Campanha Doenças Reumáticas', desc: 'Ação de conscientização e prevenção de doenças reumáticas promovida pelo ADHAM junto à comunidade.', foto: FOTOS.campanhaReumaticas },
+  { title: 'Campanha Dez Laranja', desc: 'Campanha de conscientização sobre hanseníase realizada no Hospital Municipal de Marabá (HMM).', foto: FOTOS.campanhaLaranja },
+  { title: 'Carreta Roda Hans', desc: 'Iniciativa do Ministério da Saúde; acadêmicos atuam na assistência em hanseníase em Marabá.', foto: FOTOS.carreta },
   { title: 'Projeto Cartas ao Cientista', desc: 'Atendimentos e orientações que aproximam ciência, educação e comunidade.', foto: FOTOS.jornadaLupus },
   { title: 'Cartas ao Cientista', desc: 'Equipe do ADHAM em ação de extensão do projeto Cartas ao Cientista, ao lado do GARPA.', foto: FOTOS.jornadaEstande, pos: 'center 60%' },
   { title: 'Cartas ao Cientista', desc: 'Ação de extensão que aproxima ciência, educação e comunidade.', foto: FOTOS.cartas },
   { title: 'Produção científica', desc: 'Apresentação de trabalhos em congressos nacionais, como o 78º Congresso da Sociedade Brasileira de Dermatologia (CSBD), Rio 2025.', foto: FOTOS.producao, pos: 'center 30%' },
-  { title: 'Carreta Roda Hans', desc: 'Iniciativa do Ministério da Saúde; acadêmicos atuam na assistência em hanseníase em Marabá.', foto: FOTOS.carreta },
-  { title: 'Estágios da LIMDERM', desc: 'Vivência prática dos acadêmicos do 6º período de Habilidades Profissionais no ambulatório.', foto: FOTOS.estagio },
-  { title: 'Campanha Dez Laranja', desc: 'Campanha de conscientização sobre hanseníase realizada no Hospital Municipal de Marabá (HMM).', foto: FOTOS.campanhaLaranja },
-  { title: 'Oficina de Hanseníase', desc: 'Oficina educativa promovida pelo ADHAM para capacitação e difusão do conhecimento sobre a doença.', foto: FOTOS.oficinaHanseniase },
-  { title: 'Primeiros sonhos do ADHAM', desc: 'Registros da origem do ambulatório, que nasceu do sonho coletivo de uma equipe comprometida com a saúde da Amazônia.', foto: FOTOS.primeirosSonhos },
-  { title: 'Ação Social', desc: 'Atividade de extensão do ADHAM voltada ao atendimento e cuidado da população em situação de vulnerabilidade.', foto: FOTOS.acaoSocial },
-  { title: 'Campanha Doenças Reumáticas', desc: 'Ação de conscientização e prevenção de doenças reumáticas promovida pelo ADHAM junto à comunidade.', foto: FOTOS.campanhaReumaticas },
-  { title: 'Ação Social LIMDERM', desc: 'Ação social da LIMDERM em parceria com o ADHAM, levando atendimento especializado à comunidade.', foto: FOTOS.acaoSocialLimderm },
-  { title: 'Formação', desc: 'Desenvolvendo competências acadêmicas e profissionais por meio do ensino e da educação continuada.', foto: FOTOS.equipeExtensao },
 ];
 
 const reconhecimentos = [
