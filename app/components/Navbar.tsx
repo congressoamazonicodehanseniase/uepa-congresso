@@ -53,23 +53,23 @@ export default function Navbar() {
           <img
             src="/parceiros/logoamb.png"
             alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
-            className="adham-only h-14 sm:h-20 lg:h-24 w-auto object-contain transition-transform group-hover:scale-105"
+            className="adham-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
           />
           <img
             src="/logo-congresso.png"
             alt="I Congresso Amazônico de Hanseníase"
             className="cong-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
           />
-          <span className="w-px h-8 lg:h-10 bg-line shrink-0" />
+          <span className="w-px h-8 sm:h-12 lg:h-14 bg-line shrink-0" />
           <img
             src="/parceiros/logouepaa.png"
             alt="Universidade do Estado do Pará"
-            className="h-8 lg:h-11 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1"
+            className="h-8 sm:h-11 lg:h-14 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
           />
           <img
             src="/parceiros/cipe.png"
             alt="CIPE"
-            className="h-8 lg:h-11 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1"
+            className="h-8 sm:h-11 lg:h-14 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
           />
         </Link>
 
