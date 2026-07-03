@@ -40,7 +40,7 @@ const timeline = [
 
 const pilares: { n: string; title: string; desc: string; foto: { src: string; alt: string }; pos?: string; contain?: boolean }[] = [
   { n: '01', title: 'Assistência', desc: 'Atendimento especializado em dermatologia e hanseníase, com diagnóstico precoce, acompanhamento clínico e tratamento.', foto: FOTOS.atendimento, pos: 'center bottom' },
-  { n: '02', title: 'Ensino', desc: 'Campo de prática qualificado para a formação acadêmica, com vivência clínica real para estudantes e profissionais.', foto: FOTOS.pratica1, contain: true },
+  { n: '02', title: 'Ensino', desc: 'Campo de prática qualificado para a formação acadêmica, com vivência clínica real para estudantes e profissionais.', foto: FOTOS.discussao },
   { n: '03', title: 'Pesquisa', desc: 'Investigação científica voltada às demandas epidemiológicas da Amazônia e à formação de pesquisadores.', foto: FOTOS.producao, pos: 'center 20%' },
   { n: '04', title: 'Extensão', desc: 'Ações que aproximam ciência, educação e comunidade no enfrentamento da hanseníase.', foto: FOTOS.cartas, pos: 'center center' },
 ];
