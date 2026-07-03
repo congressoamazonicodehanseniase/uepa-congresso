@@ -50,7 +50,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between relative">
         <div className="flex items-center justify-start flex-shrink-0 z-10">
-          <Link href="/" className="flex items-center gap-3 sm:gap-4 group ml-2 sm:ml-6 lg:ml-0">
+          <Link href="/" className="flex items-center gap-3 sm:gap-4 group lg:-ml-4 xl:-ml-8">
             <img
               src="/parceiros/logoamb.png"
               alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
