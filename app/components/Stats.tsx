@@ -1,7 +1,7 @@
 const stats = [
   { value: 'Iª', label: 'edição inaugural', note: '2026' },
   { value: '3', label: 'dias de programação', note: '27 a 29 de agosto' },
-  { value: '2', label: 'sedes em Marabá', note: 'UEPA + CENTRO DE CONVENÇÕES' },
+  { value: '2', label: 'sede em Marabá', note: 'UEPA + CENTRO DE CONVENÇÕES' },
   { value: 'CNPq', label: 'apoio institucional', note: 'fomento à pesquisa' },
 ];
 

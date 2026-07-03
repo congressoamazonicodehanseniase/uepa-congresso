@@ -15,7 +15,7 @@ const eixos = [
 const ficha = [
   { label: 'Realização', value: 'ADHAM · Ambulatório de Dermatologia e Hanseníase da Amazônia' },
   { label: 'Datas', value: CONGRESSO.datasLabel },
-  { label: 'Sedes', value: 'UEPA e Carajás Centro de Convenções · Marabá-PA' },
+  { label: 'Sede', value: 'UEPA e Carajás Centro de Convenções · Marabá-PA' },
   { label: 'Apoio', value: 'CNPq' },
 ];
 

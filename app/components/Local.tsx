@@ -26,7 +26,7 @@ export default function Local() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-          {/* Seletor de sedes */}
+          {/* Seletor de sede */}
           <div className="lg:col-span-5 flex flex-col gap-4">
             {venues.map((venue, i) => {
               const isActive = i === active;
