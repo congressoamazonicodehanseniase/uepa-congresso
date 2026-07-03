@@ -25,21 +25,21 @@ export default function Footer() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-12 gap-10 gap-y-12 mb-12">
           <div className="md:col-span-5">
-            <div className="mb-6 flex flex-wrap items-center gap-5">
+            <div className="mb-6 flex flex-wrap items-center gap-6">
               <img
                 src="/adham-icon.png"
                 alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
-                className="h-20 w-auto object-contain"
-              />
-              <img
-                src="/parceiros/logouepaa.png"
-                alt="Universidade do Estado do Pará"
-                className="h-14 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
               <img
                 src="/parceiros/cipe.png"
                 alt="CIPE"
-                className="h-14 w-auto object-contain"
+                className="h-16 w-auto object-contain"
+              />
+              <img
+                src="/parceiros/logouepaa.png"
+                alt="Universidade do Estado do Pará"
+                className="h-16 w-auto object-contain"
               />
             </div>
             <p className="text-sm leading-relaxed mb-5 max-w-sm text-white/70">

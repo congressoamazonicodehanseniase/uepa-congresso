@@ -59,7 +59,7 @@ export default function Inscricoes() {
                 <span className="text-brand-light text-xs font-semibold uppercase tracking-widest">Atenção</span>
                 <span className="w-px h-4 bg-brand-edge hidden sm:block" />
                 <span className="inline-flex items-center gap-2 text-white text-sm font-medium">
-                  Ligantes LIMDERM: <strong>gratuidade de 03/07 a 09/07</strong>
+                  Ligantes LIMDERM: <strong>gratuidade de 04/07 a 15/07</strong>
                   <Countdown deadline={INSCRICOES_INFO.ligantesFim} className="bg-brand-strong px-2 py-0.5 text-xs font-semibold" />
                 </span>
               </div>

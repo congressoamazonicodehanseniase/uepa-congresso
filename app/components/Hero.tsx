@@ -56,7 +56,7 @@ export default function Hero() {
             <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
               <span className="inline-flex items-center gap-2 text-brand-light font-semibold">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-light" />
-                Ligantes: gratuidade de 03/07 a 09/07
+                Ligantes: gratuidade de 04/07 a 15/07
               </span>
               <Countdown
                 deadline={INSCRICOES_INFO.ligantesFim}

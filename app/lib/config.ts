@@ -57,10 +57,10 @@ export const LOCAIS = {
 
 // Inscrições e submissão de trabalhos (PDF "Programação do Congresso").
 export const INSCRICOES_INFO = {
-  ligantesPeriodo: '03/07/2026 a 09/07/2026',
+  ligantesPeriodo: '04/07/2026 a 15/07/2026',
   submissaoPeriodo: '04/07/2026 a 18/07/2026',
   // Datas-fim (ISO) usadas pelo countdown de urgência.
-  ligantesFim: '2026-07-09',
+  ligantesFim: '2026-07-15',
   submissaoFim: '2026-07-18',
   publicoAlvo: [
     'Médicos',
