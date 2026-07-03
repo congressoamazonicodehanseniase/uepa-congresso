@@ -66,6 +66,11 @@ export default function Navbar() {
             alt="Universidade do Estado do Pará"
             className="h-8 lg:h-11 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1"
           />
+          <img
+            src="/parceiros/cipe.png"
+            alt="CIPE"
+            className="h-8 lg:h-11 w-auto object-contain opacity-75 group-hover:opacity-100 transition-opacity -translate-y-1"
+          />
         </Link>
 
         <ul className="hidden lg:flex items-center gap-8">

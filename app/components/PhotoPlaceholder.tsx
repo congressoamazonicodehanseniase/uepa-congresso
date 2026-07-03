@@ -13,6 +13,8 @@ type Props = {
   position?: string;
   /** Prioriza o carregamento (LCP, hero). */
   priority?: boolean;
+  /** Usa object-contain para mostrar a imagem toda sem cortes. */
+  contain?: boolean;
   className?: string;
 };
 
@@ -27,6 +29,7 @@ export default function PhotoPlaceholder({
   src,
   position,
   priority = false,
+  contain = false,
   className = '',
 }: Props) {
   if (src) {
@@ -37,7 +40,7 @@ export default function PhotoPlaceholder({
           src={src}
           alt={caption ?? ''}
           loading={priority ? 'eager' : 'lazy'}
-          className="absolute inset-0 w-full h-full object-cover"
+          className={`absolute inset-0 w-full h-full ${contain ? 'object-contain' : 'object-cover'}`}
           // Padrão: ancora no topo, então qualquer corte tira a parte de baixo (preserva cabeças/topo).
           style={{ objectPosition: position ?? 'center top' }}
         />

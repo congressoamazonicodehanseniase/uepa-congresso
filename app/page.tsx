@@ -38,11 +38,11 @@ const timeline = [
   { date: 'Atual', title: 'Integração ao SUS', desc: 'A integração ao sistema municipal de regulação ampliou o acesso da população aos serviços especializados.' },
 ];
 
-const pilares = [
-  { n: '01', title: 'Assistência', desc: 'Atendimento especializado em dermatologia e hanseníase, com diagnóstico precoce, acompanhamento clínico e tratamento.' },
-  { n: '02', title: 'Ensino', desc: 'Campo de prática qualificado para a formação acadêmica, com vivência clínica real para estudantes e profissionais.' },
-  { n: '03', title: 'Pesquisa', desc: 'Investigação científica voltada às demandas epidemiológicas da Amazônia e à formação de pesquisadores.' },
-  { n: '04', title: 'Extensão', desc: 'Ações que aproximam ciência, educação e comunidade no enfrentamento da hanseníase.' },
+const pilares: { n: string; title: string; desc: string; foto: { src: string; alt: string }; pos?: string; contain?: boolean }[] = [
+  { n: '01', title: 'Assistência', desc: 'Atendimento especializado em dermatologia e hanseníase, com diagnóstico precoce, acompanhamento clínico e tratamento.', foto: FOTOS.atendimento, pos: 'center bottom' },
+  { n: '02', title: 'Ensino', desc: 'Campo de prática qualificado para a formação acadêmica, com vivência clínica real para estudantes e profissionais.', foto: FOTOS.pratica1, contain: true },
+  { n: '03', title: 'Pesquisa', desc: 'Investigação científica voltada às demandas epidemiológicas da Amazônia e à formação de pesquisadores.', foto: FOTOS.producao, pos: 'center 20%' },
+  { n: '04', title: 'Extensão', desc: 'Ações que aproximam ciência, educação e comunidade no enfrentamento da hanseníase.', foto: FOTOS.cartas, pos: 'center center' },
 ];
 
 const extensao: { title: string; desc: string; foto: { src: string; alt: string }; pos?: string }[] = [
@@ -196,8 +196,34 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Pilares — numerado editorial */}
+        <section id="atuacao" className="py-16 sm:py-24 bg-surface">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
+              <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
+                Quatro eixos,<br />um só propósito
+              </h2>
+              <p className="text-muted max-w-sm text-sm leading-relaxed">
+                O ADHAM integra assistência, ensino, pesquisa e extensão no enfrentamento da hanseníase.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+              {pilares.map((p) => (
+                <div key={p.n} className="border-t-2 border-brand-strong pt-4 flex flex-col group">
+                  <span className="index-num block">{p.n}</span>
+                  <div className="mt-4 mb-4 rounded-xl overflow-hidden shadow-sm border border-line bg-canvas transition-transform duration-300 group-hover:-translate-y-1">
+                    <PhotoPlaceholder ratio="aspect-[4/3]" src={p.foto.src} caption={p.foto.alt} position={p.pos} contain={p.contain} />
+                  </div>
+                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-ink text-lg">{p.title}</h3>
+                  <p className="text-muted text-sm mt-1.5 leading-relaxed flex-1">{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Impacto e trajetória */}
-        <section id="impacto" className="py-16 sm:py-24 bg-surface">
+        <section id="impacto" className="py-16 sm:py-24 bg-canvas">
           <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5">
               <p className="rule-label mb-7">Impacto e trajetória</p>
@@ -217,41 +243,62 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pilares — numerado editorial */}
-        <section id="atuacao" className="py-16 sm:py-24 bg-canvas">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
-              <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
-                Quatro eixos,<br />um só propósito
-              </h2>
-              <p className="text-muted max-w-sm text-sm leading-relaxed">
-                O ADHAM integra assistência, ensino, pesquisa e extensão no enfrentamento da hanseníase.
-              </p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-10">
-              {pilares.map((p) => (
-                <div key={p.n} className="border-t-2 border-brand-strong pt-4">
-                  <span className="index-num block">{p.n}</span>
-                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-ink text-lg mt-2">{p.title}</h3>
-                  <p className="text-muted text-sm mt-1.5 leading-relaxed">{p.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Extensão */}
-        <section className="py-16 sm:py-24 bg-surface">
-          <div className="max-w-6xl mx-auto px-6">
-            <p className="rule-label mb-10">Extensão, pesquisa e formação · Ciência que chega à população</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
-              {extensao.map((e) => (
-                <div key={e.title}>
-                  <PhotoPlaceholder ratio="aspect-[16/10]" src={e.foto.src} caption={e.foto.alt} position={e.pos} />
-                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-ink mt-4">{e.title}</h3>
-                  <p className="text-muted text-sm mt-1.5 leading-relaxed">{e.desc}</p>
-                </div>
-              ))}
+        <section className="py-16 sm:py-24 bg-surface overflow-hidden">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <p className="rule-label">Extensão, pesquisa e formação</p>
+              <h2 className="display text-ink mt-4" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>Ciência que chega à população</h2>
+            </div>
+            
+            <div className="relative">
+              {/* Linha vertical */}
+              <div className="absolute left-[19px] md:left-1/2 top-0 bottom-0 w-[2px] bg-brand-edge md:-translate-x-1/2" />
+              
+              <div className="space-y-16 md:space-y-24">
+                {extensao.map((e, index) => {
+                  const isEven = index % 2 === 0;
+                  return (
+                    <div key={index} className="relative flex items-center w-full group">
+                      
+                      {/* Ponto */}
+                      <div className="absolute left-[11px] md:left-1/2 top-14 md:top-1/2 w-[18px] h-[18px] rounded-full bg-brand-strong border-[4px] border-surface shadow-[0_0_0_2px_var(--tw-shadow-color)] shadow-brand-edge md:-translate-x-1/2 md:-translate-y-1/2 z-10 transition-transform duration-300 group-hover:scale-125 group-hover:bg-brand-light" />
+
+                      <div className="w-full pl-12 md:pl-0 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0 items-center">
+                        
+                        {/* Container Esquerdo (Desktop) */}
+                        <div className={`min-w-0 w-full ${isEven ? 'md:pr-12 md:text-right order-2 md:order-1' : 'md:pr-12 order-1 md:order-1'}`}>
+                          {isEven ? (
+                            <>
+                              <h3 className="font-[family-name:var(--font-display)] font-bold text-ink text-2xl mb-3">{e.title}</h3>
+                              <p className="text-ink-soft text-base leading-relaxed">{e.desc}</p>
+                            </>
+                          ) : (
+                            <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-line bg-canvas transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+                              <PhotoPlaceholder ratio="aspect-[16/10]" src={e.foto.src} caption={e.foto.alt} position={e.pos} />
+                            </div>
+                          )}
+                        </div>
+                        
+                        {/* Container Direito (Desktop) */}
+                        <div className={`min-w-0 w-full ${isEven ? 'md:pl-12 order-1 md:order-2' : 'md:pl-12 md:text-left order-2 md:order-2'}`}>
+                          {isEven ? (
+                            <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-line bg-canvas transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+                              <PhotoPlaceholder ratio="aspect-[16/10]" src={e.foto.src} caption={e.foto.alt} position={e.pos} />
+                            </div>
+                          ) : (
+                            <>
+                              <h3 className="font-[family-name:var(--font-display)] font-bold text-ink text-2xl mb-3">{e.title}</h3>
+                              <p className="text-ink-soft text-base leading-relaxed">{e.desc}</p>
+                            </>
+                          )}
+                        </div>
+
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>

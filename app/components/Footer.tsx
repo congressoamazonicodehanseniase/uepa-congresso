@@ -36,6 +36,11 @@ export default function Footer() {
                 alt="Universidade do Estado do Pará"
                 className="h-14 w-auto object-contain"
               />
+              <img
+                src="/parceiros/cipe.png"
+                alt="CIPE"
+                className="h-14 w-auto object-contain"
+              />
             </div>
             <p className="text-sm leading-relaxed mb-5 max-w-sm text-white/70">
               Assistência, ensino, pesquisa e extensão em dermatologia e hanseníase na Amazônia.
