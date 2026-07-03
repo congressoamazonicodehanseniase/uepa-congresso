@@ -3,7 +3,7 @@ import { LeafMark } from './Decor';
 
 export default function SubmissaoTrabalhos() {
   return (
-    <section id="trabalhos" className="relative py-16 sm:py-24 bg-canvas overflow-hidden">
+    <section id="trabalhos" className="relative pt-0 pb-16 sm:pb-24 bg-canvas overflow-hidden">
       <LeafMark className="absolute -top-10 -right-10 w-52 text-brand-tint rotate-[-15deg] pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">
