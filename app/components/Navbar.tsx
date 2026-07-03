@@ -48,32 +48,34 @@ export default function Navbar() {
         scrolled ? 'py-1' : 'py-2'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 sm:gap-4 group ml-2 sm:ml-6 lg:ml-10">
-          <img
-            src="/parceiros/logoamb.png"
-            alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
-            className="adham-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
-          />
-          <img
-            src="/logo-congresso.png"
-            alt="I Congresso Amazônico de Hanseníase"
-            className="cong-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
-          />
-          <span className="w-px h-8 sm:h-12 lg:h-14 bg-line shrink-0" />
-          <img
-            src="/parceiros/logouepaa.png"
-            alt="Universidade do Estado do Pará"
-            className="h-8 sm:h-11 lg:h-14 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
-          />
-          <img
-            src="/parceiros/cipe.png"
-            alt="CIPE"
-            className="h-8 sm:h-11 lg:h-14 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
-          />
-        </Link>
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between lg:grid lg:grid-cols-3">
+        <div className="flex items-center justify-start">
+          <Link href="/" className="flex items-center gap-3 sm:gap-4 group ml-2 sm:ml-6 lg:ml-0">
+            <img
+              src="/parceiros/logoamb.png"
+              alt="Ambulatório de Dermatologia e Hanseníase da Amazônia"
+              className="adham-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
+            />
+            <img
+              src="/logo-congresso.png"
+              alt="I Congresso Amazônico de Hanseníase"
+              className="cong-only h-12 sm:h-16 lg:h-20 w-auto object-contain transition-transform group-hover:scale-105"
+            />
+            <span className="w-px h-8 sm:h-12 lg:h-14 bg-line shrink-0" />
+            <img
+              src="/parceiros/logouepaa.png"
+              alt="Universidade do Estado do Pará"
+              className="h-8 sm:h-11 lg:h-14 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+            />
+            <img
+              src="/parceiros/cipe.png"
+              alt="CIPE"
+              className="h-8 sm:h-11 lg:h-14 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+            />
+          </Link>
+        </div>
 
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center justify-center gap-8">
           {links.map((l) => (
             <li key={l.href}>
               <Link
@@ -86,19 +88,21 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center justify-end">
           <Link href={cta.href} className="btn btn-primary btn-sm">{cta.label}</Link>
         </div>
 
-        <button
-          className="lg:hidden text-ink p-1"
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="lg:hidden">
+          <button
+            className="text-ink p-1"
+            onClick={() => setOpen(!open)}
+            aria-label="Menu"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Backdrop */}
