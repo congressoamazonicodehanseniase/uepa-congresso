@@ -182,7 +182,19 @@ export default function InscricaoForm() {
           </form>
         )}
 
-        <Link href="/congresso" className="btn btn-outline w-full mt-8 text-base py-4">Voltar ao congresso</Link>
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <a
+            href="https://www.even3.com.br/i-congresso-amazonico-de-hanseniase-757463"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary flex-1 text-base py-4 text-center"
+          >
+            Submeter trabalho científico
+          </a>
+          <Link href="/congresso" className="btn btn-outline flex-1 text-base py-4 text-center">
+            Voltar ao congresso
+          </Link>
+        </div>
       </div>
     );
   }
