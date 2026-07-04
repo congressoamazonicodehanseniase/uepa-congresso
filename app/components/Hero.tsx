@@ -47,6 +47,15 @@ export default function Hero() {
               ))}
             </p>
 
+            <div className="mt-6 flex items-center gap-4 border border-brand-edge/50 bg-brand-panel/40 rounded-2xl p-3 w-max">
+              <span className="text-[0.65rem] uppercase tracking-widest text-brand-faint font-semibold pl-2">Chancelado por:</span>
+              <img 
+                src="/parceiros/sbh-transparent.png" 
+                alt="SBH - Sociedade Brasileira de Hansenologia" 
+                className="h-10 w-auto brightness-0 invert opacity-90" 
+              />
+            </div>
+
             <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
               <Link href="/congresso/inscricao" className="btn btn-white w-full sm:w-auto">Garantir minha vaga</Link>
               <a href="#programacao" className="btn btn-ghost-light w-full sm:w-auto">Ver programação</a>

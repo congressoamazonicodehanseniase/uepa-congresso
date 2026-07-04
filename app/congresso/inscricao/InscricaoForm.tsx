@@ -114,9 +114,33 @@ export default function InscricaoForm() {
         ) : (
           <>
             <p className="text-muted text-base sm:text-lg mt-5 leading-relaxed">
-              Agora finalize com o pagamento via Pix abaixo. Depois, envie o comprovante para{' '}
-              <strong className="text-ink">{PIX.chave}</strong> para confirmarmos sua vaga.
+              Agora finalize com o pagamento via Pix. Verifique abaixo o valor correspondente à sua categoria e o lote atual e, em seguida, realize a transferência para a chave Pix.
             </p>
+
+            <div className="mt-6 p-6 bg-surface border border-brand-tint rounded-2xl">
+              <h3 className="font-[family-name:var(--font-display)] font-semibold text-brand-strong mb-4">
+                Valores de Inscrição
+              </h3>
+              
+              <div className="space-y-5">
+                <div>
+                  <p className="font-semibold text-ink text-sm">Estudantes</p>
+                  <p className="text-muted text-sm mt-1">1º lote: <strong>R$ 40</strong> | 2º lote: <strong>R$ 60</strong> | 3º lote: <strong>R$ 80</strong></p>
+                </div>
+                
+                <div>
+                  <p className="font-semibold text-ink text-sm">Profissionais da Saúde e demais categorias</p>
+                  <p className="text-muted text-sm mt-1">
+                    Lote promocional: <strong>R$ 80</strong> | 2º lote: <strong>R$ 100</strong><br/>
+                    3º lote: <strong>R$ 150</strong> | 4º lote: <strong>R$ 180</strong>
+                  </p>
+                </div>
+              </div>
+              
+              <p className="text-xs text-brand-strong font-medium mt-4 bg-brand-soft p-3 rounded-lg">
+                Dica: Confirme qual é o lote atual disponível antes de realizar a transferência. 
+              </p>
+            </div>
 
             <div className="mt-7 rounded-2xl border border-line bg-canvas p-6 sm:p-8 space-y-5">
               {[
