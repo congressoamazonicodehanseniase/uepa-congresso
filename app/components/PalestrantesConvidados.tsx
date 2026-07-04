@@ -127,10 +127,10 @@ const palestrantes: Palestrante[] = [
   {
     nome: 'Dra. Cláudia Dizioli Franco Bueno',
     titulo: 'Pediatra e Infectologista · Mestre (USP Ribeirão Preto)',
-    instituicao: 'Professora UEPA · Coordenadora UTI Pediátrica HRS-PA',
+    instituicao: 'Professora UEPA · Coordenadora do Suporte Básico de Vida UEPA',
     foto: '/palestrantes/claudia-dizioli.jpg',
-    curriculo: 'Médica Pediatra e Infectologista, graduada e com residência pela Faculdade de Medicina da USP – Ribeirão Preto, com Mestrado pela USP. Possui títulos de especialista em Pediatria, Terapia Intensiva Pediátrica e Emergência Pediátrica, além de formação em Emergências Pediátricas pelo Hospital Albert Einstein. É Professora Auxiliar da UEPA, coordenadora do Laboratório de Suporte Básico de Vida e orientadora da Liga Acadêmica Marabaense de Pediatria (LAMPED). Atua em pesquisa e assistência nas áreas de urgências e emergências pediátricas, terapia intensiva e suporte básico de vida, sendo coordenadora da UTI Pediátrica do Hospital Regional do Sudeste do Pará.',
-    resumo: 'Atua em urgências e emergências pediátricas, terapia intensiva e suporte básico de vida. Coordenadora da UTI Pediátrica do HRS-PA.',
+    curriculo: 'Médica Pediatra e Infectologista, graduada e com residência pela Faculdade de Medicina da USP – Ribeirão Preto, com Mestrado pela USP. Possui títulos de especialista em Pediatria, Terapia Intensiva Pediátrica e Emergência Pediátrica, além de formação em Emergências Pediátricas pelo Hospital Albert Einstein. É Professora Auxiliar da UEPA, coordenadora do Laboratório de Suporte Básico de Vida e orientadora da Liga Acadêmica Marabaense de Pediatria (LAMPED). Atua em pesquisa e assistência nas áreas de urgências e emergências pediátricas e suporte básico de vida.',
+    resumo: 'Atua em urgências e emergências pediátricas e suporte básico de vida.',
     lattes: 'http://lattes.cnpq.br/4167541584600306',
   },
   {
@@ -178,15 +178,7 @@ const palestrantes: Palestrante[] = [
     resumo: 'Dermatologista com Fellow em Cosmiatria pelo Hospital Albert Einstein. Atua em Dermatologia Clínica, Cirúrgica e Cosmiatria.',
     lattes: 'http://lattes.cnpq.br/9373610013404564',
   },
-  {
-    nome: 'Dr. Luiz Porto',
-    titulo: 'Dermatologista · Pós-graduado em Medicina e Cirurgia Estética',
-    instituicao: 'Dermatologia Clínica, Cirúrgica e Estética · UFMG / FHEMIG',
-    foto: '/palestrantes/luiz-porto.jpg',
-    curriculo: 'Médico dermatologista, graduado pela UFMG, com residência em Dermatologia pela FHEMIG e pós-graduação em Medicina e Cirurgia Estética. Realizou estágios internacionais na Dinamarca, Áustria e Estados Unidos. Atua em Dermatologia Clínica, Cirúrgica e Estética, sendo palestrante para médicos dermatologistas e desenvolvendo atividades de ensino e divulgação científica.',
-    resumo: 'Dermatologista com estágios internacionais na Dinamarca, Áustria e EUA. Atua em Dermatologia Clínica, Cirúrgica e Estética e é palestrante nacional.',
-    lattes: 'http://lattes.cnpq.br/3785959064381738',
-  },
+
   {
     nome: 'Sarah Lais Rocha',
     titulo: 'Enfermeira · Doutora em Ensino na Saúde na Amazônia (UEPA)',

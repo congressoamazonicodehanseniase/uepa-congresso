@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 import { CONTATO } from '../../lib/config';
 
-const TAMANHO_MAXIMO = 8 * 1024 * 1024; // 8MB
+const TAMANHO_MAXIMO = 4 * 1024 * 1024; // 4MB
 
 const CAMPOS_OBRIGATORIOS = ['nomeCompleto', 'nomeCracha', 'categoria', 'tipoParticipacao', 'cidade', 'instituicao', 'contato', 'email'] as const;
 
@@ -29,6 +29,8 @@ export async function POST(request: Request) {
     instituicao: campo('instituicao'),
     contato: campo('contato'),
     email: campo('email'),
+    postoSaude: campo('postoSaude'),
+    funcao: campo('funcao'),
   };
   const arquivo = form.get('comprovante');
 
@@ -53,6 +55,8 @@ export async function POST(request: Request) {
     ['Categoria', dados.categoria],
     ['Especialidade', dados.especialidade],
     ['Empresa', dados.empresa],
+    ['Posto de Saúde', dados.postoSaude],
+    ['Função', dados.funcao],
     ['Palestrante ou participante/ouvinte', dados.tipoParticipacao],
     ['Cidade', dados.cidade],
     ['Instituição', dados.instituicao],

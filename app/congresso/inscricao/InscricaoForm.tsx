@@ -71,6 +71,12 @@ export default function InscricaoForm() {
   async function onEnviarComprovante(e: FormEvent) {
     e.preventDefault();
     if (!comprovante) return;
+    
+    if (comprovante.size > 4 * 1024 * 1024) {
+      setErroComprovante('O arquivo é muito grande (máx 4MB). Se for uma foto do celular, tente tirar um print e enviar o print, ou envie direto para nosso e-mail.');
+      return;
+    }
+
     setErroComprovante('');
     setEnviandoComprovante(true);
     try {
