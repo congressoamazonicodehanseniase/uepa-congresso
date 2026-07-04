@@ -142,10 +142,13 @@ export default function InscricaoForm() {
       if (blobVinculo) form.append('comprovanteVinculoUrl', blobVinculo.url);
 
       const res = await fetch('/api/comprovante', { method: 'POST', body: form });
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const errData = await res.json().catch(() => null);
+        throw new Error(errData?.error || 'Erro na comunicação com o servidor.');
+      }
       setComprovanteEnviado(true);
-    } catch {
-      setErroComprovante('Não foi possível enviar o comprovante agora. Tente novamente em instantes ou nos chame por e-mail.');
+    } catch (err: any) {
+      setErroComprovante(err.message || 'Não foi possível enviar o comprovante agora. Tente novamente em instantes ou nos chame por e-mail.');
     } finally {
       setEnviandoComprovante(false);
     }
