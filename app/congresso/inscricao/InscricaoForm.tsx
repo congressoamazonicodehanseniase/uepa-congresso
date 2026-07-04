@@ -2,6 +2,7 @@
 
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import imageCompression from 'browser-image-compression';
+import { upload } from '@vercel/blob/client';
 import Link from 'next/link';
 import { Check, Copy, Loader2, ArrowLeft, Paperclip } from 'lucide-react';
 import { CATEGORIAS_INSCRICAO, TIPOS_PARTICIPACAO, PIX, CONTATO } from '../../lib/config';
@@ -115,17 +116,31 @@ export default function InscricaoForm() {
     }
 
     const totalSize = arquivoFinal.size + (arquivoFinalVinculo?.size || 0);
-    if (totalSize > 4 * 1024 * 1024) {
+    if (totalSize > 12 * 1024 * 1024) {
       setEnviandoComprovante(false);
-      setErroComprovante('O tamanho total dos arquivos excede o limite (máx 4MB). Tente reduzir o tamanho dos PDFs ou envie direto para nosso e-mail.');
+      setErroComprovante('O tamanho total dos arquivos excede o limite (máx 12MB). Tente reduzir o tamanho dos PDFs ou envie direto para nosso e-mail.');
       return;
     }
 
     try {
+      const blobComprovante = await upload(arquivoFinal.name, arquivoFinal, {
+        access: 'public',
+        handleUploadUrl: '/api/upload',
+      });
+
+      let blobVinculo = null;
+      if (arquivoFinalVinculo && comprovanteVinculo) {
+        blobVinculo = await upload(arquivoFinalVinculo.name, arquivoFinalVinculo, {
+          access: 'public',
+          handleUploadUrl: '/api/upload',
+        });
+      }
+
       const form = new FormData();
       Object.entries(dados).forEach(([chave, valor]) => form.append(chave, valor));
-      form.append('comprovante', arquivoFinal, comprovante.name);
-      if (arquivoFinalVinculo && comprovanteVinculo) form.append('comprovanteVinculo', arquivoFinalVinculo, comprovanteVinculo.name);
+      form.append('comprovanteUrl', blobComprovante.url);
+      if (blobVinculo) form.append('comprovanteVinculoUrl', blobVinculo.url);
+
       const res = await fetch('/api/comprovante', { method: 'POST', body: form });
       if (!res.ok) throw new Error();
       setComprovanteEnviado(true);
