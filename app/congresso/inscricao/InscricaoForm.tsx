@@ -260,6 +260,20 @@ export default function InscricaoForm() {
         Preencha seus dados. Ao final, você recebe as informações de pagamento via Pix.
       </p>
 
+      <div className="mt-6 p-4 sm:p-5 bg-brand-soft/50 border border-brand-tint/60 rounded-xl">
+        <p className="font-semibold text-brand-strong text-sm mb-3 uppercase tracking-wide">Tabela de Valores</p>
+        <div className="grid sm:grid-cols-2 gap-4 text-sm">
+          <div>
+            <p className="font-semibold text-ink">Estudantes</p>
+            <p className="text-muted mt-1 leading-relaxed">1º lote: <strong>R$ 40</strong> <br className="hidden sm:block"/>2º lote: <strong>R$ 60</strong> <br className="hidden sm:block"/>3º lote: <strong>R$ 80</strong></p>
+          </div>
+          <div>
+            <p className="font-semibold text-ink">Profissionais da Saúde / Demais</p>
+            <p className="text-muted mt-1 leading-relaxed">Lote promocional: <strong>R$ 80</strong> <br className="hidden sm:block"/>2º lote: <strong>R$ 100</strong> | 3º lote: <strong>R$ 150</strong> <br className="hidden sm:block"/>4º lote: <strong>R$ 180</strong></p>
+          </div>
+        </div>
+      </div>
+
       <form onSubmit={onSubmit} className="mt-9 sm:mt-10 space-y-6 sm:space-y-7">
         <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
           <div>
