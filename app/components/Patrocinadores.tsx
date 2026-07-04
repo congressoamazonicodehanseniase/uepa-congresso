@@ -5,7 +5,7 @@ import { LOGO_POR_NOME } from '../lib/parceiros';
 const grupos = [
   { titulo: 'Realização', parceiros: ['ADHAM', 'UEPA', 'LIMDERM', 'CIPE'] },
   { titulo: 'Apoio científico', parceiros: ['CNPq', 'SBH'] },
-  { titulo: 'Apoio institucional', parceiros: ['SMS Marabá', 'SESPA'] },
+  { titulo: 'Apoio institucional', parceiros: ['SMS Marabá'] },
   // UNIACESSE temporariamente removido
 ];
 
@@ -37,14 +37,10 @@ export default function Patrocinadores() {
                     <img
                       key={p}
                       src={logo}
-                      alt={p === 'SESPA' ? 'Governo do Estado do Pará' : p}
-                      title={p === 'SESPA' ? 'Governo do Estado do Pará' : p}
+                      alt={p}
+                      title={p}
                       loading="lazy"
-                      className={`transition-all duration-300 ease-out hover:-translate-y-1 ${
-                        p === 'SESPA'
-                          ? 'h-14 w-14 object-cover object-[45%_center] scale-[1.25]'
-                          : 'max-h-12 max-w-[8rem] w-auto object-contain'
-                      }`}
+                      className="transition-all duration-300 ease-out hover:-translate-y-1 max-h-12 max-w-[8rem] w-auto object-contain"
                     />
                   ) : (
                     <span key={p} className="font-[family-name:var(--font-display)] font-bold text-muted text-lg">{p}</span>

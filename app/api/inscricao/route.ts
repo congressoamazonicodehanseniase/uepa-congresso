@@ -7,6 +7,8 @@ type Inscricao = {
   tipoParticipacao: string;
   cidade: string;
   instituicao: string;
+  contato: string;
+  email: string;
 };
 
 const CAMPOS_OBRIGATORIOS: (keyof Inscricao)[] = [
@@ -16,6 +18,8 @@ const CAMPOS_OBRIGATORIOS: (keyof Inscricao)[] = [
   'tipoParticipacao',
   'cidade',
   'instituicao',
+  'contato',
+  'email',
 ];
 
 export async function POST(request: Request) {

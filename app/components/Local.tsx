@@ -21,7 +21,7 @@ export default function Local() {
           </h2>
           <p className="mt-6 text-ink-soft leading-relaxed">
             Principal polo de saúde do sudeste do Pará e sede do ADHAM. As capacitações ocorrem na
-            UEPA (27/08) e o congresso científico no Carajás Centro de Convenções (28 e 29/08).
+            UEPA (27/08) e o congresso científico no Carajás Centro de Convenções – Leonildo Borges Rocha (28 e 29/08).
           </p>
         </div>
 

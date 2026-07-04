@@ -10,7 +10,6 @@ export const PARCEIROS: Parceiro[] = [
   { nome: 'CNPq', logo: '/parceiros/cnpq.png' },
   { nome: 'SBH', logo: '/parceiros/sbh.png' },
   { nome: 'SMS Marabá', logo: '/parceiros/sms-maraba.png' },
-  { nome: 'SESPA', logo: '/parceiros/sespa.png' },
   { nome: 'UNIACESSE', logo: '/parceiros/uniacesse.png' },
 ];
 

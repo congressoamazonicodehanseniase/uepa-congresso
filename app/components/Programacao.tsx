@@ -51,7 +51,7 @@ export default function Programacao() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="programacao" className="py-16 sm:py-24 bg-canvas">
+    <section id="programacao" className="pt-16 sm:pt-24 pb-4 sm:pb-8 bg-canvas">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-wrap items-end justify-between gap-4 mb-14">
           <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
@@ -59,7 +59,7 @@ export default function Programacao() {
           </h2>
           <p className="text-muted max-w-sm text-sm leading-relaxed">
             27/08: capacitações na UEPA. 28 e 29/08: congresso científico no Carajás Centro de
-            Convenções. Horários e palestrantes em breve.
+            Convenções – Leonildo Borges Rocha. Horários e palestrantes em breve.
           </p>
         </div>
 

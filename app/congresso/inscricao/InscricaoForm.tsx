@@ -18,6 +18,8 @@ const ESTADO_INICIAL = {
   tipoParticipacao: '' as (typeof TIPOS_PARTICIPACAO)[number] | '',
   cidade: '',
   instituicao: '',
+  contato: '',
+  email: '',
 };
 
 export default function InscricaoForm() {
@@ -212,6 +214,29 @@ export default function InscricaoForm() {
               required
               value={dados.nomeCracha}
               onChange={(e) => set('nomeCracha', e.target.value)}
+              className={campoInput}
+            />
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+          <div>
+            <label className={campoLabel}>E-mail</label>
+            <input
+              required
+              type="email"
+              value={dados.email}
+              onChange={(e) => set('email', e.target.value)}
+              className={campoInput}
+            />
+          </div>
+          <div>
+            <label className={campoLabel}>Contato (WhatsApp)</label>
+            <input
+              required
+              type="tel"
+              value={dados.contato}
+              onChange={(e) => set('contato', e.target.value)}
               className={campoInput}
             />
           </div>

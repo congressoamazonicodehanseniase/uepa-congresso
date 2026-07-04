@@ -3,7 +3,7 @@ import { CONTATO } from '../../lib/config';
 
 const TAMANHO_MAXIMO = 8 * 1024 * 1024; // 8MB
 
-const CAMPOS_OBRIGATORIOS = ['nomeCompleto', 'nomeCracha', 'categoria', 'tipoParticipacao', 'cidade', 'instituicao'] as const;
+const CAMPOS_OBRIGATORIOS = ['nomeCompleto', 'nomeCracha', 'categoria', 'tipoParticipacao', 'cidade', 'instituicao', 'contato', 'email'] as const;
 
 export async function POST(request: Request) {
   let form: FormData;
@@ -27,6 +27,8 @@ export async function POST(request: Request) {
     tipoParticipacao: campo('tipoParticipacao'),
     cidade: campo('cidade'),
     instituicao: campo('instituicao'),
+    contato: campo('contato'),
+    email: campo('email'),
   };
   const arquivo = form.get('comprovante');
 
@@ -54,6 +56,8 @@ export async function POST(request: Request) {
     ['Palestrante ou participante/ouvinte', dados.tipoParticipacao],
     ['Cidade', dados.cidade],
     ['Instituição', dados.instituicao],
+    ['E-mail', dados.email],
+    ['Contato', dados.contato],
   ];
 
   const corpoTexto = linhas
