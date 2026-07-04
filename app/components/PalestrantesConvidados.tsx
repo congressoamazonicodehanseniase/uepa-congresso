@@ -180,7 +180,7 @@ const palestrantes: Palestrante[] = [
   },
 
   {
-    nome: 'Sarah Lais Rocha',
+    nome: 'Dra. Sarah Lais Rocha',
     titulo: 'Enfermeira · Doutora em Ensino na Saúde na Amazônia (UEPA)',
     instituicao: 'Docente UEPA e Afya Marabá · Pesquisadora em educação em saúde',
     foto: '/palestrantes/sarah-lais.jpg',
