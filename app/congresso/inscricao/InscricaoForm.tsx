@@ -96,11 +96,7 @@ export default function InscricaoForm() {
       console.warn('Erro ao comprimir imagem:', err);
     }
 
-    if (arquivoFinal.size > 8 * 1024 * 1024) {
-      setEnviandoComprovante(false);
-      setErroComprovante('O arquivo é muito grande (máx 8MB). Se for uma foto do celular, tente tirar um print e enviar o print, ou envie direto para nosso e-mail.');
-      return;
-    }
+    // Limite individual não mais testado aqui para não quebrar fluxo prematuramente
 
     let arquivoFinalVinculo = comprovanteVinculo;
     if (comprovanteVinculo) {
@@ -116,11 +112,13 @@ export default function InscricaoForm() {
         console.warn('Erro ao comprimir imagem do vínculo:', err);
       }
       
-      if (arquivoFinalVinculo && arquivoFinalVinculo.size > 8 * 1024 * 1024) {
-        setEnviandoComprovante(false);
-        setErroComprovante('O arquivo do vínculo é muito grande (máx 8MB). Tente reduzir o tamanho ou envie direto para nosso e-mail.');
-        return;
-      }
+    }
+
+    const totalSize = arquivoFinal.size + (arquivoFinalVinculo?.size || 0);
+    if (totalSize > 4 * 1024 * 1024) {
+      setEnviandoComprovante(false);
+      setErroComprovante('O tamanho total dos arquivos excede o limite (máx 4MB). Tente reduzir o tamanho dos PDFs ou envie direto para nosso e-mail.');
+      return;
     }
 
     try {

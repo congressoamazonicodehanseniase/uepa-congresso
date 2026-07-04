@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 import { CONTATO } from '../../lib/config';
 
-const TAMANHO_MAXIMO = 8 * 1024 * 1024; // 8MB
+const TAMANHO_MAXIMO = 4 * 1024 * 1024; // 4MB
 
 const CAMPOS_OBRIGATORIOS = ['nomeCompleto', 'nomeCracha', 'categoria', 'tipoParticipacao', 'cidade', 'instituicao', 'contato', 'email'] as const;
 
@@ -44,7 +44,7 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Anexe o comprovante de pagamento' }, { status: 400 });
   }
   if (arquivo.size > TAMANHO_MAXIMO) {
-    return Response.json({ error: 'Arquivo muito grande (máximo 8MB)' }, { status: 400 });
+    return Response.json({ error: 'Arquivo muito grande (máximo 4MB)' }, { status: 400 });
   }
   const extValida = arquivo.name.match(/\.(jpg|jpeg|png|webp|heic|pdf)$/i);
   if (!arquivo.type.startsWith('image/') && arquivo.type !== 'application/pdf' && !extValida) {
