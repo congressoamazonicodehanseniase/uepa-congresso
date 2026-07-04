@@ -68,7 +68,7 @@ const reconhecimentos = [
 
 const visao = [
   { title: 'Referência na Amazônia Legal', desc: 'Consolidar-se como centro de referência em assistência, ensino, pesquisa e extensão.' },
-  { title: 'Cursos em Dermatologia e Hanseníase', desc: 'Criação de programa de residência médica em dermatologia.' },
+  { title: 'Cursos em Dermatologia e Hanseníase', desc: 'Cursos e oficinas de capacitação em dermatologia.' },
   { title: 'Congresso Amazônico', desc: 'Consolidar o congresso como espaço permanente de atualização e pesquisa.' },
 ];
 

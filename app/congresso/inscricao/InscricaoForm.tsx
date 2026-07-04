@@ -101,6 +101,11 @@ export default function InscricaoForm() {
             Inscrição recebida!
           </h2>
         </div>
+        <div className="mt-4 p-4 bg-brand-soft/50 rounded-xl border border-brand-tint">
+          <p className="text-brand-strong font-medium">
+            Você receberá em breve um e-mail de confirmação da inscrição no endereço: <strong className="break-all">{dados.email}</strong>
+          </p>
+        </div>
         {dados.categoria === 'Profissional da Saúde (Prefeitura)' ? (
           <p className="text-muted text-base sm:text-lg mt-5 leading-relaxed">
             Sua inscrição como profissional da rede municipal foi registrada. Agora, envie seu comprovante de vinculação com a Secretaria de Saúde abaixo ou para{' '}
