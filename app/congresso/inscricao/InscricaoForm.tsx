@@ -31,6 +31,7 @@ export default function InscricaoForm() {
   const [copiado, setCopiado] = useState('');
 
   const [comprovante, setComprovante] = useState<File | null>(null);
+  const [comprovanteVinculo, setComprovanteVinculo] = useState<File | null>(null);
   const [enviandoComprovante, setEnviandoComprovante] = useState(false);
   const [comprovanteEnviado, setComprovanteEnviado] = useState(false);
   const [erroComprovante, setErroComprovante] = useState('');
@@ -69,6 +70,11 @@ export default function InscricaoForm() {
     setErroComprovante('');
   }
 
+  function onComprovanteVinculoChange(e: ChangeEvent<HTMLInputElement>) {
+    setComprovanteVinculo(e.target.files?.[0] ?? null);
+    setErroComprovante('');
+  }
+
   async function onEnviarComprovante(e: FormEvent) {
     e.preventDefault();
     if (!comprovante) return;
@@ -90,16 +96,38 @@ export default function InscricaoForm() {
       console.warn('Erro ao comprimir imagem:', err);
     }
 
-    if (arquivoFinal.size > 4 * 1024 * 1024) {
+    if (arquivoFinal.size > 8 * 1024 * 1024) {
       setEnviandoComprovante(false);
-      setErroComprovante('O arquivo é muito grande (máx 4MB). Se for uma foto do celular, tente tirar um print e enviar o print, ou envie direto para nosso e-mail.');
+      setErroComprovante('O arquivo é muito grande (máx 8MB). Se for uma foto do celular, tente tirar um print e enviar o print, ou envie direto para nosso e-mail.');
       return;
+    }
+
+    let arquivoFinalVinculo = comprovanteVinculo;
+    if (comprovanteVinculo) {
+      try {
+        if (comprovanteVinculo.type.startsWith('image/')) {
+          arquivoFinalVinculo = await imageCompression(comprovanteVinculo, {
+            maxSizeMB: 1,
+            maxWidthOrHeight: 1920,
+            useWebWorker: true,
+          });
+        }
+      } catch (err) {
+        console.warn('Erro ao comprimir imagem do vínculo:', err);
+      }
+      
+      if (arquivoFinalVinculo && arquivoFinalVinculo.size > 8 * 1024 * 1024) {
+        setEnviandoComprovante(false);
+        setErroComprovante('O arquivo do vínculo é muito grande (máx 8MB). Tente reduzir o tamanho ou envie direto para nosso e-mail.');
+        return;
+      }
     }
 
     try {
       const form = new FormData();
       Object.entries(dados).forEach(([chave, valor]) => form.append(chave, valor));
-      form.append('comprovante', arquivoFinal);
+      form.append('comprovante', arquivoFinal, comprovante.name);
+      if (arquivoFinalVinculo && comprovanteVinculo) form.append('comprovanteVinculo', arquivoFinalVinculo, comprovanteVinculo.name);
       const res = await fetch('/api/comprovante', { method: 'POST', body: form });
       if (!res.ok) throw new Error();
       setComprovanteEnviado(true);
@@ -217,11 +245,29 @@ export default function InscricaoForm() {
               <input type="file" accept="image/*,application/pdf" onChange={onComprovanteChange} className="sr-only" />
             </label>
 
+            {dados.categoria === 'Estudante' && (
+               <div className="mt-6">
+                 <p className={campoLabel}>
+                   Anexar comprovante de vínculo com a faculdade
+                 </p>
+                 <p className="text-muted text-sm sm:text-base leading-relaxed mb-4">
+                   Por favor, envie seu comprovante de matrícula, declaração de vínculo ou carteirinha de estudante atualizada.
+                 </p>
+                 <label className="flex items-center gap-3 rounded-xl border border-dashed border-line bg-surface px-5 py-4 cursor-pointer hover:border-brand-strong transition-colors">
+                   <Paperclip size={20} className="text-muted shrink-0" />
+                   <span className="text-sm sm:text-base text-ink-soft truncate">
+                     {comprovanteVinculo ? comprovanteVinculo.name : 'Escolher arquivo (imagem ou PDF)'}
+                   </span>
+                   <input type="file" accept="image/*,application/pdf" onChange={onComprovanteVinculoChange} className="sr-only" />
+                 </label>
+               </div>
+            )}
+
             {erroComprovante && <p className="text-sm text-red-600 mt-3">{erroComprovante}</p>}
 
             <button
               type="submit"
-              disabled={!comprovante || enviandoComprovante}
+              disabled={!comprovante || (dados.categoria === 'Estudante' && !comprovanteVinculo) || enviandoComprovante}
               className="btn btn-primary w-full mt-5 text-base py-4 disabled:opacity-60"
             >
               {enviandoComprovante ? <Loader2 size={18} className="animate-spin" /> : 'Enviar comprovante'}

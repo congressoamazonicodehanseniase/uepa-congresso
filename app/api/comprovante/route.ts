@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 import { CONTATO } from '../../lib/config';
 
-const TAMANHO_MAXIMO = 4 * 1024 * 1024; // 4MB
+const TAMANHO_MAXIMO = 8 * 1024 * 1024; // 8MB
 
 const CAMPOS_OBRIGATORIOS = ['nomeCompleto', 'nomeCracha', 'categoria', 'tipoParticipacao', 'cidade', 'instituicao', 'contato', 'email'] as const;
 
@@ -33,6 +33,7 @@ export async function POST(request: Request) {
     funcao: campo('funcao'),
   };
   const arquivo = form.get('comprovante');
+  const arquivoVinculo = form.get('comprovanteVinculo');
 
   for (const obrigatorio of CAMPOS_OBRIGATORIOS) {
     if (!dados[obrigatorio]) {
@@ -45,7 +46,8 @@ export async function POST(request: Request) {
   if (arquivo.size > TAMANHO_MAXIMO) {
     return Response.json({ error: 'Arquivo muito grande (máximo 8MB)' }, { status: 400 });
   }
-  if (!arquivo.type.startsWith('image/') && arquivo.type !== 'application/pdf') {
+  const extValida = arquivo.name.match(/\.(jpg|jpeg|png|webp|heic|pdf)$/i);
+  if (!arquivo.type.startsWith('image/') && arquivo.type !== 'application/pdf' && !extValida) {
     return Response.json({ error: 'Envie uma imagem ou PDF' }, { status: 400 });
   }
 
@@ -87,6 +89,18 @@ export async function POST(request: Request) {
   });
 
   const buffer = Buffer.from(await arquivo.arrayBuffer());
+  const attachments: nodemailer.SendMailOptions['attachments'] = [
+    { filename: arquivo.name || 'comprovante', content: buffer, contentType: arquivo.type }
+  ];
+
+  if (arquivoVinculo instanceof File && arquivoVinculo.size > 0) {
+    const bufferVinculo = Buffer.from(await arquivoVinculo.arrayBuffer());
+    attachments.push({
+      filename: arquivoVinculo.name || 'comprovante-vinculo',
+      content: bufferVinculo,
+      contentType: arquivoVinculo.type
+    });
+  }
 
   try {
     await transporter.sendMail({
@@ -94,9 +108,9 @@ export async function POST(request: Request) {
       to: CONTATO.email,
       replyTo: GMAIL_USER,
       subject: `Inscrição + comprovante: ${dados.nomeCompleto}`,
-      text: `${corpoTexto}\n\nComprovante de pagamento Pix em anexo.`,
-      html: `<table style="font-family:sans-serif;font-size:14px">${corpoHtml}</table><p style="font-family:sans-serif;font-size:14px">Comprovante de pagamento Pix em anexo.</p>`,
-      attachments: [{ filename: arquivo.name || 'comprovante', content: buffer, contentType: arquivo.type }],
+      text: `${corpoTexto}\n\nComprovante de pagamento Pix em anexo.${arquivoVinculo ? ' Comprovante de vínculo também em anexo.' : ''}`,
+      html: `<table style="font-family:sans-serif;font-size:14px">${corpoHtml}</table><p style="font-family:sans-serif;font-size:14px">Comprovante de pagamento Pix em anexo.${arquivoVinculo ? ' Comprovante de vínculo também em anexo.' : ''}</p>`,
+      attachments,
     });
   } catch (err) {
     console.error('Falha ao enviar e-mail de inscrição + comprovante', err);
