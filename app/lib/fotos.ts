@@ -21,12 +21,12 @@ export const FOTOS = {
   jornadaLupus:{ src: b + 'p24b.jpg', alt: 'Atendimentos e orientações do projeto Cartas ao Cientista' },
   jornadaEstande:{ src: b + 'p25a.jpg', alt: 'Equipe do ADHAM em ação de extensão do projeto Cartas ao Cientista, em parceria com GRUPO de Pacientes Reumáticos do Pará - GARPA' },
   evento:      { src: b + 'p24a.jpg', alt: 'Auditório durante a II Jornada do Lúpus, evento científico do ADHAM' },
-  estagio:     { src: b + 'p21b.jpg', alt: 'Estágio da LIMDERM e atividades dos acadêmicos no ADHAM' },
+  estagio:     { src: b + 'p21b.jpg', alt: 'Estágio da LIMDERM e atividades dos alunos de medicina no ADHAM' },
   cartas:      { src: b + 'p26a.jpg', alt: 'Ação de extensão “Cartas ao Cientista”, aproximando ciência, educação e comunidade' },
   carreta:     { src: b + 'p28a.jpg', alt: 'Acadêmicos na ação de extensão da Carreta Roda Hans (Ministério da Saúde) em Marabá' },
 
   // Campanhas e ações sociais
-  campanhaLaranja:     { src: b + 'campanha-dez-laranja.jpeg',           alt: 'Campanha Dez Laranja no HMM – conscientização sobre hanseníase' },
+  campanhaLaranja:     { src: b + 'campanha-dez-laranja.jpeg',           alt: 'Atividades práticas em cirurgia dermatológica no HMM com acadêmicos de Medicina' },
   oficinaHanseniase:   { src: b + 'oficina-hanseniase.jpeg',             alt: 'Oficina de Hanseníase promovida pelo ADHAM' },
   primeirosSonhos:     { src: b + 'primeiros-sonhos-adham.jpeg',         alt: 'Lá dos primeiros sonhos do ADHAM – origem do ambulatório' },
   acaoSocial:          { src: b + 'acao-social.jpeg',                    alt: 'Ação social do ADHAM na comunidade' },
