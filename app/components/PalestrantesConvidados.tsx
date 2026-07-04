@@ -274,12 +274,12 @@ export default function PalestrantesConvidados() {
                 className="group rounded-2xl border border-line bg-surface overflow-hidden flex flex-col transition-all hover:border-brand-tint hover:shadow-lg hover:-translate-y-1 cursor-pointer"
                 onClick={() => setSelected(p)}
               >
-                <div className="h-64 sm:h-auto sm:aspect-[4/5] bg-brand-soft overflow-hidden">
+                <div className="aspect-[4/5] w-full bg-brand-soft overflow-hidden">
                   <img
                     src={p.foto || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%25" height="100%25" fill="%23f0f0f0"><rect width="100%25" height="100%25"/><text x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23aaa">Foto Pendente</text></svg>'}
                     alt={p.nome}
                     loading="lazy"
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover object-[center_10%] transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-1 relative">
