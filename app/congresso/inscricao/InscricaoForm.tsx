@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type ChangeEvent, type FormEvent } from 'react';
+import imageCompression from 'browser-image-compression';
 import Link from 'next/link';
 import { Check, Copy, Loader2, ArrowLeft, Paperclip } from 'lucide-react';
 import { CATEGORIAS_INSCRICAO, TIPOS_PARTICIPACAO, PIX, CONTATO } from '../../lib/config';
@@ -71,18 +72,34 @@ export default function InscricaoForm() {
   async function onEnviarComprovante(e: FormEvent) {
     e.preventDefault();
     if (!comprovante) return;
-    
-    if (comprovante.size > 4 * 1024 * 1024) {
+
+    setErroComprovante('');
+    setEnviandoComprovante(true);
+
+    let arquivoFinal = comprovante;
+
+    try {
+      if (comprovante.type.startsWith('image/')) {
+        arquivoFinal = await imageCompression(comprovante, {
+          maxSizeMB: 1,
+          maxWidthOrHeight: 1920,
+          useWebWorker: true,
+        });
+      }
+    } catch (err) {
+      console.warn('Erro ao comprimir imagem:', err);
+    }
+
+    if (arquivoFinal.size > 4 * 1024 * 1024) {
+      setEnviandoComprovante(false);
       setErroComprovante('O arquivo é muito grande (máx 4MB). Se for uma foto do celular, tente tirar um print e enviar o print, ou envie direto para nosso e-mail.');
       return;
     }
 
-    setErroComprovante('');
-    setEnviandoComprovante(true);
     try {
       const form = new FormData();
       Object.entries(dados).forEach(([chave, valor]) => form.append(chave, valor));
-      form.append('comprovante', comprovante);
+      form.append('comprovante', arquivoFinal);
       const res = await fetch('/api/comprovante', { method: 'POST', body: form });
       if (!res.ok) throw new Error();
       setComprovanteEnviado(true);
