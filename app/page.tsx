@@ -56,7 +56,7 @@ const extensao: { title: string; desc: string; foto: { src: string; alt: string 
   { title: 'Campanha Dez Laranja', desc: 'Campanha de conscientização sobre hanseníase realizada no Hospital Municipal de Marabá (HMM).', foto: FOTOS.campanhaLaranja },
   { title: 'Carreta Roda Hans', desc: 'Iniciativa do Ministério da Saúde; acadêmicos atuam na assistência em hanseníase em Marabá.', foto: FOTOS.carreta },
   { title: 'Projeto Cartas ao Cientista', desc: 'Atendimentos e orientações que aproximam ciência, educação e comunidade.', foto: FOTOS.jornadaLupus },
-  { title: 'Cartas ao Cientista', desc: 'Equipe do ADHAM em ação de extensão do projeto Cartas ao Cientista, ao lado do GARPA.', foto: FOTOS.jornadaEstande, pos: 'center 60%' },
+  { title: 'Cartas ao Cientista', desc: 'Equipe do ADHAM em ação de extensão do projeto Cartas ao Cientista, em parceria com GRUPO de Pacientes Reumáticos do Pará - GARPA.', foto: FOTOS.jornadaEstande, pos: 'center 60%' },
   { title: 'Produção científica', desc: 'Apresentação de trabalhos em congressos nacionais, como o 78º Congresso da Sociedade Brasileira de Dermatologia (CSBD), Rio 2025.', foto: FOTOS.producao, pos: 'center 30%' },
 ];
 
