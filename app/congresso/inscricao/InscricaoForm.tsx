@@ -123,14 +123,16 @@ export default function InscricaoForm() {
     }
 
     try {
-      const blobComprovante = await upload(arquivoFinal.name, arquivoFinal, {
+      const uniqueName1 = `${Date.now()}-${Math.random().toString(36).substring(2, 8)}-${arquivoFinal.name.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
+      const blobComprovante = await upload(uniqueName1, arquivoFinal, {
         access: 'public',
         handleUploadUrl: '/api/upload',
       });
 
       let blobVinculo = null;
       if (arquivoFinalVinculo && comprovanteVinculo) {
-        blobVinculo = await upload(arquivoFinalVinculo.name, arquivoFinalVinculo, {
+        const uniqueName2 = `${Date.now()}-${Math.random().toString(36).substring(2, 8)}-${arquivoFinalVinculo.name.replace(/[^a-zA-Z0-9.-]/g, '_')}`;
+        blobVinculo = await upload(uniqueName2, arquivoFinalVinculo, {
           access: 'public',
           handleUploadUrl: '/api/upload',
         });

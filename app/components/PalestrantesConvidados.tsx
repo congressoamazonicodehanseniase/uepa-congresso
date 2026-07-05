@@ -231,6 +231,14 @@ const palestrantes: Palestrante[] = [
     curriculo: 'Pró-Reitora de Pesquisa e Pós-Graduação e Professora Adjunta do Departamento de Morfologia e Ciências Fisiológicas (DMCF/UEPA). Graduação em Odontologia, Especialização em Farmacologia e Ortodontia, Mestrado em Ciências Farmacêuticas, Doutorado em Neurociências e Biologia Celular. Docente Permanente do PPGCF-UFPA e BIONORTE. Coordenadora do LANEFC e líder de grupo de pesquisa no CNPq.',
     resumo: 'Pró-Reitora de Pesquisa e Pós-Graduação e Professora Adjunta da UEPA. Doutora em Neurociências e Biologia Celular.',
     lattes: 'http://lattes.cnpq.br/0156144290849777',
+  },
+  {
+    nome: 'Waldirene Bentes Barreto',
+    titulo: 'Visitadora Sanitária do MS · Especialista em Avaliação Neurológica Simplificada',
+    instituicao: 'Secretaria Municipal de Saúde de Marabá',
+    foto: '/palestrantes/waldirene-bentes.jpg',
+    curriculo: 'Possui licenciatura em Letras pela UFPA. Visitadora Sanitária do Ministério da Saúde, com ênfase nos programas de Hanseníase e Tuberculose há 36 anos. Atua como Referência Técnica em Hanseníase na Secretaria Municipal de Saúde de Marabá e é Especialista em Avaliação Neurológica Simplificada.',
+    resumo: 'Visitadora Sanitária do MS há 36 anos, Referência Técnica em Hanseníase em Marabá e Especialista em Avaliação Neurológica Simplificada.',
   }
 ];
 
