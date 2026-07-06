@@ -63,12 +63,12 @@ const palestrantes: Palestrante[] = [
     lattes: 'http://lattes.cnpq.br/1894551542259862',
   },
   {
-    nome: 'Dra. Marília Brasil',
-    titulo: 'Dermatologista e infectologista · Pós-doutora (FM-USP)',
-    instituicao: 'Professora Titular da UEPA · Mestrado Saúde na Amazônia (UFPA/UEPA)',
+    nome: 'Dra. Marília Brasil Xavier',
+    titulo: 'Dermatologista e Infectologista · Pós-doutora (FM-USP)',
+    instituicao: 'Docente Titular da UEPA e NMT/UFPA',
     foto: '/palestrantes/marilia-brasil.jpg',
-    curriculo: 'Médica dermatologista e infectologista, com doutorado pela UFPA e pós-doutorado pela FM-USP. É Professora Titular de Dermatologia da UEPA, docente da UFPA e coordenadora do Mestrado Profissional Saúde na Amazônia (UFPA/UEPA). Atua em ensino, assistência e pesquisa com ênfase em hanseníase, HIV/AIDS, leishmanioses, dermatologia tropical e epidemiologia de doenças endêmicas da Amazônia.',
-    resumo: 'Atua em ensino, assistência e pesquisa com ênfase em hanseníase, leishmanioses e epidemiologia de doenças endêmicas da Amazônia.',
+    curriculo: 'Dermatologista (Sociedade Brasileira de Dermatologia) e Infectologista (Sociedade Brasileira de Infectologia) • Pós-doutora (FM-USP) • Docente Titular de Dermatologia da UEPA e Titular do Núcleo de Medicina Tropical (NMT) da UFPA • Docente dos Programas de Pós-Graduação PPGBPA (UEPA), PPGDT (UFPA) e PPGSA (UFPA).\n\nAtua no ensino, assistência e pesquisa, com ênfase em hanseníase, leishmaniose e epidemiologia das doenças endêmicas da Amazônia.',
+    resumo: 'Atua no ensino, assistência e pesquisa, com ênfase em hanseníase, leishmaniose e epidemiologia das doenças endêmicas da Amazônia.',
     lattes: 'http://lattes.cnpq.br/0548879430701901',
   },
   {
