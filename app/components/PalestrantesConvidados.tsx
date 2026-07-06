@@ -23,7 +23,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Presidente da Sociedade Brasileira de Hansenologia (2023–2026) · FMRP-USP',
     foto: '/palestrantes/marco-andrey.jpg',
     curriculo: 'Médico pela Universidade Federal de Juiz de Fora, Dermatologista, Doutor pela USP e pós-doutor pela Universidade de Amsterdã. Professor Titular da FMRP-USP, coordenador do Laboratório de Cicatrização e Hanseníase e do Programa de Pós-Graduação em Clínica Médica. Presidente da Sociedade Brasileira de Hansenologia (2023–2026) e membro do Conselho da International Leprosy Association (ILA). Atua em hanseníase, dermatologia, cicatrização e pesquisa translacional.',
-    resumo: 'Atua em hanseníase, dermatologia, cicatrização e pesquisa translacional. É coordenador do Laboratório de Cicatrização e Hanseníase da FMRP-USP.',
+    resumo: 'Médico pela Universidade Federal de Juiz de Fora, Dermatologista, Doutor pela USP e pós-doutor pela Universidade de Amsterdã.\n\nProfessor Titular da FMRP-USP, coordenador do Laboratório de Cicatrização e Hanseníase e do Programa de Pós-Graduação em Clínica Médica.\n\nPresidente da Sociedade Brasileira de Hansenologia (2023–2026) e membro do Conselho da International Leprosy Association (ILA).\n\nAtua em hanseníase, dermatologia, cicatrização e pesquisa translacional.',
     lattes: 'http://lattes.cnpq.br/9103136155056414',
   },
   {
@@ -32,7 +32,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professor Titular da UFPA · Fundador do LDI/UFPA · Ex-presidente da SBH',
     foto: '/palestrantes/claudio-salgado.jpg',
     curriculo: 'Médico pela UEPA, Doutor em Medicina pela Universidade de Tóquio, Professor Titular da UFPA e fundador do LDI/UFPA. Referência em hanseníase, dermatologia tropical e imunologia. Ex-presidente da Sociedade Brasileira de Hansenologia, Conselheiro da International Leprosy Association (Américas) e Coordenador da Área Ciências Biológicas II da CAPES.',
-    resumo: 'Referência em hanseníase, dermatologia tropical e imunologia, atuando como Professor Titular da UFPA e fundador do LDI/UFPA.',
+    resumo: 'Médico pela UEPA, Doutor em Medicina pela Universidade de Tóquio, Professor Titular da UFPA e fundador do LDI/UFPA.\n\nReferência em hanseníase, dermatologia tropical e imunologia.\n\nEx-presidente da Sociedade Brasileira de Hansenologia, Conselheiro da International Leprosy Association (Américas) e Coordenador da Área Ciências Biológicas II da CAPES.',
     lattes: 'http://lattes.cnpq.br/2310734509396125',
   },
   {
@@ -41,7 +41,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Instituto Lauro de Souza Lima (ILSL) · Aliança Contra a Hanseníase',
     foto: '/palestrantes/jaison-barreto.jpg',
     curriculo: 'Médico pela Universidade Federal de Santa Catarina, especialista em Dermatologia e Hansenologia, Doutor em Dermatologia pela USP. Médico do Instituto Lauro de Souza Lima (ILSL), preceptor da Residência Médica em Dermatologia e assessor médico da Aliança Contra a Hanseníase. Atua em Dermatologia, Dermatopatologia e Hansenologia.',
-    resumo: 'Especialista em Dermatologia e Hansenologia, atua como médico do Instituto Lauro de Souza Lima (ILSL) e assessor da Aliança Contra a Hanseníase.',
+    resumo: 'Médico pela Universidade Federal de Santa Catarina, especialista em Dermatologia e Hansenologia, Doutor em Dermatologia pela USP.\n\nMédico do Instituto Lauro de Souza Lima (ILSL), preceptor da Residência Médica em Dermatologia e assessor médico da Aliança Contra a Hanseníase.\n\nAtua em Dermatologia, Dermatopatologia e Hansenologia.',
     lattes: 'http://lattes.cnpq.br/5343952256246039',
   },
   {
@@ -50,7 +50,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professora Titular da UEPA · Secretária-Geral da SBD',
     foto: '/palestrantes/regina-carneiro.jpg',
     curriculo: 'Graduada em Medicina pela Universidade Federal do Pará (1985), com especialização em Dermatologia Tropical (UFPA), Mestrado em Dermatologia e Doutorado em Medicina (Dermatologia) pela Universidade Federal de São Paulo (UNIFESP). É Professora Titular de Dermatologia da Universidade do Estado do Pará (UEPA) desde 2013, docente permanente dos programas de pós-graduação em Cirurgia Experimental e Biologia dos Agentes Parasitários da UEPA. Atua como Coordenadora e Preceptora da Residência Médica em Dermatologia da UEPA e exerce o cargo de Secretária-Geral da Sociedade Brasileira de Dermatologia. Desenvolve atividades de ensino, assistência e pesquisa com ênfase em Dermatologia Tropical, dermatoses inflamatórias e dermatologia pediátrica.',
-    resumo: 'Desenvolve atividades com ênfase em Dermatologia Tropical, dermatoses inflamatórias e dermatologia pediátrica. É Professora Titular da UEPA.',
+    resumo: 'Graduada em Medicina pela Universidade Federal do Pará (1985), com especialização em Dermatologia Tropical (UFPA), Mestrado em Dermatologia e Doutorado em Medicina (Dermatologia) pela Universidade Federal de São Paulo (UNIFESP).\n\nÉ Professora Titular de Dermatologia da Universidade do Estado do Pará (UEPA) desde 2013, docente permanente dos programas de pós-graduação em Cirurgia Experimental e Biologia dos Agentes Parasitários da UEPA.\n\nAtua como Coordenadora e Preceptora da Residência Médica em Dermatologia da UEPA e exerce o cargo de Secretária-Geral da Sociedade Brasileira de Dermatologia.\n\nDesenvolve atividades de ensino, assistência e pesquisa com ênfase em Dermatologia Tropical, dermatoses inflamatórias e dermatologia pediátrica.',
     lattes: 'http://lattes.cnpq.br/1387234135281918',
   },
   {
@@ -59,7 +59,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professor Associado da UFPA · Coordenador do LabEE-UFPA (epidemiologia espacial)',
     foto: '/palestrantes/josafa-barreto.jpg',
     curriculo: 'Professor Associado II da Universidade Federal do Pará (UFPA), com mestrado e doutorado em Doenças Tropicais pela UFPA e doutorado sanduíche na Emory University (EUA). Atua como docente de Saúde Coletiva no Campus Castanhal e como professor permanente do Programa de Pós-Graduação em Doenças Tropicais da UFPA. Desenvolve pesquisas em epidemiologia espacial da hanseníase, com ênfase na distribuição espacial da doença, soroprevalência em municípios endêmicos e aplicação de Sistemas de Informação Geográfica (SIG) e geoprocessamento em saúde pública. É fundador e coordenador do Laboratório de Epidemiologia Espacial da UFPA (LabEE-UFPA) desde 2014, criado com financiamento do CNPq.',
-    resumo: 'Desenvolve pesquisas em epidemiologia espacial da hanseníase, com ênfase na distribuição da doença e aplicação de geoprocessamento em saúde pública.',
+    resumo: 'Professor Associado II da Universidade Federal do Pará (UFPA), com mestrado e doutorado em Doenças Tropicais pela UFPA e doutorado sanduíche na Emory University (EUA).\n\nAtua como docente de Saúde Coletiva no Campus Castanhal e como professor permanente do Programa de Pós-Graduação em Doenças Tropicais da UFPA.\n\nDesenvolve pesquisas em epidemiologia espacial da hanseníase, com ênfase na distribuição espacial da doença, soroprevalência em municípios endêmicos e aplicação de Sistemas de Informação Geográfica (SIG) e geoprocessamento em saúde pública.\n\nÉ fundador e coordenador do Laboratório de Epidemiologia Espacial da UFPA (LabEE-UFPA) desde 2014, criado com financiamento do CNPq.',
     lattes: 'http://lattes.cnpq.br/1894551542259862',
   },
   {
@@ -77,7 +77,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Vice-Reitora da UEPA · PPGENF e PPGESA',
     foto: '/palestrantes/ilma-pastana.jpg',
     curriculo: 'Enfermeira, mestre, doutora e pós-doutora em Enfermagem. Atualmente é Vice-Reitora da Universidade do Estado do Pará (UEPA), professora da graduação e dos programas de pós-graduação em Enfermagem (PPGENF) e Ensino na Saúde na Amazônia (PPGESA). Possui experiência em enfermagem cirúrgica, controle de infecções, gestão em saúde e educação em enfermagem, tendo ocupado cargos de destaque na UEPA e na Associação Brasileira de Enfermagem (ABEn), com relevante atuação no ensino, na pesquisa e na gestão acadêmica.',
-    resumo: 'Possui experiência em enfermagem cirúrgica, controle de infecções, gestão em saúde e educação em enfermagem. Atualmente é Vice-Reitora da UEPA.',
+    resumo: 'Enfermeira, mestre, doutora e pós-doutora em Enfermagem.\n\nAtualmente é Vice-Reitora da Universidade do Estado do Pará (UEPA), professora da graduação e dos programas de pós-graduação em Enfermagem (PPGENF) e Ensino na Saúde na Amazônia (PPGESA).\n\nPossui experiência em enfermagem cirúrgica, controle de infecções, gestão em saúde e educação em enfermagem, tendo ocupado cargos de destaque na UEPA e na Associação Brasileira de Enfermagem (ABEn), com relevante atuação no ensino, na pesquisa e na gestão acadêmica.',
     lattes: 'http://lattes.cnpq.br/1650337093024641',
   },
   {
@@ -86,7 +86,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professor da UNIFESSPA · Coordenador do Curso de Medicina',
     foto: '/palestrantes/luann-wendel.jpg',
     curriculo: 'Farmacêutico, doutor em Inovação Farmacêutica e mestre em Ciências Farmacêuticas pela UFPA, com pós-doutorado em Doenças Tropicais pelo Núcleo de Medicina Tropical da UFPA. É Professor Adjunto e Pesquisador da UNIFESSPA, Coordenador da Faculdade de Medicina e do Curso de Medicina, além de coordenador do Programa de Pós-Graduação em Saúde da Família. Atua em pesquisa nas áreas de doenças tropicais e negligenciadas, assistência farmacêutica, farmacologia clínica, farmacogenômica e saúde coletiva, com produção científica e orientação em programas de pós-graduação.',
-    resumo: 'Atua em pesquisa nas áreas de doenças tropicais e negligenciadas, assistência farmacêutica, farmacologia clínica e saúde coletiva.',
+    resumo: 'Farmacêutico, doutor em Inovação Farmacêutica e mestre em Ciências Farmacêuticas pela UFPA, com pós-doutorado em Doenças Tropicais pelo Núcleo de Medicina Tropical da UFPA.\n\nÉ Professor Adjunto e Pesquisador da UNIFESSPA, Coordenador da Faculdade de Medicina e do Curso de Medicina, além de coordenador do Programa de Pós-Graduação em Saúde da Família.\n\nAtua em pesquisa nas áreas de doenças tropicais e negligenciadas, assistência farmacêutica, farmacologia clínica, farmacogenômica e saúde coletiva, com produção científica e orientação em programas de pós-graduação.',
     lattes: 'http://lattes.cnpq.br/6233488431016391',
   },
   {
@@ -95,7 +95,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professor da UEPA · Bolsista de produtividade do CNPq',
     foto: '/palestrantes/anderson-bentes.jpg',
     curriculo: 'Farmacêutico graduado pela Universidade Federal do Pará (UFPA), com Mestrado em Ciências Farmacêuticas e Doutorado em Biotecnologia pela UFPA. É Professor Adjunto da Universidade do Estado do Pará (UEPA) e coordenador do Programa de Pós-Graduação Profissional em Cirurgia e Pesquisa Experimental. Atua em pesquisa nas áreas de Farmacologia Experimental, plantas medicinais, drogas sintéticas e tecnologias em saúde, sendo coordenador de laboratório de pesquisa e membro da Sociedade Brasileira de Farmacologia e Terapêutica Experimental. É bolsista de produtividade do CNPq.',
-    resumo: 'Atua em pesquisa nas áreas de Farmacologia Experimental, plantas medicinais, drogas sintéticas e tecnologias em saúde.',
+    resumo: 'Farmacêutico graduado pela Universidade Federal do Pará (UFPA), com Mestrado em Ciências Farmacêuticas e Doutorado em Biotecnologia pela UFPA.\n\nÉ Professor Adjunto da Universidade do Estado do Pará (UEPA) e coordenador do Programa de Pós-Graduação Profissional em Cirurgia e Pesquisa Experimental.\n\nAtua em pesquisa nas áreas de Farmacologia Experimental, plantas medicinais, drogas sintéticas e tecnologias em saúde, sendo coordenador de laboratório de pesquisa e membro da Sociedade Brasileira de Farmacologia e Terapêutica Experimental.\n\nÉ bolsista de produtividade do CNPq.',
     lattes: 'http://lattes.cnpq.br/3455183793812931',
   },
   {
@@ -104,7 +104,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Médica Dermatologista · CRM-PA 9310 · RQE 5394 (Dermatologia) · RQE 6065 (Hansenologia)',
     foto: '/palestrantes/dyana-silva-nova.jpg',
     curriculo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Membro da SBH, SBD, SBCD, GBM e SBC. Idealizadora do ADHAM.',
-    resumo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM. Idealizadora do ADHAM.',
+    resumo: 'Graduada em Medicina pela UEPA, Mestra em Cirurgia Experimental (CIPE-UEPA) e orientadora da LIMDERM.\n\nMembro da SBH, SBD, SBCD, GBM e SBC.\n\nIdealizadora do ADHAM.',
   },
   {
     nome: 'Dra. Larissa Navarro Barros',
@@ -112,7 +112,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professora UEPA Campus VIII · Coordenadora da LIOTO',
     foto: '/palestrantes/larissa-navarro.jpg',
     curriculo: 'Médica otorrinolaringologista, especialista pela ABORL-CCF, com Mestrado em Ensino em Saúde na Amazônia pela UEPA e pós-graduação em Alergia e Imunologia. É Professora Auxiliar do curso de Medicina da UEPA – Campus VIII e docente assistente no ambulatório de Otorrinolaringologia da FACIMPA. Atua como coordenadora e orientadora da Liga Acadêmica de Otorrinolaringologia de Marabá (LIOTO), com experiência em Otorrinolaringologia geral e pediátrica, incluindo rinologia, otologia, laringologia, otoneurologia e cirurgias otorrinolaringológicas.',
-    resumo: 'Coordenadora da LIOTO, com experiência em Otorrinolaringologia geral e pediátrica, rinologia, otologia, laringologia e cirurgias otorrinolaringológicas.',
+    resumo: 'Médica otorrinolaringologista, especialista pela ABORL-CCF, com Mestrado em Ensino em Saúde na Amazônia pela UEPA e pós-graduação em Alergia e Imunologia.\n\nÉ Professora Auxiliar do curso de Medicina da UEPA – Campus VIII e docente assistente no ambulatório de Otorrinolaringologia da FACIMPA.\n\nAtua como coordenadora e orientadora da Liga Acadêmica de Otorrinolaringologia de Marabá (LIOTO), com experiência em Otorrinolaringologia geral e pediátrica, incluindo rinologia, otologia, laringologia, otoneurologia e cirurgias otorrinolaringológicas.',
     lattes: 'http://lattes.cnpq.br/7017222096097910',
   },
   {
@@ -121,7 +121,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professora UEPA · Coordenadora do Suporte Básico de Vida UEPA',
     foto: '/palestrantes/claudia-dizioli.jpg',
     curriculo: 'Médica Pediatra e Infectologista, graduada e com residência pela Faculdade de Medicina da USP – Ribeirão Preto, com Mestrado pela USP. Possui títulos de especialista em Pediatria, Terapia Intensiva Pediátrica e Emergência Pediátrica, além de formação em Emergências Pediátricas pelo Hospital Albert Einstein. É Professora Auxiliar da UEPA, coordenadora do Laboratório de Suporte Básico de Vida e orientadora da Liga Acadêmica Marabaense de Pediatria (LAMPED). Atua em pesquisa e assistência nas áreas de urgências e emergências pediátricas e suporte básico de vida.',
-    resumo: 'Atua em urgências e emergências pediátricas e suporte básico de vida.',
+    resumo: 'Médica Pediatra e Infectologista, graduada e com residência pela Faculdade de Medicina da USP – Ribeirão Preto, com Mestrado pela USP.\n\nPossui títulos de especialista em Pediatria, Terapia Intensiva Pediátrica e Emergência Pediátrica, além de formação em Emergências Pediátricas pelo Hospital Albert Einstein.\n\nÉ Professora Auxiliar da UEPA, coordenadora do Laboratório de Suporte Básico de Vida e orientadora da Liga Acadêmica Marabaense de Pediatria (LAMPED).\n\nAtua em pesquisa e assistência nas áreas de urgências e emergências pediátricas e suporte básico de vida.',
     lattes: 'http://lattes.cnpq.br/4167541584600306',
   },
   {
@@ -130,7 +130,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professor UEPA Marabá · Cardiologia e Medicina Intensiva',
     foto: '/palestrantes/carlos-andre.jpg',
     curriculo: 'Médico graduado pela Universidade do Estado do Pará (UEPA), especialista em Cardiologia pela SBC/AMB e em Terapia Intensiva pela AMIB/AMB, com habilitação em Ergometria e Ecocardiografia. É Mestre pela UEPA (CIPE) e professor do internato de Clínica Médica do curso de Medicina da UEPA – Marabá. Atua como médico nas áreas de Cardiologia e Terapia Intensiva nos hospitais de Marabá, além de instrutor em ultrassonografia point of care e ecocardiografia.',
-    resumo: 'Especialista em Cardiologia e Terapia Intensiva, com habilitação em Ecocardiografia. Professor UEPA Marabá e instrutor em ultrassonografia point of care.',
+    resumo: 'Médico graduado pela Universidade do Estado do Pará (UEPA), especialista em Cardiologia pela SBC/AMB e em Terapia Intensiva pela AMIB/AMB, com habilitação em Ergometria e Ecocardiografia.\n\nÉ Mestre pela UEPA (CIPE) e professor do internato de Clínica Médica do curso de Medicina da UEPA – Marabá.\n\nAtua como médico nas áreas de Cardiologia e Terapia Intensiva nos hospitais de Marabá, além de instrutor em ultrassonografia point of care e ecocardiografia.',
     lattes: 'http://lattes.cnpq.br/5907719701481757',
   },
   {
@@ -139,7 +139,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'UEPA · Hospital Ophir Loyola · HC-FMUSP',
     foto: '/palestrantes/milena-lins-veiga.jpg',
     curriculo: 'Médica graduada pela Faculdade Metropolitana da Amazônia. Neurologista pela Universidade do Estado do Pará (UEPA) e pelo Hospital Ophir Loyola. Neuroimunologista pelo Hospital das Clínicas – FMUSP.',
-    resumo: 'Neurologista e Neuroimunologista formada pela UEPA, Hospital Ophir Loyola e HC-FMUSP.',
+    resumo: 'Médica graduada pela Faculdade Metropolitana da Amazônia.\n\nNeurologista pela Universidade do Estado do Pará (UEPA) e pelo Hospital Ophir Loyola.\n\nNeuroimunologista pelo Hospital das Clínicas – FMUSP.',
     lattes: 'http://lattes.cnpq.br/0305074187747227',
   },
   {
@@ -148,7 +148,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Docente UEPA Marabá · Coordenador Medicina Intensiva HRS-PA',
     foto: '/palestrantes/davi-tozzeto.jpg',
     curriculo: 'Médico com atuação em Cardiologia, Medicina Intensiva e Clínica Médica, com títulos de especialista nessas áreas. Possui Mestrado em Ciências Médicas (Investigação Clínica) e Doutorado em Educação em Saúde pela UEPA. É docente do curso de Medicina da UEPA – Marabá, coordenador adjunto do curso desde sua implantação e atua como coordenador da Medicina Intensiva Adulto do Hospital Regional Público do Sudeste do Pará e do Hospital Municipal de Marabá. Possui RQE em Clínica Médica, Cardiologia, Ecocardiografia e Medicina Intensiva.',
-    resumo: 'Doutor em Educação em Saúde (UEPA), coordenador adjunto do curso de Medicina da UEPA Marabá e coordenador da Medicina Intensiva do HRS-PA.',
+    resumo: 'Médico com atuação em Cardiologia, Medicina Intensiva e Clínica Médica, com títulos de especialista nessas áreas.\n\nPossui Mestrado em Ciências Médicas (Investigação Clínica) e Doutorado em Educação em Saúde pela UEPA.\n\nÉ docente do curso de Medicina da UEPA – Marabá, coordenador adjunto do curso desde sua implantação e atua como coordenador da Medicina Intensiva Adulto do Hospital Regional Público do Sudeste do Pará e do Hospital Municipal de Marabá.\n\nPossui RQE em Clínica Médica, Cardiologia, Ecocardiografia e Medicina Intensiva.',
     lattes: 'http://lattes.cnpq.br/7890221131531452',
   },
   {
@@ -157,7 +157,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Dermatologista em Marabá · Professor Afya Marabá',
     foto: '/palestrantes/evardo-nunes.jpg',
     curriculo: 'Médico graduado pela Universidade Federal do Piauí (UFPI), especialista em Dermatologia pela Faculdade de Ciências Médicas da Universidade de Pernambuco (Hospital Oswaldo Cruz – HUOC/UPE). É Membro Titular da Sociedade Brasileira de Dermatologia e da Sociedade Brasileira de Cirurgia Dermatológica. Atua como dermatologista em Marabá-PA e como Professor do curso de Medicina da Afya Faculdade de Ciências Médicas de Marabá, com experiência em Dermatologia, Clínica Médica, Medicina Intensiva e Atenção à Saúde.',
-    resumo: 'Dermatologista e professor universitário em Marabá, membro titular da SBD e da Sociedade Brasileira de Cirurgia Dermatológica.',
+    resumo: 'Médico graduado pela Universidade Federal do Piauí (UFPI), especialista em Dermatologia pela Faculdade de Ciências Médicas da Universidade de Pernambuco (Hospital Oswaldo Cruz – HUOC/UPE).\n\nÉ Membro Titular da Sociedade Brasileira de Dermatologia e da Sociedade Brasileira de Cirurgia Dermatológica.\n\nAtua como dermatologista em Marabá-PA e como Professor do curso de Medicina da Afya Faculdade de Ciências Médicas de Marabá, com experiência em Dermatologia, Clínica Médica, Medicina Intensiva e Atenção à Saúde.',
     lattes: 'http://lattes.cnpq.br/8924474953848229',
   },
   {
@@ -166,7 +166,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Dermatologia Clínica, Cirúrgica e Cosmiatria',
     foto: '/palestrantes/amelia-leal.jpg',
     curriculo: 'Médica graduada pela Universidade do Estado do Pará (UEPA), dermatologista com Fellow em Cosmiatria pelo Hospital Israelita Albert Einstein. Atua em Dermatologia Clínica, Cirúrgica e Cosmiatria, com experiência no atendimento de doenças da pele e procedimentos estéticos.',
-    resumo: 'Dermatologista com Fellow em Cosmiatria pelo Hospital Albert Einstein. Atua em Dermatologia Clínica, Cirúrgica e Cosmiatria.',
+    resumo: 'Médica graduada pela Universidade do Estado do Pará (UEPA), dermatologista com Fellow em Cosmiatria pelo Hospital Israelita Albert Einstein.\n\nAtua em Dermatologia Clínica, Cirúrgica e Cosmiatria, com experiência no atendimento de doenças da pele e procedimentos estéticos.',
     lattes: 'http://lattes.cnpq.br/9373610013404564',
   },
 
@@ -176,7 +176,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Docente UEPA e Afya Marabá · Pesquisadora em educação em saúde',
     foto: '/palestrantes/sarah-lais.jpg',
     curriculo: 'Enfermeira, Doutora e Mestra em Ensino em Saúde na Amazônia pela UEPA, com especializações em Saúde Mental, Gestão de Redes de Atenção à Saúde, Educação Médica e Gestão em Enfermagem. Atua como docente dos cursos de Medicina da UEPA e Afya Marabá, com experiência em Saúde Coletiva, metodologias ativas, formação de profissionais da saúde e integração ensino-serviço-comunidade. Desenvolve pesquisas em educação em saúde, inovação pedagógica e saúde mental docente, além de atuar em projetos científicos e extensão universitária.',
-    resumo: 'Doutora em Ensino na Saúde na Amazônia (UEPA), atua como docente da UEPA e Afya Marabá com pesquisa em educação em saúde e inovação pedagógica.',
+    resumo: 'Enfermeira, Doutora e Mestra em Ensino em Saúde na Amazônia pela UEPA, com especializações em Saúde Mental, Gestão de Redes de Atenção à Saúde, Educação Médica e Gestão em Enfermagem.\n\nAtua como docente dos cursos de Medicina da UEPA e Afya Marabá, com experiência em Saúde Coletiva, metodologias ativas, formação de profissionais da saúde e integração ensino-serviço-comunidade.\n\nDesenvolve pesquisas em educação em saúde, inovação pedagógica e saúde mental docente, além de atuar em projetos científicos e extensão universitária.',
     lattes: 'http://lattes.cnpq.br/2851222415491802',
   },
   {
@@ -185,7 +185,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Membro Titular da SBD · UFPA',
     foto: '/palestrantes/natani-marreiros.jpg',
     curriculo: 'Médica Dermatologista pela Universidade Federal do Pará (UFPA). Título de Especialista pela Sociedade Brasileira de Dermatologia (SBD). Membro Titular da Sociedade Brasileira de Dermatologia (SBD).',
-    resumo: 'Médica Dermatologista pela UFPA, com Título de Especialista e Membro Titular da Sociedade Brasileira de Dermatologia (SBD).',
+    resumo: 'Médica Dermatologista pela Universidade Federal do Pará (UFPA).\n\nTítulo de Especialista pela Sociedade Brasileira de Dermatologia (SBD).\n\nMembro Titular da Sociedade Brasileira de Dermatologia (SBD).',
   },
   {
     nome: 'Dra. Glaucielen Gomes da Silva',
@@ -193,7 +193,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Professora Auxiliar I da UEPA · Departamento de Patologia (DPAT)',
     foto: '/palestrantes/glaucielen-gomes.jpg',
     curriculo: 'Biomédica (PUC Goiás - 2014), Mestrado em Ciências Ambientais e Saúde (PUC Goiás - 2017) e Doutorado em Biologia Parasitária na Amazônia (UEPA - 2023). Atualmente é Professora Auxiliar I da Universidade do Estado do Pará (UEPA) pelo Departamento de Patologia (DPAT).',
-    resumo: 'Doutora em Biologia Parasitária na Amazônia (UEPA), atua como Professora Auxiliar no Departamento de Patologia da UEPA.',
+    resumo: 'Biomédica (PUC Goiás - 2014), Mestrado em Ciências Ambientais e Saúde (PUC Goiás - 2017) e Doutorado em Biologia Parasitária na Amazônia (UEPA - 2023).\n\nAtualmente é Professora Auxiliar I da Universidade do Estado do Pará (UEPA) pelo Departamento de Patologia (DPAT).',
     lattes: 'http://lattes.cnpq.br/1087812657057520',
   },
   {
@@ -202,7 +202,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Docente efetiva da Universidade do Estado do Pará (UEPA)',
     foto: '/palestrantes/simone-argentino.jpg',
     curriculo: 'Enfermeira graduada pela Universidade Federal de São Paulo (UNIFESP), com pós-graduação em Saúde da Família e Mestrado em Ensino em Saúde na Amazônia pela UEPA. É docente efetiva da Universidade do Estado do Pará desde 2010 e atua nas áreas de Saúde Coletiva, Educação em Saúde e Saúde Indígena, com experiência na formação e capacitação de profissionais para atenção à saúde de populações amazônicas.',
-    resumo: 'Atua nas áreas de Saúde Coletiva, Educação em Saúde e Saúde Indígena. Docente efetiva da UEPA desde 2010.',
+    resumo: 'Enfermeira graduada pela Universidade Federal de São Paulo (UNIFESP), com pós-graduação em Saúde da Família e Mestrado em Ensino em Saúde na Amazônia pela UEPA.\n\nÉ docente efetiva da Universidade do Estado do Pará desde 2010 e atua nas áreas de Saúde Coletiva, Educação em Saúde e Saúde Indígena, com experiência na formação e capacitação de profissionais para atenção à saúde de populações amazônicas.',
     lattes: 'http://lattes.cnpq.br/0154609186488185',
   },
   {
@@ -211,7 +211,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Membro da American Academy of Ophthalmology',
     foto: '/palestrantes/paulo-turiel.jpg',
     curriculo: 'Médico graduado pela Universidade Federal do Pará. Oftalmologista pelo Hospital Federal de Bonsucesso - RJ. Realizou fellowship no setor de Catarata do Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo - HCFMUSP. Membro da American Academy of Ophthalmology. Título de Especialista em Oftalmologia pela Associação Médica Brasileira e Conselho Brasileiro de Oftalmologia (2015).',
-    resumo: 'Oftalmologista com fellowship em Catarata pelo HCFMUSP. Membro da American Academy of Ophthalmology.',
+    resumo: 'Médico graduado pela Universidade Federal do Pará.\n\nOftalmologista pelo Hospital Federal de Bonsucesso - RJ.\n\nRealizou fellowship no setor de Catarata do Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo - HCFMUSP.\n\nMembro da American Academy of Ophthalmology.\n\nTítulo de Especialista em Oftalmologia pela Associação Médica Brasileira e Conselho Brasileiro de Oftalmologia (2015).',
     lattes: 'http://lattes.cnpq.br/1186849050351849',
   },
   {
@@ -220,7 +220,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Pró-Reitora de Pesquisa e Pós-Graduação (UEPA)',
     foto: '/palestrantes/luanna-fernandes.jpg',
     curriculo: 'Pró-Reitora de Pesquisa e Pós-Graduação e Professora Adjunta do Departamento de Morfologia e Ciências Fisiológicas (DMCF/UEPA). Graduação em Odontologia, Especialização em Farmacologia e Ortodontia, Mestrado em Ciências Farmacêuticas, Doutorado em Neurociências e Biologia Celular. Docente Permanente do PPGCF-UFPA e BIONORTE. Coordenadora do LANEFC e líder de grupo de pesquisa no CNPq.',
-    resumo: 'Pró-Reitora de Pesquisa e Pós-Graduação e Professora Adjunta da UEPA. Doutora em Neurociências e Biologia Celular.',
+    resumo: 'Pró-Reitora de Pesquisa e Pós-Graduação e Professora Adjunta do Departamento de Morfologia e Ciências Fisiológicas (DMCF/UEPA).\n\nGraduação em Odontologia, Especialização em Farmacologia e Ortodontia, Mestrado em Ciências Farmacêuticas, Doutorado em Neurociências e Biologia Celular.\n\nDocente Permanente do PPGCF-UFPA e BIONORTE.\n\nCoordenadora do LANEFC e líder de grupo de pesquisa no CNPq.',
     lattes: 'http://lattes.cnpq.br/0156144290849777',
   },
   {
@@ -229,7 +229,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Secretaria Municipal de Saúde de Marabá',
     foto: '/palestrantes/waldirene-bentes.jpg',
     curriculo: 'Possui licenciatura em Letras pela UFPA. Visitadora Sanitária do Ministério da Saúde, com ênfase nos programas de Hanseníase e Tuberculose há 36 anos. Atua como Referência Técnica em Hanseníase na Secretaria Municipal de Saúde de Marabá e é Especialista em Avaliação Neurológica Simplificada.',
-    resumo: 'Possui licenciatura em Letras pela UFPA. Visitadora Sanitária do Ministério da Saúde, com ênfase nos programas de Hanseníase e Tuberculose há 36 anos.\n\nAtua como Referência Técnica em Hanseníase na Secretaria Municipal de Saúde de Marabá e é Especialista em Avaliação Neurológica Simplificada.',
+    resumo: 'Possui licenciatura em Letras pela UFPA.\n\nVisitadora Sanitária do Ministério da Saúde, com ênfase nos programas de Hanseníase e Tuberculose há 36 anos.\n\nAtua como Referência Técnica em Hanseníase na Secretaria Municipal de Saúde de Marabá e é Especialista em Avaliação Neurológica Simplificada.',
   }
 ];
 
