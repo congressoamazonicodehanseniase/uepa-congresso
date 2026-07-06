@@ -67,18 +67,9 @@ const palestrantes: Palestrante[] = [
     titulo: 'Dermatologista e Infectologista · Pós-doutora (FM-USP)',
     instituicao: 'Docente Titular da UEPA e NMT/UFPA',
     foto: '/palestrantes/marilia-brasil.jpg',
-    curriculo: 'Dermatologista (Sociedade Brasileira de Dermatologia) e Infectologista (Sociedade Brasileira de Infectologia) • Pós-doutora (FM-USP) • Docente Titular de Dermatologia da UEPA e Titular do Núcleo de Medicina Tropical (NMT) da UFPA • Docente dos Programas de Pós-Graduação PPGBPA (UEPA), PPGDT (UFPA) e PPGSA (UFPA).\n\nAtua no ensino, assistência e pesquisa, com ênfase em hanseníase, leishmaniose e epidemiologia das doenças endêmicas da Amazônia.',
-    resumo: 'Atua no ensino, assistência e pesquisa, com ênfase em hanseníase, leishmaniose e epidemiologia das doenças endêmicas da Amazônia.',
+    curriculo: 'Dermatologista (Sociedade Brasileira de Dermatologia) e Infectologista (Sociedade Brasileira de Infectologia)\nPós-doutora (FM-USP)\nDocente Titular de Dermatologia da UEPA e Titular do Núcleo de Medicina Tropical (NMT) da UFPA\nDocente dos Programas de Pós-Graduação PPGBPA (UEPA), PPGDT (UFPA) e PPGSA (UFPA).\n\nAtua no ensino, assistência e pesquisa, com ênfase em hanseníase, leishmaniose e epidemiologia das doenças endêmicas da Amazônia.',
+    resumo: 'Dermatologista (Sociedade Brasileira de Dermatologia) e Infectologista (Sociedade Brasileira de Infectologia)\nPós-doutora (FM-USP)\nDocente Titular de Dermatologia da UEPA e Titular do Núcleo de Medicina Tropical (NMT) da UFPA\nDocente dos Programas de Pós-Graduação PPGBPA (UEPA), PPGDT (UFPA) e PPGSA (UFPA).\n\nAtua no ensino, assistência e pesquisa, com ênfase em hanseníase, leishmaniose e epidemiologia das doenças endêmicas da Amazônia.',
     lattes: 'http://lattes.cnpq.br/0548879430701901',
-  },
-  {
-    nome: 'Dra. Lorena Carvalho',
-    titulo: 'Dermatologista · Mestranda (UEPA)',
-    instituicao: 'Membro da SBD · Dermatologista da SESMA/Belém · Docente do CESUPA',
-    foto: '/palestrantes/lorena-carvalho.jpg',
-    curriculo: 'Médica dermatologista, mestre em andamento pela UEPA, com atuação em dermatologia clínica, cirúrgica, dermatoscopia e cosmiatria. Graduada em Medicina pela UEPA e especialista em Dermatologia pela UFPA. É membro titular da Sociedade Brasileira de Dermatologia, dermatologista da SESMA/Belém e docente de Dermatologia do CESUPA, onde coordena o ambulatório de cirurgia dermatológica.',
-    resumo: 'Com atuação em dermatologia clínica, cirúrgica, dermatoscopia e cosmiatria. É dermatologista da SESMA/Belém e docente do CESUPA.',
-    lattes: 'http://lattes.cnpq.br/7517604215547189',
   },
   {
     nome: 'Dra. Ilma Pastana',
@@ -238,7 +229,7 @@ const palestrantes: Palestrante[] = [
     instituicao: 'Secretaria Municipal de Saúde de Marabá',
     foto: '/palestrantes/waldirene-bentes.jpg',
     curriculo: 'Possui licenciatura em Letras pela UFPA. Visitadora Sanitária do Ministério da Saúde, com ênfase nos programas de Hanseníase e Tuberculose há 36 anos. Atua como Referência Técnica em Hanseníase na Secretaria Municipal de Saúde de Marabá e é Especialista em Avaliação Neurológica Simplificada.',
-    resumo: 'Visitadora Sanitária do MS há 36 anos, Referência Técnica em Hanseníase em Marabá e Especialista em Avaliação Neurológica Simplificada.',
+    resumo: 'Possui licenciatura em Letras pela UFPA. Visitadora Sanitária do Ministério da Saúde, com ênfase nos programas de Hanseníase e Tuberculose há 36 anos.\n\nAtua como Referência Técnica em Hanseníase na Secretaria Municipal de Saúde de Marabá e é Especialista em Avaliação Neurológica Simplificada.',
   }
 ];
 
@@ -296,7 +287,7 @@ export default function PalestrantesConvidados() {
                   </h3>
                   <p className="text-brand-strong text-sm font-semibold mt-1.5 leading-snug">{p.titulo}</p>
                   <p className="text-muted text-sm mt-1.5 leading-snug">{p.instituicao}</p>
-                  <p className="text-ink-soft text-[0.8rem] mt-3 leading-relaxed flex-1">
+                  <p className="text-ink-soft text-[0.8rem] mt-3 leading-relaxed flex-1 whitespace-pre-wrap">
                     {p.resumo}
                   </p>
                   
