@@ -121,7 +121,7 @@ export default function Sobre() {
           </div>
           <div className="mt-10 pt-8 border-t border-brand-edge flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <Link href="/congresso/inscricao" className="btn btn-white">Garantir minha vaga agora</Link>
-            <p className="text-brand-faint text-sm">Quanto antes, menor o valor — o 1º lote tem o menor preço.</p>
+            <p className="text-brand-faint text-sm">Lotes esgotam rápido — o 1º lote já esgotou, garanta sua vaga no 2º lote!</p>
           </div>
         </div>
       </div>

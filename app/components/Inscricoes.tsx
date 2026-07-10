@@ -22,8 +22,8 @@ const tabela = [
     name: 'Estudantes',
     sub: 'Alunos UEPA (não ligantes) e de outras instituições',
     lotes: [
-      { lote: '1º lote', valor: 'R$ 40' },
-      { lote: '2º lote', valor: 'R$ 60' },
+      { lote: '1º lote', valor: 'R$ 40', esgotado: true },
+      { lote: '2º lote', valor: 'R$ 60', atual: true },
       { lote: '3º lote', valor: 'R$ 80' },
     ],
   },
@@ -31,8 +31,8 @@ const tabela = [
     name: 'Profissionais da Saúde',
     sub: 'Médicos, residentes, pós-graduandos e Agentes Técnicos (ACS/ACE)',
     lotes: [
-      { lote: 'Lote promocional', valor: 'R$ 80' },
-      { lote: '2º lote', valor: 'R$ 100' },
+      { lote: 'Lote promocional', valor: 'R$ 80', esgotado: true },
+      { lote: '2º lote', valor: 'R$ 100', atual: true },
       { lote: '3º lote', valor: 'R$ 150' },
       { lote: '4º lote', valor: 'R$ 180' },
     ],
@@ -78,13 +78,12 @@ export default function Inscricoes() {
           <div>
             <p className="rule-label mb-7">Inscrições</p>
             <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
-              Inscreva-se agora —<br />o 1º lote é o{' '}
-              <span className="italic text-brand-strong mark">menor preço</span>
+              Inscreva-se agora —<br />1º lote <span className="italic text-brand-strong mark">esgotado</span>
             </h2>
           </div>
           <p className="text-muted max-w-sm text-sm leading-relaxed">
-            Os valores aumentam a cada lote. Inscreva-se quanto antes para garantir
-            o menor preço disponível na sua categoria.
+            Os valores aumentam a cada lote. Garanta sua vaga no lote atual
+            antes da próxima virada de preço.
           </p>
         </div>
 
@@ -111,17 +110,22 @@ export default function Inscricoes() {
                 </div>
               ) : (
                 <div className="md:col-span-8 flex flex-wrap gap-3 md:justify-end">
-                  {c.lotes.map((l, idx) => (
+                  {c.lotes.map((l: any) => (
                     <div
                       key={l.lote}
-                      className={`rounded-xl border px-4 py-3 min-w-[7.25rem] flex-1 sm:flex-none ${
-                        idx === 0 ? 'border-brand-strong bg-brand-soft' : 'border-line bg-canvas'
+                      className={`rounded-xl border px-4 py-3 min-w-[7.25rem] flex-1 sm:flex-none transition-all ${
+                        l.atual ? 'border-brand-strong bg-brand-soft shadow-sm' : l.esgotado ? 'border-line/60 bg-surface/40 opacity-70' : 'border-line bg-canvas'
                       }`}
                     >
-                      <p className="text-[0.66rem] uppercase tracking-[0.08em] text-muted">{l.lote}</p>
-                      <p className="font-[family-name:var(--font-display)] font-extrabold text-2xl text-brand-strong mt-0.5 leading-none">{l.valor}</p>
-                      {idx === 0 && (
-                        <p className="text-[0.6rem] uppercase tracking-[0.1em] text-brand-strong font-semibold mt-1.5">Melhor preço</p>
+                      <p className={`text-[0.66rem] uppercase tracking-[0.08em] ${l.esgotado ? 'text-muted/70' : 'text-muted'}`}>{l.lote}</p>
+                      <p className={`font-[family-name:var(--font-display)] font-extrabold text-2xl mt-0.5 leading-none ${l.atual ? 'text-brand-strong' : l.esgotado ? 'text-muted line-through' : 'text-ink-soft'}`}>
+                        {l.valor}
+                      </p>
+                      {l.atual && (
+                        <p className="text-[0.6rem] uppercase tracking-[0.1em] text-brand-strong font-semibold mt-1.5">Lote Atual</p>
+                      )}
+                      {l.esgotado && (
+                        <p className="text-[0.6rem] uppercase tracking-[0.1em] text-red-600/80 font-semibold mt-1.5">Esgotado</p>
                       )}
                     </div>
                   ))}
@@ -139,9 +143,9 @@ export default function Inscricoes() {
 
         {/* Progressão de preço — trilho único, do menor ao maior valor */}
         <div className="mt-4 mb-6 flex items-center gap-3 text-xs">
-          <span className="font-semibold text-brand-strong whitespace-nowrap">1º lote · menor preço</span>
+          <span className="font-semibold text-muted whitespace-nowrap line-through">1º lote esgotado</span>
           <span className="relative flex-1 h-px bg-brand-tint">
-            <span className="absolute left-0 -top-[3px] w-1.5 h-1.5 rounded-full bg-brand-strong" />
+            <span className="absolute left-1/3 -top-[3px] w-1.5 h-1.5 rounded-full bg-brand-strong" />
             <span className="absolute right-0 -top-[3px] w-1.5 h-1.5 rounded-full bg-muted" />
           </span>
           <span className="text-muted whitespace-nowrap">maior valor</span>
@@ -179,11 +183,11 @@ export default function Inscricoes() {
             <div className="lg:col-span-8">
               <p className="rule-label mb-5 text-brand-light">Inscrição oficial</p>
               <h3 className="display text-white" style={{ fontSize: 'clamp(1.35rem,3.2vw,2.6rem)' }}>
-                Garanta sua vaga enquanto o 1º lote está aberto
+                Garanta sua vaga no 2º lote
               </h3>
               <p className="text-brand-faint mt-4 max-w-xl leading-relaxed">
-                Inscrições e submissão de trabalhos pela plataforma Even3. Quanto antes
-                você se inscreve, menor o valor — o 1º lote tem o melhor preço da sua categoria.
+                Inscrições e submissão de trabalhos pela plataforma Even3. O 1º lote já esgotou,
+                garanta o 2º lote para obter o melhor preço atual disponível.
               </p>
             </div>
             <div className="lg:col-span-4 lg:text-right">
