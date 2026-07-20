@@ -194,14 +194,14 @@ export default function InscricaoForm() {
               <div className="space-y-5">
                 <div>
                   <p className="font-semibold text-ink text-sm">Estudantes</p>
-                  <p className="text-muted text-sm mt-1"><span className="line-through opacity-70">1º lote: R$ 40</span> | <strong className="text-brand-strong">2º lote: R$ 60</strong> | 3º lote: <strong>R$ 80</strong></p>
+                  <p className="text-muted text-sm mt-1"><span className="line-through opacity-70">1º lote: R$ 40 | 2º lote: R$ 60</span> | <strong className="text-brand-strong">3º lote: R$ 80</strong></p>
                 </div>
                 
                 <div>
                   <p className="font-semibold text-ink text-sm">Profissionais da Saúde e demais categorias</p>
                   <p className="text-muted text-sm mt-1">
-                    <span className="line-through opacity-70">Lote promocional: R$ 80</span> | <strong className="text-brand-strong">2º lote: R$ 100</strong><br/>
-                    3º lote: <strong>R$ 150</strong> | 4º lote: <strong>R$ 180</strong>
+                    <span className="line-through opacity-70">Lote promocional: R$ 80 | 2º lote: R$ 100</span><br/>
+                    <strong className="text-brand-strong">3º lote: R$ 150</strong> | 4º lote: <strong>R$ 180</strong>
                   </p>
                 </div>
               </div>
@@ -329,11 +329,11 @@ export default function InscricaoForm() {
         <div className="grid sm:grid-cols-2 gap-4 text-sm">
           <div>
             <p className="font-semibold text-ink">Estudantes</p>
-            <p className="text-muted mt-1 leading-relaxed"><span className="line-through opacity-70">1º lote: R$ 40</span> <br className="hidden sm:block"/><strong className="text-brand-strong">2º lote: R$ 60</strong> <br className="hidden sm:block"/>3º lote: <strong>R$ 80</strong></p>
+            <p className="text-muted mt-1 leading-relaxed"><span className="line-through opacity-70">1º lote: R$ 40 <br className="hidden sm:block"/>2º lote: R$ 60</span> <br className="hidden sm:block"/><strong className="text-brand-strong">3º lote: R$ 80</strong></p>
           </div>
           <div>
             <p className="font-semibold text-ink">Profissionais da Saúde / Demais</p>
-            <p className="text-muted mt-1 leading-relaxed"><span className="line-through opacity-70">Lote promocional: R$ 80</span> <br className="hidden sm:block"/><strong className="text-brand-strong">2º lote: R$ 100</strong> | 3º lote: <strong>R$ 150</strong> <br className="hidden sm:block"/>4º lote: <strong>R$ 180</strong></p>
+            <p className="text-muted mt-1 leading-relaxed"><span className="line-through opacity-70">Lote promocional: R$ 80 <br className="hidden sm:block"/>2º lote: R$ 100</span> | <strong className="text-brand-strong">3º lote: R$ 150</strong> <br className="hidden sm:block"/>4º lote: <strong>R$ 180</strong></p>
           </div>
         </div>
       </div>

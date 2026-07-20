@@ -23,8 +23,8 @@ const tabela = [
     sub: 'Alunos UEPA (não ligantes) e de outras instituições',
     lotes: [
       { lote: '1º lote', valor: 'R$ 40', esgotado: true },
-      { lote: '2º lote', valor: 'R$ 60', atual: true },
-      { lote: '3º lote', valor: 'R$ 80' },
+      { lote: '2º lote', valor: 'R$ 60', esgotado: true },
+      { lote: '3º lote', valor: 'R$ 80', atual: true },
     ],
   },
   {
@@ -32,8 +32,8 @@ const tabela = [
     sub: 'Médicos, residentes, pós-graduandos e Agentes Técnicos (ACS/ACE)',
     lotes: [
       { lote: 'Lote promocional', valor: 'R$ 80', esgotado: true },
-      { lote: '2º lote', valor: 'R$ 100', atual: true },
-      { lote: '3º lote', valor: 'R$ 150' },
+      { lote: '2º lote', valor: 'R$ 100', esgotado: true },
+      { lote: '3º lote', valor: 'R$ 150', atual: true },
       { lote: '4º lote', valor: 'R$ 180' },
     ],
   },
@@ -78,7 +78,7 @@ export default function Inscricoes() {
           <div>
             <p className="rule-label mb-7">Inscrições</p>
             <h2 className="display text-ink" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
-              Inscreva-se agora —<br />1º lote <span className="italic text-brand-strong mark">esgotado</span>
+              Inscreva-se agora —<br />1º e 2º lotes <span className="italic text-brand-strong mark">esgotados</span>
             </h2>
           </div>
           <p className="text-muted max-w-sm text-sm leading-relaxed">
@@ -143,7 +143,7 @@ export default function Inscricoes() {
 
         {/* Progressão de preço — trilho único, do menor ao maior valor */}
         <div className="mt-4 mb-6 flex items-center gap-3 text-xs">
-          <span className="font-semibold text-muted whitespace-nowrap line-through">1º lote esgotado</span>
+          <span className="font-semibold text-muted whitespace-nowrap line-through">1º e 2º lotes esgotados</span>
           <span className="relative flex-1 h-px bg-brand-tint">
             <span className="absolute left-1/3 -top-[3px] w-1.5 h-1.5 rounded-full bg-brand-strong" />
             <span className="absolute right-0 -top-[3px] w-1.5 h-1.5 rounded-full bg-muted" />
@@ -183,11 +183,11 @@ export default function Inscricoes() {
             <div className="lg:col-span-8">
               <p className="rule-label mb-5 text-brand-light">Inscrição oficial</p>
               <h3 className="display text-white" style={{ fontSize: 'clamp(1.35rem,3.2vw,2.6rem)' }}>
-                Garanta sua vaga no 2º lote
+                Garanta sua vaga no 3º lote
               </h3>
               <p className="text-brand-faint mt-4 max-w-xl leading-relaxed">
-                Inscrições e submissão de trabalhos pela plataforma Even3. O 1º lote já esgotou,
-                garanta o 2º lote para obter o melhor preço atual disponível.
+                Inscrições e submissão de trabalhos pela plataforma Even3. O 1º e 2º lotes já esgotaram,
+                garanta o 3º lote para obter o melhor preço atual disponível.
               </p>
             </div>
             <div className="lg:col-span-4 lg:text-right">
