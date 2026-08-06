@@ -143,7 +143,7 @@ const palestrantes: Palestrante[] = [
     lattes: 'http://lattes.cnpq.br/0305074187747227',
   },
   {
-    nome: 'Dr. Davi Tozzeto',
+    nome: 'Dr. David Tozetto',
     titulo: 'Cardiologista e Intensivista · Doutor em Educação em Saúde (UEPA)',
     instituicao: 'Docente UEPA Marabá · Coordenador Medicina Intensiva HRS-PA',
     foto: '/palestrantes/davi-tozzeto.jpg',
@@ -230,6 +230,38 @@ const palestrantes: Palestrante[] = [
     foto: '/palestrantes/waldirene-bentes.jpg',
     curriculo: 'Possui licenciatura em Letras pela UFPA. Visitadora Sanitária do Ministério da Saúde, com ênfase nos programas de Hanseníase e Tuberculose há 36 anos. Atua como Referência Técnica em Hanseníase na Secretaria Municipal de Saúde de Marabá e é Especialista em Avaliação Neurológica Simplificada.',
     resumo: 'Possui licenciatura em Letras pela UFPA.\n\nVisitadora Sanitária do Ministério da Saúde, com ênfase nos programas de Hanseníase e Tuberculose há 36 anos.\n\nAtua como Referência Técnica em Hanseníase na Secretaria Municipal de Saúde de Marabá e é Especialista em Avaliação Neurológica Simplificada.',
+  },
+  {
+    nome: 'Dra. Rita Vidigal',
+    titulo: 'Dermatologista e Hansenologista · Título de Especialista (AMB)',
+    instituicao: 'Diretora Regional Nordeste da SBH · Doutoranda em Ciências da Saúde (UFMA)',
+    foto: '/palestrantes/rita-vidigal.jpg',
+    curriculo: 'Graduada em Medicina pela Universidade do Estado do Pará (UEPA, 2008), com pós-graduação em Dermatologia pelo Instituto Superior de Medicina da Faculdade de Ciências Médicas de Minas Gerais e Título de Especialista em Hansenologia pela Associação Médica Brasileira (AMB). É doutoranda no Programa de Pós-Graduação em Ciências da Saúde da Universidade Federal do Maranhão (UFMA) e atua como Diretora Regional Nordeste da Sociedade Brasileira de Hansenologia. Desenvolve pesquisas em imunologia e hanseníase, integrando o Centro de Referência Nacional em Hanseníase e Dermatologia Sanitária (CREDESH/UFU) e o Laboratório de Dermatologia e Imunologia (LDI/UFPA). Atua com ênfase em hanseníase, imunopatogênese, doenças imunomediadas e educação médica.',
+    resumo: 'Graduada em Medicina pela Universidade do Estado do Pará (UEPA, 2008), com pós-graduação em Dermatologia pelo Instituto Superior de Medicina da Faculdade de Ciências Médicas de Minas Gerais e Título de Especialista em Hansenologia pela Associação Médica Brasileira (AMB).\n\nÉ doutoranda no Programa de Pós-Graduação em Ciências da Saúde da Universidade Federal do Maranhão (UFMA) e atua como Diretora Regional Nordeste da Sociedade Brasileira de Hansenologia.\n\nDesenvolve pesquisas em imunologia e hanseníase, integrando o Centro de Referência Nacional em Hanseníase e Dermatologia Sanitária (CREDESH/UFU) e o Laboratório de Dermatologia e Imunologia (LDI/UFPA).\n\nAtua com ênfase em hanseníase, imunopatogênese, doenças imunomediadas e educação médica.',
+  },
+  {
+    nome: 'Dr. Harbi Othman',
+    titulo: 'Infectologista · Mestrando em Medicina Tropical (FIOCRUZ)',
+    instituicao: 'Professor Assistente IESB/UNIFESSPA · Hospital Municipal de Marabá',
+    foto: '/palestrantes/harbi-othman.jpg',
+    curriculo: 'Graduado em Medicina pela Universidade do Estado do Pará (UEPA), com Residência Médica em Infectologia pela Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA) e mestrando em Medicina Tropical pela Fundação Oswaldo Cruz (FIOCRUZ). Membro titular e membro eleito do comitê científico da Sociedade Brasileira de Infectologia. Professor Assistente da Faculdade de Medicina IESB/UNIFESSPA e docente do curso de Medicina da Afya Marabá, onde coordena o Internato de Clínica Médica. Médico Infectologista do Hospital Municipal de Marabá e do Hospital MEDVIDA – Canaã do Carajás.',
+    resumo: 'Graduado em Medicina pela Universidade do Estado do Pará (UEPA), com Residência Médica em Infectologia pela Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA) e mestrando em Medicina Tropical pela Fundação Oswaldo Cruz (FIOCRUZ).\n\nMembro titular e membro eleito do comitê científico da Sociedade Brasileira de Infectologia.\n\nProfessor Assistente da Faculdade de Medicina IESB/UNIFESSPA e docente do curso de Medicina da Afya Marabá, onde coordena o Internato de Clínica Médica.\n\nMédico Infectologista do Hospital Municipal de Marabá e do Hospital MEDVIDA – Canaã do Carajás.',
+  },
+  {
+    nome: 'Dra. Lorena Miranda Agrizzi',
+    titulo: 'Médica de Família e Comunidade · Mestre em Saúde da Família (Fiocruz)',
+    instituicao: 'Docente Afya Marabá · Supervisora do Programa Mais Médicos',
+    foto: '/palestrantes/lorena-agrizzi.jpg',
+    curriculo: 'Médica, mestre em Saúde da Família pela Fiocruz Amazônia, com residências em Medicina de Família e Comunidade pela Escola Nacional de Saúde Pública Sérgio Arouca (ENSP/Fiocruz) e em Medicina Paliativa pelo Instituto de Assistência Médica ao Servidor Público Estadual de São Paulo (IAMSPE). É docente na Afya Marabá, supervisora do Programa Mais Médicos, integra o Grupo Condutor Estadual de Cuidados Paliativos do Pará e representou o estado como delegada na 17ª Conferência Nacional de Saúde. Marabaense e mãe do Luca, dedica sua trajetória ao fortalecimento da Atenção Primária e dos Cuidados Paliativos na Amazônia.',
+    resumo: 'Médica, mestre em Saúde da Família pela Fiocruz Amazônia, com residências em Medicina de Família e Comunidade pela Escola Nacional de Saúde Pública Sérgio Arouca (ENSP/Fiocruz) e em Medicina Paliativa pelo Instituto de Assistência Médica ao Servidor Público Estadual de São Paulo (IAMSPE).\n\nÉ docente na Afya Marabá, supervisora do Programa Mais Médicos, integra o Grupo Condutor Estadual de Cuidados Paliativos do Pará e representou o estado como delegada na 17ª Conferência Nacional de Saúde.\n\nMarabaense e mãe do Luca, dedica sua trajetória ao fortalecimento da Atenção Primária e dos Cuidados Paliativos na Amazônia.',
+  },
+  {
+    nome: 'Regina Maldonado Pozenato Bernardo',
+    titulo: 'Enfermeira Estomaterapeuta · Mestre em Enfermagem',
+    instituicao: 'Instituto Lauro de Souza Lima (Bauru-SP)',
+    foto: '/palestrantes/regina-maldonado.jpg',
+    curriculo: 'Enfermeira Estomaterapeuta e Mestre em Enfermagem, atualmente especializanda em Podiatria Clínica. Atua no Instituto Lauro de Souza Lima, em Bauru-SP, referência nacional no atendimento e na pesquisa em hanseníase.',
+    resumo: 'Enfermeira Estomaterapeuta e Mestre em Enfermagem, atualmente especializanda em Podiatria Clínica.\n\nAtua no Instituto Lauro de Souza Lima, em Bauru-SP, referência nacional no atendimento e na pesquisa em hanseníase.',
   }
 ];
 
