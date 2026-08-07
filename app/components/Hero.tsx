@@ -47,12 +47,12 @@ export default function Hero() {
               ))}
             </p>
 
-            <div className="mt-6 flex items-center gap-4 border border-brand-edge/50 bg-brand-panel/40 rounded-2xl p-3 w-max">
-              <span className="text-[0.65rem] uppercase tracking-widest text-brand-faint font-semibold pl-2">Chancelado por:</span>
+            <div className="mt-6 flex items-center gap-4 border border-brand-edge/50 bg-brand-panel/40 rounded-2xl p-4 w-max">
+              <span className="text-xs uppercase tracking-widest text-brand-faint font-semibold pl-2">Chancelado por:</span>
               <img 
                 src="/parceiros/sbh-transparent.png" 
                 alt="SBH - Sociedade Brasileira de Hansenologia" 
-                className="h-10 w-auto brightness-0 invert opacity-90" 
+                className="h-14 w-auto brightness-0 invert opacity-90" 
               />
             </div>
 

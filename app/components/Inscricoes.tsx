@@ -17,6 +17,7 @@ const tabela = [
     sub: 'Vinculados à Secretaria Municipal de Saúde · comprovação obrigatória',
     lotes: [{ lote: 'Inscrições de 04/07 a 19/07/2026', valor: 'Gratuito' }],
     free: true,
+    hidePeriodo: true,
   },
   {
     name: 'Estudantes',
@@ -33,8 +34,8 @@ const tabela = [
     lotes: [
       { lote: 'Lote promocional', valor: 'R$ 80', esgotado: true },
       { lote: '2º lote', valor: 'R$ 100', esgotado: true },
-      { lote: '3º lote', valor: 'R$ 150', atual: true },
-      { lote: '4º lote', valor: 'R$ 180' },
+      { lote: '3º lote', valor: 'R$ 150', esgotado: true },
+      { lote: '4º lote', valor: 'R$ 180', atual: true },
     ],
   },
 ];
@@ -104,9 +105,11 @@ export default function Inscricoes() {
               {c.free ? (
                 <div className="md:col-span-8 md:text-right">
                   <p className="font-[family-name:var(--font-display)] font-extrabold text-3xl text-brand-strong leading-none">Gratuito</p>
-                  <p className="text-ink-soft text-sm mt-2">
-                    {c.lotes[0].lote}, exclusivamente neste período.
-                  </p>
+                  {!c.hidePeriodo && (
+                    <p className="text-ink-soft text-sm mt-2">
+                      {c.lotes[0].lote}, exclusivamente neste período.
+                    </p>
+                  )}
                 </div>
               ) : (
                 <div className="md:col-span-8 flex flex-wrap gap-3 md:justify-end">
@@ -183,11 +186,11 @@ export default function Inscricoes() {
             <div className="lg:col-span-8">
               <p className="rule-label mb-5 text-brand-light">Inscrição oficial</p>
               <h3 className="display text-white" style={{ fontSize: 'clamp(1.35rem,3.2vw,2.6rem)' }}>
-                Garanta sua vaga no 3º lote
+                Garanta sua vaga no lote atual
               </h3>
               <p className="text-brand-faint mt-4 max-w-xl leading-relaxed">
-                Inscrições e submissão de trabalhos pela plataforma Even3. O 1º e 2º lotes já esgotaram,
-                garanta o 3º lote para obter o melhor preço atual disponível.
+                Inscrições e submissão de trabalhos pela plataforma Even3. Os lotes anteriores já esgotaram,
+                garanta o lote atual para obter o melhor preço disponível.
               </p>
             </div>
             <div className="lg:col-span-4 lg:text-right">
